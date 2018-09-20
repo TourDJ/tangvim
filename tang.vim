@@ -1,5 +1,4 @@
-                                                                                                                                       
-
+" Vundle plugin
 " Keep Plugin commands between vundle#begin/end.
 " Brief help
 " :PluginList       - lists configured plugins
