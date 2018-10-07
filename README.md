@@ -1,4 +1,4 @@
 # tangvim
 Vim config and use.
 
-[vim document](https://github.com/TourDJ/tangvim/blob/master/vim_doc.md)    
+[vim 使用知识点](https://github.com/TourDJ/memory/blob/master/vim.md)    
