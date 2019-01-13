@@ -1,4 +1,4 @@
-# tangvim
+# vim
 Vim config and use.
 
 [vim 配置](https://github.com/TourDJ/tangvim/blob/master/tang.vim)     
