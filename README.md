@@ -6,7 +6,7 @@ Vim config and use.
 [vim 使用的相关知识点](https://github.com/TourDJ/tangvim/blob/master/vim.md)    
 
 
-
+***
 [vim 使用](#vim)    
   - [vim 概述](#summary)  
     - [vim 历史](#history)   
