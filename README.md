@@ -1,7 +1,13 @@
 # Vim
 Playgound for vim's hobbyist. Here record vim's install, config and use. 
 
-## vim 配置
+## vim 安装配置
+
+在任意系统中，在Vim中执行
+
+    :echo $MYVIMRC
+命令可以快速得知这个文件的位置和名称。文件的路径会在屏幕的底部显示。
+
 [vim 的基本配置](https://github.com/TourDJ/tangvim/blob/master/tang.vim)     
 
 
