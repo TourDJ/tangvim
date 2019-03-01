@@ -1,13 +1,14 @@
-# vim
-Vim config and use.
+# Vim
+Playgound for vim's hobbyist. Here record vim's install, config and use. 
 
-[vim 配置](https://github.com/TourDJ/tangvim/blob/master/tang.vim)     
+## vim 配置
+[vim 的基本配置](https://github.com/TourDJ/tangvim/blob/master/tang.vim)     
 
-[vim 使用的相关知识点](https://github.com/TourDJ/tangvim/blob/master/vim.md)    
+
 
 
 ***
-[vim 使用](#vim)    
+[vim 使用说明](#vim)    
   - [vim 概述](#summary)  
     - [vim 历史](#history)   
   - [vim 模式](#mode)   
