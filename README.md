@@ -37,7 +37,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [其他](#vimcmd_other)  
   - [模式行（modeline）](#modeline)   
   - [vim 寄存器](#register)
-  - [映射](#mapping)        
+  - [键盘映射](#mapping)        
   - [vim 插件](#plugin)       
   - [vim 主题](#theme)   
   - [vimscript 命令](#script)       
@@ -195,6 +195,23 @@ vim 的全局配置文件是： /etc/vimrc，用户的配置文件为 ~/.vimrc�
     
     :source ~/.vimrc
 > 注意命令前面的冒号，是在vim的命令模式下执行的，不是在linux命令行下执行。
+
+vim 主要有两种选项：布尔选项（值为"on"或"off"）和键值选项。      
+配置方法。
+
+    :set <name>打开选项、
+    :set no<name>关闭选项
+
+* 添加一个!（感叹号）至布尔选项后面就会切换对于选项的值。
+
+          :set number!
+
+* 使用一个?符号向Vim获取一个选项的当前值。
+
+          :set number
+          :set number?
+          :set nonumber
+          :set number?
   
 vim 常用设置参数
 
@@ -648,14 +665,38 @@ modeline 里可以放的指令不限一个，所以我.py 档案在档尾都有�
 
 ***
 
-## <a id="mapping">map 映射</a>
+## <a id="mapping">键盘映射</a>
 map是一个映射命令,将常用的很长的命令映射到一个新的功能键上。
 
 map的格式：
 
     map <要映射键> <被映射的按键序列>
-比如 `map T :q!`后，则在命令模式下按T并按回车，就会退出vim
-vmap 和 map类似，二者的区别在于前者用于所谓的Visual模式，后者用于通常的命令模式。 
+比如 `map T :q!`后，则在命令模式下按T并按回车，就会退出vim。map 映射在visual模式一样工作。你可以使用nmap、vmap和imap命令分别指定映射仅在normal、visual、insert模式有效。
+vmap 和 map类似，二者的区别在于前者用于所谓的Visual模式，后者用于通常的命令模式。
+
+\*map系列命令的一个缺点就是存在递归的危险。例如：
+
+    :nmap dd O<esc>jddk
+这个映射实际上是 递归 的！当你按下dd后，Vim解释为：
+
+dd存在映射，执行映射的内容。
+    新建一行。
+    退出insert模式。
+    向下移动一行。
+    dd存在映射，执行映射的内容。
+        新建一行。
+        退出insert模式。
+        向下移动一行。
+        dd存在映射，执行映射的内容。
+        然后一直这样。
+
+另外一个是如果你安装一个插件，插件 映射了同一个按键为不同的行为，两者冲突，有一个映射就无效了。
+
+Vim提供另一组映射命令，这些命令创建的映射在运行时 不会 进行递归。例如：
+
+    :nmap x dd
+    :nnoremap \ x
+每一个\*map系列的命令都有个对应的\*noremap命令，包括：noremap/nnoremap、 vnoremap和inoremap。这些命令将不递归解释映射的内容。
 
     映射:map <F2> ggvG
     解除映射:unmap <F2>
@@ -850,16 +891,7 @@ Vim的脚本语言被称为Vimscript，是典型的动态式命令语言，提�
 
           :echo $MYVIMRC  查询 vimrc 文件的位置
 
-* 添加一个!（感叹号）至布尔选项后面就会切换对于选项的值。
 
-          :set number!
-
-* 使用一个?符号向Vim获取一个选项的当前值。
-
-          :set number
-          :set number?
-          :set nonumber
-          :set number?
 
 * numberwidth 选项改变行号的列宽。
 * viw 将高亮选中整个单词。
