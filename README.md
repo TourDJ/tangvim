@@ -20,7 +20,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [vim 概述](#summary)  
     - [vim 历史](#history)   
   - [vim 模式](#mode)   
-  - [vim 的 buffer、window 和 tab](#buffer)    
+  - [vim 缓冲区](#buffer)    
   - [vim 配置](#config)      
   - [vim 命令](#vimcmd)      
     - [文件命令](#vimcmd_file)      
@@ -138,26 +138,30 @@ vim 编辑器很强大，而他的强大之处其中一方面是有种类繁多�
 
 *** 
 
-## <a id="buffer">vim 的 buffer、window 和 tab</a>
-查看帮助文件，是这样描述的：
+## <a id="buffer">vim 缓冲区</a>
+关于 vim 的 buffer（缓冲区）、window（窗口） 和 tab（标签），查看帮助文件，是这样描述的：
 
      缓冲区是内存中的文件文本。
      窗口是缓冲区的视窗。
      标签页是窗口的集合
 
 在 vim 中，可以将 buffer 看成是打开文件的实例。一个文件只有一个 buffer。
-查看 buffer 的命令：
+* 查看 buffer 的命令：
 
-     :ls
-       1 %a   ".vimrc"                       line 20
-       2   =  ".viminfo"                     line 30
-       3 # =  "/etc/vimrc"                   line 71
+         :ls 
+显示：
+
+           1 %a   ".vimrc"                       line 20
+           2   =  ".viminfo"                     line 30
+           3 # =  "/etc/vimrc"                   line 71
 左侧是buffer的编号，有%的表示是当前激活的window中打开的buffer，a表示这个buffer是active的，双引号中的字符串表示了buffer对应的文件名字，line n表示当前cursor处于该buffer的哪一行，# 代表的是编辑前一次编辑的文档。
 
-使用:buffer(:b)命令切换buffer
+* 使用:buffer(:b)命令切换buffer
 
-     :b 2
+        :b 2
+* 命令将当前缓冲区写入文件
 
+        :write
 
 window 可以看成是 buffer 的 viewport。一个 buffer 可以有多个 window。在不同的window中编辑同一个文件的buffer，并且在一个window中对文件进行编辑，修改会同步体现在另外的window中。
 
@@ -857,6 +861,7 @@ vimrc 修改后立即生效
 打开一个Javascript文件（后缀为.js的文件）,将光标移动到某一行，敲击<localleader>c，光标所在的那一行会被注释掉。
 打开一个Python文件（后缀为.py的文件）,将光标移动到某一行，敲击<localleader>c，同样的那一行会被注释掉，不同的是此时所用的是Python的注释字符！
 
+### <a id="augroup">自动命令组</a>
 
 
 
