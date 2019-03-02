@@ -40,7 +40,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [键盘映射](#mapping)  
     - [Leader](#leader)    
     - [Local Leader](#localleader)     
-    - [常用映射](#cusmapping)     
+    - [常用映射](#cusmapping)  
+    - [遮盖](#override)    
   - [Abbreviations](#abbrev) 
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
@@ -336,6 +337,12 @@ vim 自身支持多种折叠：
      * za 打开或关闭当前折叠
      * zM 关闭所有折叠
      * zR 打开所有折叠
+
+
+有些选项可以基于缓冲区进行设置。例如：
+
+    :setlocal wrap
+不是所有的选项都可以使用setlocal进行设置。如果你想知道某个特定的选项是否可以设置为本地选项，执行:help查看它的帮助文档。
 
 ***
 
@@ -779,6 +786,13 @@ vimrc 修改后立即生效
      " 让配置变更立即生效
      autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+### <a id="override">遮盖</a>
+来看关于本地映射的一个非常有趣的特性-遮盖。     
+看个例子
+
+    :nnoremap <buffer> Q x
+    :nnoremap          Q dd
+当你敲击Q，Vim会执行第一个映射，而不是第二个，因为第一个映射比起第二个要显得更具体，这可以看成第二个映射被第一个映射遮盖了。
 ***
 
 ## <a id="abbrev">Abbreviations</a>
