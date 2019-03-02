@@ -751,6 +751,15 @@ Vim有另外一个“leader”成为“local leader“。这个leader用于那�
      nnoremap <Leader>jw <C-W>j
      " 定义快捷键在结对符之间跳转
      nmap <Leader>M %
+     
+    " 编辑配置文件
+    nnoremap <leader>ev :vsplit $MYVIMRC<cr> 
+    " 重读配置文件
+    nnoremap <leader>sv :source $MYVIMRC<cr> 
+    " 给单词加引号
+    nnoremap <leader>a viw<esc>a"<esc>hbi"<esc>lel
+    " 从插入模式返回到常用模式
+    inoremap jk <esc>
 
 vimrc 修改后立即生效
 
