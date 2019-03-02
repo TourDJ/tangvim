@@ -37,7 +37,9 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [其他](#vimcmd_other)  
   - [模式行（modeline）](#modeline)   
   - [vim 寄存器](#register)
-  - [键盘映射](#mapping)        
+  - [键盘映射](#mapping)  
+  - [Abbreviations](#abbrev) 
+    - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
   - [vim 主题](#theme)   
   - [vimscript 命令](#script)       
@@ -667,32 +669,31 @@ modeline 里可以放的指令不限一个，所以我.py 档案在档尾都有�
 
 ## <a id="mapping">键盘映射</a>
 map是一个映射命令,将常用的很长的命令映射到一个新的功能键上。
-
 map的格式：
 
     map <要映射键> <被映射的按键序列>
-比如 `map T :q!`后，则在命令模式下按T并按回车，就会退出vim。map 映射在visual模式一样工作。你可以使用nmap、vmap和imap命令分别指定映射仅在normal、visual、insert模式有效。
-vmap 和 map类似，二者的区别在于前者用于所谓的Visual模式，后者用于通常的命令模式。
+比如 `map T :q!`后，则在命令模式下按T并按回车，就会退出vim。
+
+map 映射在visual模式一样工作。你可以使用nmap、vmap和imap命令分别指定映射仅在normal、visual、insert模式有效。vmap 和 map类似，二者的区别在于前者用于所谓的Visual模式，后者用于通常的命令模式。
 
 \*map系列命令的一个缺点就是存在递归的危险。例如：
 
     :nmap dd O<esc>jddk
 这个映射实际上是 递归 的！当你按下dd后，Vim解释为：
 
-dd存在映射，执行映射的内容。
-    新建一行。
-    退出insert模式。
-    向下移动一行。
     dd存在映射，执行映射的内容。
         新建一行。
         退出insert模式。
         向下移动一行。
         dd存在映射，执行映射的内容。
-        然后一直这样。
-
+            新建一行。
+            退出insert模式。
+            向下移动一行。
+            dd存在映射，执行映射的内容。
+            然后一直这样。
 另外一个是如果你安装一个插件，插件 映射了同一个按键为不同的行为，两者冲突，有一个映射就无效了。
 
-Vim提供另一组映射命令，这些命令创建的映射在运行时 不会 进行递归。例如：
+Vim提供另一组映射命令，这些命令创建的映射在运行时不会进行递归。例如：
 
     :nmap x dd
     :nnoremap \ x
@@ -705,13 +706,22 @@ Vim提供另一组映射命令，这些命令创建的映射在运行时 不会 
     
 [vim的几种模式和按键映射](http://www.cnblogs.com/my_life/articles/3261873.html) 
 
-每一个*map系列的命令都有个对应的*noremap命令，包括：noremap/nnoremap、 vnoremap和inoremap。这些命令将不递归解释映射的内容。
-
+### Leader
 各类 vim 插件帮助文档中经常出现 <leader>，即前缀键，缓解了快捷键引起冲突的问题。
      
-     " 定义快捷键的前缀，即<Leader>
-     let mapleader=";"
-     
+    let mapleader = ";"
+
+### Local Leader
+Vim有另外一个“leader”成为“local leader“。这个leader用于那些只对某类文件 （如Python文件、HTML文件）而设置的映射。
+
+    let maplocalleader = "\\"
+
+有时你正在疯狂的编码，突然发现加个映射会加速你的进度。你要立即将其加到~/.vimrc 文件中以防止忘记，但是你 不想 退出当前的文件，因为灵感稍纵即逝。
+我们在一个分屏中打开~/.vimrc文件以快速编辑添加映射，然后退出继续编码。运行命令：
+
+    :nnoremap <leader>ev :vsplit $MYVIMRC<cr> " 编辑配置文件
+    :nnoremap <leader>sv :source $MYVIMRC<cr> " 重读配置文件
+
 常用操作设定成快捷键，提升效率：
 
      " 定义快捷键到行首和行尾
@@ -748,6 +758,32 @@ vimrc 修改后立即生效
      autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 ***
+
+## <a id="abbrev">Abbreviations</a>
+与映射有点类似，但是它用于insert、replace和 command模式。这个特性灵活且强大。
+
+例如：
+
+    :iabbrev adn and
+进入insert模式并输入：
+
+    One adn two.
+在输入adn之后输入空格键，Vim会将其替换为and。
+
+### <a id="keyword">Keyword Characters</a>
+紧跟一个abbreviation输入"non-keyword character"后Vim会替换那个abbreviation。 "non-keyword character"指那些不在iskeyword选项中的字符。运行命令：
+
+    :set iskeyword?
+你将看到类似于iskeyword=@,48-57,\_,192-255的结果。
+这个格式很复杂，但本质上 "keyword characters"包含一下几种：
+
+    下划线字符 (_).
+    所有字母字符，包括大小写。
+    ASCII值在48到57之间的字符（数字0-9）。
+    ASCII值在192到255之间的字符（一些特殊ASCII字符）。
+输入:help isfname 查看详情
+
+*** 
 
 工欲善其事，必先利其器。
 VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtimepath”选项中， 我们可以使用 set 命令查看它：
