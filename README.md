@@ -354,8 +354,8 @@ vim 自身支持多种折叠：
 
     vim file 打开单个文件
     vim file1 file2 file3 ... 同时打开多个文件
-    vim file +10 打开文件并跳转到指定行
-    :open file 在vim窗口中打开一个新文件
+    vim file +10 打开文件并跳转到指定行
+    :open file 在vim窗口中打开一个新文件
     :split file 在水平分割的窗口中打开文件
     :vsplit file 在垂直分割的窗口中打开文件
     :bn 切换到下一个文件
@@ -718,6 +718,13 @@ Vim提供另一组映射命令，这些命令创建的映射在运行时不会�
 Vim有另外一个“leader”成为“local leader“。这个leader用于那些只对某类文件 （如Python文件、HTML文件）而设置的映射。
 
     let maplocalleader = "\\"
+
+
+
+<buffer> 告诉Vim这个映射只在定义它的那个缓冲区中有效
+
+    :nnoremap <buffer> <leader>x dd
+<leader>x是一个本地缓冲区映射，不过这种定义方式并不合适。如果我们需要设定一个只会用于特定缓冲区的映射，一般会使用<localleader>，而不是<leader>。
 
 有时你正在疯狂的编码，突然发现加个映射会加速你的进度。你要立即将其加到~/.vimrc 文件中以防止忘记，但是你 不想 退出当前的文件，因为灵感稍纵即逝。
 我们在一个分屏中打开~/.vimrc文件以快速编辑添加映射，然后退出继续编码。运行命令：
