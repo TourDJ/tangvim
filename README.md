@@ -723,7 +723,7 @@ map 配置的映射在 visual 模式一样工作。你可以使用nmap、vmap和
 
 ### <a id="leader">Leader</a>
 **Leader**   
-各类 vim 插件帮助文档中经常出现 <leader>，即前缀键，缓解了快捷键引起冲突的问题。
+各类 vim 插件帮助文档中经常出现 `<leader>`，即前缀键，缓解了快捷键引起冲突的问题。
      
     let mapleader = ";"
 
@@ -733,10 +733,10 @@ Vim有另外一个“leader”成为“local leader“。这个leader用于那�
     let maplocalleader = "\\"
 
 **\<buffer\>**     
-\<buffer\> 告诉Vim这个映射只在定义它的那个缓冲区中有效
+`<buffer>` 告诉Vim这个映射只在定义它的那个缓冲区中有效
 
     :nnoremap <buffer> <leader>x dd
-> \<leader\>x是一个本地缓冲区映射，不过这种定义方式并不合适。如果我们需要设定一个只会用于特定缓冲区的映射，一般会使用<localleader>，而不是<leader>。
+> `<leader>x`是一个本地缓冲区映射，不过这种定义方式并不合适。如果我们需要设定一个只会用于特定缓冲区的映射，一般会使用 `<localleader>`，而不是`<leader>`。
 
 有时你正在疯狂的编码，突然发现加个映射会加速你的进度。你要立即将其加到~/.vimrc 文件中以防止忘记，但是你 <strong>不想</strong> 退出当前的文件，因为灵感稍纵即逝。
 
