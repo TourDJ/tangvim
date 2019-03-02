@@ -862,6 +862,8 @@ vimrc 修改后立即生效
 打开一个Javascript文件（后缀为.js的文件）,将光标移动到某一行，敲击<localleader>c，光标所在的那一行会被注释掉。
 打开一个Python文件（后缀为.py的文件）,将光标移动到某一行，敲击<localleader>c，同样的那一行会被注释掉，不同的是此时所用的是Python的注释字符！
 
+> 输入 <code>:help autocmd-events</code> 查看自动命令可以绑定的所有事件。
+
 ### <a id="augroup">自动命令组</a>
 可以将相关的自动命令收集起来放到一个已命名的组（groups）中。当你多次使用augroup的时候，Vim每次都会组合那些组。而不会替换之前的组。
 
@@ -872,8 +874,6 @@ vimrc 修改后立即生效
     :    autocmd BufWrite * :echom "Cats"
     :augroup END
 
-
-> 输入 <code>:help autocmd-events</code> 查看自动命令可以绑定的所有事件。
 
 ***
 
