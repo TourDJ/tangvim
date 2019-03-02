@@ -698,17 +698,17 @@ map 配置的映射在 visual 模式一样工作。你可以使用nmap、vmap和
     :nmap dd O<esc>jddk
 这个映射实际上是递归的！当你按下dd后，Vim解释为：
 
-    dd存在映射，执行映射的内容。
-        新建一行。
-        退出insert模式。
-        向下移动一行。
         dd存在映射，执行映射的内容。
             新建一行。
             退出insert模式。
             向下移动一行。
             dd存在映射，执行映射的内容。
-            ......
-            然后一直这样
+                新建一行。
+                退出insert模式。
+                向下移动一行。
+                dd存在映射，执行映射的内容。
+                ......
+                然后一直这样
 
 * 另外一个是如果你安装一个插件，插件映射了同一个按键为不同的行为，两者冲突，有一个映射就无效了。
 
@@ -732,8 +732,8 @@ Vim有另外一个“leader”成为“local leader“。这个leader用于那�
 
     let maplocalleader = "\\"
 
-**<buffer>**
-<buffer> 告诉Vim这个映射只在定义它的那个缓冲区中有效
+**\<buffer\>**
+\<buffer\> 告诉Vim这个映射只在定义它的那个缓冲区中有效
 
     :nnoremap <buffer> <leader>x dd
 > \<leader\>x是一个本地缓冲区映射，不过这种定义方式并不合适。如果我们需要设定一个只会用于特定缓冲区的映射，一般会使用<localleader>，而不是<leader>。
