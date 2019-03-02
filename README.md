@@ -695,7 +695,7 @@ map 配置的映射在 visual 模式一样工作。你可以使用nmap、vmap和
 ### <a id="mapfault">map 的缺点</a>
 * \*map系列命令的一个缺点就是存在递归的危险。例如：
 
-    :nmap dd O<esc>jddk
+        :nmap dd O<esc>jddk
 这个映射实际上是递归的！当你按下dd后，Vim解释为：
 
         dd存在映射，执行映射的内容。
@@ -732,7 +732,7 @@ Vim有另外一个“leader”成为“local leader“。这个leader用于那�
 
     let maplocalleader = "\\"
 
-**\<buffer\>**
+**\<buffer\>**     
 \<buffer\> 告诉Vim这个映射只在定义它的那个缓冲区中有效
 
     :nnoremap <buffer> <leader>x dd
