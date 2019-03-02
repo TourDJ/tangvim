@@ -14,6 +14,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
 
 
 ***
+
+## vim 使用说明
 [vim 使用说明](#vim)    
   - [vim 概述](#summary)  
     - [vim 历史](#history)   
