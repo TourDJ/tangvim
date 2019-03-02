@@ -16,7 +16,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
 ***
 
 ## vim 使用说明
-[vim 使用说明](#vim)    
+   
   - [vim 概述](#summary)  
     - [vim 历史](#history)   
   - [vim 模式](#mode)   
@@ -648,13 +648,13 @@ modeline 里可以放的指令不限一个，所以我.py 档案在档尾都有�
 
 ***
 
-## <a id="mapping">映射</a>
+## <a id="mapping">map 映射</a>
 map是一个映射命令,将常用的很长的命令映射到一个新的功能键上。
 
 map的格式：
 
     map <要映射键> <被映射的按键序列>
-比如 map T :q!后，则在命令模式下按T并按回车，就会退出vim
+比如 `map T :q!`后，则在命令模式下按T并按回车，就会退出vim
 vmap 和 map类似，二者的区别在于前者用于所谓的Visual模式，后者用于通常的命令模式。 
 
     映射:map <F2> ggvG
