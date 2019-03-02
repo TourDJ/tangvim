@@ -38,6 +38,9 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [模式行（modeline）](#modeline)   
   - [vim 寄存器](#register)
   - [键盘映射](#mapping)  
+    - [Leader](#leader)    
+    - [Local Leader](#localleader)     
+    - [常用映射](#cusmapping)     
   - [Abbreviations](#abbrev) 
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
@@ -706,12 +709,12 @@ Vim提供另一组映射命令，这些命令创建的映射在运行时不会�
     
 [vim的几种模式和按键映射](http://www.cnblogs.com/my_life/articles/3261873.html) 
 
-### Leader
+### <a id="leader">Leader</a>
 各类 vim 插件帮助文档中经常出现 <leader>，即前缀键，缓解了快捷键引起冲突的问题。
      
     let mapleader = ";"
 
-### Local Leader
+### <a id="localleader">Local Leader</a>
 Vim有另外一个“leader”成为“local leader“。这个leader用于那些只对某类文件 （如Python文件、HTML文件）而设置的映射。
 
     let maplocalleader = "\\"
@@ -722,6 +725,7 @@ Vim有另外一个“leader”成为“local leader“。这个leader用于那�
     :nnoremap <leader>ev :vsplit $MYVIMRC<cr> " 编辑配置文件
     :nnoremap <leader>sv :source $MYVIMRC<cr> " 重读配置文件
 
+### <a id="cusmapping">常用映射</a>
 常用操作设定成快捷键，提升效率：
 
      " 定义快捷键到行首和行尾
@@ -760,6 +764,8 @@ Vim有另外一个“leader”成为“local leader“。这个leader用于那�
     nnoremap <leader>a viw<esc>a"<esc>hbi"<esc>lel
     " 从插入模式返回到常用模式
     inoremap jk <esc>
+    " 在插入模式下敲击escape按键后执行<nop>(no operation)
+    :inoremap <esc> <nop>
 
 vimrc 修改后立即生效
 
