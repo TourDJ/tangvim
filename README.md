@@ -1007,6 +1007,22 @@ onoremap命令会告诉Vim当它在等待一个要附加在operator后面的move
     :help normal。
     :help execute。
     :help expr-quote了解你可以在字符串中使用的转义序列。
+
+
+#### 分组    
+使用Vim的代码折叠功能实现分组功能。在你的~/.vimrc文件中添加下面几行：
+
+    " Vimscript file settings ---------------------- {{{
+    augroup filetype_vim
+        autocmd!
+        autocmd FileType vim setlocal foldmethod=marker
+    augroup END
+    " }}}
+现在在显示~/.vimrc文件的窗口中执行`:setlocal foldmethod=marker`。如果你不执行这个命令，你会发现加载~/.vimrc文件后没什么效果。
+
+切换到常用模式，将光标放到这些文字中的任意一行，然后敲击za。Vim会折叠从包含{{{的行到包含}}}的行之间的所有行。再敲击za会展开所有这些行。
+
+
 ***
 
 ## <a id="abbrev">Abbreviations</a>
