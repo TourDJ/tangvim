@@ -52,9 +52,11 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [Abbreviations](#abbrev) 
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
-  - [vim 主题](#theme)   
-  - [vimscript 命令](#script)       
-  - [vim 文档](#doc)   
+  - [vim 主题](#theme) 
+  - [vimscript](#vimscript)    
+    - [vimscript 命令](#script)       
+  - [vim 文档](#doc)    
+  - [其他](#other)     
 ***
 
 # <a id="vim">vim 使用</a>
@@ -1163,32 +1165,14 @@ Lean & mean status/tabline for vim that's light as air.
 
   [收集漂亮的 Vim 主题](https://zhuanlan.zhihu.com/p/34699085)     
   
-  
-  
-## <a id="other">其他</a> 
-### <a id="vim8">vim7 升级 vim8</a>
-
-安装依赖
-
-     yum install libXt-devel gtk2-devel
-     yum -y install python-devel ruby ruby-devel perl perl-devel perl-ExtUtils-Embed
-     yum install ncurses-devel
-     yum install ctags
-
-下载源码并编译安装
-
-     ./configure --disable-selinux --enable-perlinterp=yes --enable-python3interp=yes --enable-rubyinterp=yes --enable-cscope --enable-gui=auto --with-features=huge --enable-multibyte --enable-xim --with-x --with-gnome --with-compiledby="tang" --prefix=/usr/local/vim8
-     make
-     make install
-
-***
+***  
 
 在 .vimrc 文件中，使用的语言就是 Vim 脚本语言(vim script)。vim 脚本相当于可直接在命令模式下执行的命令，只是不需要输入前面的冒号（如果用了冒号也不会出错）。因此，像设置选项、创建键盘映射这样的命令是直接可用的。当然，作为一种脚本语言，除了普通键盘上会输入的命令外，我们还需要一些更复杂的功能，特别是：变量，表达式，条件和循环语句，函数。
 
-## <a id="config">vimscript</a>
+## <a id="vimscript">vimscript</a>
 Vim的脚本语言被称为Vimscript，是典型的动态式命令语言，提供一些常用的语言特征：变量、表达式、控制结构、内置函数、用户自定义函数、一级字符串、列表、字典、终端、文件IO、正则表达式模式匹配、异常和集成调试器等。
 
-## <a id="script">vimscript 命令</a>
+### <a id="script">vimscript 命令</a>
 * :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
 
           :echo $MYVIMRC  查询 vimrc 文件的位置
@@ -1222,5 +1206,23 @@ Vim的脚本语言被称为Vimscript，是典型的动态式命令语言，提�
 * [vim doc](http://vimcdoc.sourceforge.net/doc/quickref.html)    
 
 *** 
+  
+## <a id="other">其他</a> 
+### <a id="vim8">vim7 升级 vim8</a>
+
+安装依赖
+
+     yum install libXt-devel gtk2-devel
+     yum -y install python-devel ruby ruby-devel perl perl-devel perl-ExtUtils-Embed
+     yum install ncurses-devel
+     yum install ctags
+
+下载源码并编译安装
+
+     ./configure --disable-selinux --enable-perlinterp=yes --enable-python3interp=yes --enable-rubyinterp=yes --enable-cscope --enable-gui=auto --with-features=huge --enable-multibyte --enable-xim --with-x --with-gnome --with-compiledby="tang" --prefix=/usr/local/vim8
+     make
+     make install
+
+***
 
 
