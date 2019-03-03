@@ -46,7 +46,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [自动命令组](#augroup)    
   - [Operator-Pending映射](#operator)  
     - [Movement映射](#movement)     
-    - [改变开始位置](#chgloc)    
+    - [改变开始位置](#chgloc)   
+    - [一般规则](#cusprin)     
   - [Abbreviations](#abbrev) 
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
@@ -890,7 +891,7 @@ vimrc 修改后立即生效
     dw     删除       到下一个单词
     ci(    修改       在括号内
     yt,    复制       到逗号
-###<a id="movement">Movement映射</a>
+### <a id="movement">Movement映射</a>
 Vim允许你创建任何新的movements，这些movements可以跟所有命令一起工作。执行下面的命令：
 
     :onoremap p i(
@@ -923,7 +924,7 @@ onoremap命令会告诉Vim当它在等待一个要附加在operator后面的move
 4 所有你想包含在movement中的文字都会被选中。     
 你所要做的工作就是在第三步中填上合适的按键。
 
-###<a id="chgloc">改变开始位置</a>
+### <a id="chgloc">改变开始位置</a>
 你可能已经从上面所学的东西中意识到一个了问题。如果我们定义的movements都是从光标所在的位置开始的话，那么这就会限制我们做一些我们想使用movement来做的事情。
 
 但是Vim并不会限制你去做你想做的事情，所以对于这个问题肯定有解决办法。执行下面的命令：
@@ -955,7 +956,7 @@ onoremap命令会告诉Vim当它在等待一个要附加在operator后面的move
 * vi(: 进入可视模式选择括号内的所有内容。
 这个movement结束在在可视模式下选择中我们想操作的文本，然后Vim会对选中的文本执行操作，就像通常情况一样。
 
-**一般规则**
+### <a id="cusprin">一般规则</a>
 下面两条规则可以让你可以很直观的以多种方式创建operator-pending映射：
 
 * 如果你的operator-pending映射以在可视模式下选中文本结束，Vim会操作这些文本。
