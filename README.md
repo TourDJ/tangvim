@@ -48,6 +48,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [Movement映射](#movement)     
     - [改变开始位置](#chgloc)   
     - [一般规则](#cusprin)     
+    - [复杂 Operator-Pending 映射](#moreop)      
   - [Abbreviations](#abbrev) 
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
