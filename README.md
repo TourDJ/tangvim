@@ -56,6 +56,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [vimscript](#vimscript)   
     - [变量](#varli)   
     - [条件语句](#condition)     
+    - [函数](#function)      
+    - [数据类型](datatype)     
     - [vimscript 命令](#script)       
   - [vim 文档](#doc)    
   - [其他](#other)     
@@ -1307,6 +1309,108 @@ Vim显示two因为<code>==#</code>是"无论你怎么设都大小写敏感"比�
 阅读`:help ignorecase`来看看为什么有的人设置了这个选项。
 
 阅读`:help expr4`看看所有允许的比较操作符
+
+### <a id="function">函数</a>
+Vimscript支持函数。
+
+没有作用域限制的Vimscript函数必须以一个大写字母开头！
+
+执行下面的命令：
+
+    :function Meow()
+    :  echom "Meow!"
+    :endfunction
+Vim定义了一个函数。
+
+运行它：
+
+    :call Meow()
+不出所料，Vim显示Meow!
+
+#### 调用函数
+第一种方法使用call命令。
+
+    :call Meow()
+第二种方法是在表达式里调用函数。
+
+    :echom GetMeow()
+#### 隐式返回
+如果一个Vimscript函数不返回一个值，它隐式返回0。
+
+执行下面命令：
+
+    :function TextwidthIsTooWide()
+    :  if &l:textwidth ># 80
+    :    return 1
+    :  endif
+    :endfunction
+这个函数涉及到我们之前学到的许多重要概念：
+* if语句
+* 将选项作为变量
+* 访问特定作用域里的选项变量
+* 大小写敏感的比较
+
+#### 函数参数
+执行下面的命令：
+
+    :function DisplayName(name)
+    :  echom "Hello!  My name is:"
+    :  echom a:name
+    :endfunction
+注意我们传递给echom命令的参数前面的a:。这表示一个变量的作用域，如果不带作用域前缀，Vim抱怨说它找不到变量。
+
+#### 可变参数
+Vimscript函数可以设计为接受不定数目的参数，就像Javascript和Python中的一样。执行下面命令：
+
+    :function Varg(...)
+    :  echom a:0
+    :  echom a:1
+    :  echo a:000
+    :endfunction
+
+    :call Varg("a", "b")
+函数定义中的...说明这个函数可以接受任意数目的参数。就像Python函数中的*args
+
+函数中的第一行为输出消息a:0，结果显示2。当你在Vim中定义了一个接受可变参数的函数， a:0将被设置为你额外给的参数数量。 刚才我们传递了两个参数给Varg，所以Vim显示2。
+
+第二行为输出a:1，结果显示a。你可以使用a:1,a:2等等来引用你的函数接受的每一个额外参数。 如果我们用的是a:2，Vim就会显示"b"
+
+第三行有些费解。当一个函数可以接受可变参数，a:000将被设置为一个包括所有传递过来的额外参数的列表(list)。 我们还没有讲过列表，所以不要太纠结于此。你不能对列表使用echom，因而在这里用echo代替。
+
+你也可以将可变参数和普通参数一起用。执行下面的命令：
+
+    :function Varg2(foo, ...)
+    :  echom a:foo
+    :  echom a:0
+    :  echom a:1
+    :  echo a:000
+    :endfunction
+
+    :call Varg2("a", "b", "c")
+我们可以看到Vim将"a"作为具名参数(named argument)a:foo的值，将余下的塞进可变参数列表中。
+
+#### 赋值
+试试执行下面的命令：
+
+    :function Assign(foo)
+    :  let a:foo = "Nope"
+    :  echom a:foo
+    :endfunction
+
+    :call Assign("test")
+Vim将抛出一个错误，因为你不能对参数变量重新赋值。现在执行下面的命令：
+
+    :function AssignGood(foo)
+    :  let foo_tmp = a:foo
+    :  let foo_tmp = "Yep"
+    :  echom foo_tmp
+    :endfunction
+
+    :call AssignGood("test")
+这次就可以了，Vim显示Yep。
+
+### <a id="datatype">数据类型</a>
+
 
 ### <a id="script">vimscript 命令</a>
 * :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
