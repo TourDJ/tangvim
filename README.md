@@ -1250,6 +1250,63 @@ Vim，像Python一样，支持"else"和"else if"分句。执行下面的命令�
     :    echom "finally!"
     :endif
 
+#### 比较
+Vim允许我们比较值的大小
+
+    :if 10 > 1
+    :    echom "foo"
+    :endif
+Vim会显示foo。
+
+#### 大小写敏感
+执行下面的命令：
+
+    :set noignorecase
+    :if "foo" == "FOO"
+    :    echom "vim is case insensitive"
+    :elseif "foo" == "foo"
+    :    echom "vim is case sensitive"
+    :endif
+Vim执行elseif分句,所以显然Vimscript是大小写敏感的。现在执行下面命令：
+
+    :set ignorecase
+    :if "foo" == "FOO"
+    :    echom "no, it couldn't be"
+    :elseif "foo" == "foo"
+    :    echom "this must be the one"
+    :endif
+...
+
+== 的行为取决于用户的设置。
+
+#### 防御性编程
+这意味着什么？意味着在为别人开发插件时，你不能信任==。 一个不加包装的==不能出现在你的插件代码里。
+
+好在Vim有额外两种比较操作符来处理这个问题。
+
+执行下面的命令：
+
+    :set noignorecase
+    :if "foo" ==? "FOO"
+    :    echom "first"
+    :elseif "foo" ==? "foo"
+    :    echom "second"
+    :endif
+Vim显示first因为<code>==?</code>是"无论你怎么设都大小写不敏感"比较操作符。
+
+现在执行下面的命令：
+
+    :set ignorecase
+    :if "foo" ==# "FOO"
+    :    echom "one"
+    :elseif "foo" ==# "foo"
+    :    echom "two"
+    :endif
+Vim显示two因为<code>==#</code>是"无论你怎么设都大小写敏感"比较操作符。
+
+阅读`:help ignorecase`来看看为什么有的人设置了这个选项。
+
+阅读`:help expr4`看看所有允许的比较操作符
 
 ### <a id="script">vimscript 命令</a>
 * :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
