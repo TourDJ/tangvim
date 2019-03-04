@@ -57,7 +57,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [变量](#varli)   
     - [条件语句](#condition)     
     - [函数](#function)      
-    - [数据类型](datatype)     
+    - [数据类型](#datatype)     
     - [vimscript 命令](#script)       
   - [vim 文档](#doc)    
   - [其他](#other)     
@@ -1410,7 +1410,19 @@ Vim将抛出一个错误，因为你不能对参数变量重新赋值。现在�
 这次就可以了，Vim显示Yep。
 
 ### <a id="datatype">数据类型</a>
+#### 数字
+Vimscript有两种数值类型：Number和Float。一个Number是32位带符号整数。一个Float是浮点数。
 
+示例：
+
+    :echom 100
+    :echom 0xff
+    :echo 100.1
+
+当你在运算，比较或其他操作中混合使用Number和Float类型，Vim将把Number转换成Float， 以Float格式作为结果。在两个Number之间的除法中，余数会被丢弃。如果你希望Vim使用浮点数除法，至少有一个数字必须是Float， 这样剩下的数字也会被转换成浮点数。执行下面命令：
+
+    :echo 3 / 2.0
+Vim输出1.5。
 
 ### <a id="script">vimscript 命令</a>
 * :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
