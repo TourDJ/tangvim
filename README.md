@@ -54,7 +54,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [vim 插件](#plugin)       
   - [vim 主题](#theme) 
   - [vimscript](#vimscript)   
-    - [变量](#varli)     
+    - [变量](#varli)   
+    - [条件语句](#condition)     
     - [vimscript 命令](#script)       
   - [vim 文档](#doc)    
   - [其他](#other)     
@@ -1225,6 +1226,30 @@ Vim会输出你刚刚使用的搜索模式。这样你就可以通过编程来�
 当某个变量由一个字符和冒号开头，那么这就表示它是一个作用域变量。
 
 > 查看 `:help internal-variables`
+
+### <a id="condition">条件语句</a>
+#### If
+每种编程语言都有产生分支流程的方法，在Vimscript中，这是用if语句实现的。 if语句是Vimscript中产生分支的基本方法。例如：
+
+    :if "9024"
+    :    echom "WHAT?!"
+    :endif
+对于Vimscript 的条件判断，我们可以得出结论：
+* 如有必要，Vim将强制转换变量(和字面量)的类型。在解析10 + "20foo"时，Vim将把 "20foo"转换成一个整数(20)然后加到10上去。
+* 以一个数字开头的字符串会被强制转换成数字，否则会转换成0
+* 在所有的强制转换完成后，当if的判断条件等于非零整数时，Vim会执行if语句体。
+
+#### Else 和 Elseif
+Vim，像Python一样，支持"else"和"else if"分句。执行下面的命令：
+
+    :if 0
+    :    echom "if"
+    :elseif "nope!"
+    :    echom "elseif"
+    :else
+    :    echom "finally!"
+    :endif
+
 
 ### <a id="script">vimscript 命令</a>
 * :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
