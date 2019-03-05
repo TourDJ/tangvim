@@ -1496,14 +1496,16 @@ execute允许你创建命令，因而你能够使用Vim普通的转义字符串�
 * `\<esc>`：这是一个表示Esc键的转义字符串序列，把我们带离insert模式。
 * <code>`q</code>：回到标记"q"所在的位置。
 
-* :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
+#### echo命令 
+会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
 
-          :echo $MYVIMRC  查询 vimrc 文件的位置
+    :echo $MYVIMRC  查询 vimrc 文件的位置
 
+#### numberwidth 
+选项改变行号的列宽。
 
-
-* numberwidth 选项改变行号的列宽。
-* viw 将高亮选中整个单词。
+#### viw 
+将高亮选中整个单词。
 
 **vimscript 语法速览**         
 [Five Minute Vimscript](http://andrewscala.com/vimscript/)    
