@@ -244,8 +244,6 @@ vim 常用设置参数
     "启动时隐去援助提示
     set shortmess=atI
 
-    "语法高亮
-    syntax on
 
     "使用vim的键盘模式
     "set nocompatible
@@ -283,12 +281,16 @@ vim 常用设置参数
 
 * 高亮    
 
-    "高亮查找匹配
-    set hlsearch
-    
-    set hlsearch incsearch
-    hlsearch 让Vim高亮文件中所有匹配项，incsearch 则令Vim在你正打着搜索内容时就高亮下一个匹配项
+        set hlsearch
+        高亮查找匹配
 
+        set hlsearch incsearch
+        hlsearch 让Vim高亮文件中所有匹配项，incsearch 则令Vim在你正打着搜索内容时就高亮下一个匹配项
+
+        syntax on
+        语法高亮
+
+* a
 
     "背景色
     set background=dark
@@ -299,19 +301,21 @@ vim 常用设置参数
     "显示标尺，就是在右下角显示光标位置
     set ruler
 
-    "允许折叠
-    set foldenable
-    """""""""""""""""设置折叠"""""""""""""""""""""
-    "
-    "根据语法折叠
-    set fdm=syntax
+* 折叠
 
-    "手动折叠
-    "set fdm=manual
+        "允许折叠
+        set foldenable
 
-    "设置键盘映射，通过空格设置折叠
-    nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
-    """"""""""""""""""""""""""""""""""""""""""""""
+        "根据语法折叠
+        set fdm=syntax
+
+        "手动折叠
+        "set fdm=manual
+
+        "设置键盘映射，通过空格设置折叠
+        nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
+
+
     "不要闪烁
     set novisualbell
 
