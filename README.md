@@ -281,8 +281,14 @@ vim 常用设置参数
     "智能缩进
     set smartindent
 
+* 高亮    
+
     "高亮查找匹配
     set hlsearch
+    
+    set hlsearch incsearch
+    hlsearch 让Vim高亮文件中所有匹配项，incsearch 则令Vim在你正打着搜索内容时就高亮下一个匹配项
+
 
     "背景色
     set background=dark
@@ -1446,8 +1452,46 @@ Vim也允许你使用"字符串字面量"来避免转义字符串的滥用。
     :echom '\n\\'
 使用单引号将告诉Vim，你希望字符串所见即所得，无视转义字符串。 一个例外是一行中连续两个单引号将产生一个单引号。
 
-
 ### <a id="script">vimscript 命令</a>
+
+#### Execute命令
+`execute` 命令用来把一个字符串当作Vimscript命令执行。
+
+执行下面的命令：
+
+    :execute "rightbelow vsplit " . bufname("#")
+Vim将在第二个文件的右边打开第一个文件的竖直分割窗口(vertical split)。
+
+浏览 `:help execute`
+
+阅读 `:help leftabove，:help rightbelow，:help :split和:help :vsplit`
+
+#### Normal命令
+normal命令简单地接受一串键值并当作是在normal模式下输入的。
+
+执行下面的命令：
+
+    :normal G
+Vim将把你的光标移到当前文件的最后一行，就像是在normal模式里按下G。
+
+*在写Vim脚本时，你应该总是使用 `normal!` 避免映射，永不使用 `normal`*。
+
+既然已经学了execute和normal!，我们就可以深入探讨一个Vimscript惯用法。 执行下面的命令：
+
+    :execute "normal! gg/foo\<cr>dd"
+这将移动到文件的开头，查找foo的首次出现的地方，并删掉那一行。
+
+execute允许你创建命令，因而你能够使用Vim普通的转义字符串来生成你需要的"打不出"的字符。 尝试下面的命令：
+
+    :execute "normal! mqA;\<esc>`q"
+分析：
+* `:execute "normal! ..."`：执行命令序列，一如它们是在normal模式下输入的，忽略所有映射， 并替换转义字符串。
+* `mq`：保存当前位置到标记"q"。
+* `A`：移动到当前行的末尾并在最后一个字符后进入insert模式。
+* `;`：我们现在位于insert模式，所以仅仅是写入了一个";"。
+* `\<esc>`：这是一个表示Esc键的转义字符串序列，把我们带离insert模式。
+* <code>`q</code>：回到标记"q"所在的位置。
+
 * :echo命令 会打印输出，但是一旦你的脚本运行完毕，那些输出信息就会消失。使用:echom打印的信息 会保存下来，你可以执行:messages命令再次查看那些信息。
 
           :echo $MYVIMRC  查询 vimrc 文件的位置
