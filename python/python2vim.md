@@ -29,6 +29,30 @@ Compiling YCM with semantic support for C-family languages through libclang:
 [Building Vim from source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)    
 
 
+## pip3 and ipython3 install
+pip3 的install, upgrade and remove
+
+	Install
+	sudo apt-get install python3-pip
+
+	Upgrade
+	sudo pip3 install --upgrade pip
+
+	Remove
+	sudo apt-get remove python3-pip
+
+ipython3 instlal
+
+	Install ipython3 with pip
+	pip3 install ipython
+
+	Find the ipython install path
+	find / -name ipython3
+
+	Link ipython3 to PATH
+	sudo ln -s /home/tang/.local/bin/ipython3 /usr/bin/ipython3
+
+
 ## Error
 * Sorry, the command is not available in this version: py << EOF    
 
