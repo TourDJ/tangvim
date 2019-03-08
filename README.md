@@ -40,7 +40,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [键盘映射](#mapping)  
     - [Leader](#leader)    
     - [遮盖](#override)   
-    - [常用映射](#cusmapping)     
+    - [常用映射](#cusmapping)   
+    - [常用映射 snippet](#snippet)    
   - [自动命令](#autocmd)    
     - [FileType事件](#filetype)   
     - [自动命令组](#augroup)    
@@ -831,7 +832,7 @@ vimrc 修改后立即生效
      " 让配置变更立即生效
      autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
-#### 常用映射 snippet
+#### <a id="snippet">常用映射 snippet</a>
 * 显示当前foldcolumn选项的值
 
         nnoremap <leader>f :call FoldColumnToggle()<cr>
