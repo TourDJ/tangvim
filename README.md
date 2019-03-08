@@ -59,6 +59,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [函数](#function)      
     - [数据类型](#datatype)   
     - [列表](#list)     
+    - [循环](#loop)    
     - [vimscript 命令](#script)       
   - [vim 文档](#doc)    
   - [其他](#other)     
@@ -1464,13 +1465,13 @@ Vimscript列表是有序的，异质的元素集合。执行下面的命令：
 
     :echo ['foo', 3, 'bar']
 
-<h4>索引</h4>
+#### 索引
 Vimscript列表的索引从0开始，也可以从列表结尾进行索引。
 
     :echo [0, [1, 2]][1]
     :echo [0, [1, 2]][-2]
 
-<h4>切割</h4>      
+#### 切割    
 Vim列表也可被切割。类似于 python，区别是包括上下限。
 
     :echo ['a', 'b', 'c', 'd', 'e'][0:2]
@@ -1481,12 +1482,77 @@ Vim列表也可被切割。类似于 python，区别是包括上下限。
     :echo ['a', 'b', 'c', 'd', 'e'][:1]
     :echo ['a', 'b', 'c', 'd', 'e'][3:]
 
-<h4>连接</h4>
+#### 连接
 用+连接Vim列表。试试这个命令：
 
     :echo ['a', 'b'] + ['c']
 
-<h4>列表函数</h4>
+#### 列表函数
+Vim有着许许多多内置列表函数。
+
+* add 列表增加元素    
+
+        :let foo = ['a']
+        :call add(foo, 'b')
+        :echo foo
+* len 列表的长度     
+
+        :echo len(foo)
+* get 返回给定索引对应的给定列表的项，如果索引超过列表范围， 返回给定的默认值。
+
+        :echo get(foo, 0, 'default')
+        :echo get(foo, 100, 'default')
+* index 返回给定项在给定列表的第一个索引，如果不在列表中则返回-1。
+
+        :echo index(foo, 'b')
+        :echo index(foo, 'nope')
+* join 先将给定列表的每一项强制转换成字符串， 再以给定的分割字符串(或一个空格，如果没有给的话)作为分割，连接成一个字符串。
+
+        :echo join(foo)
+        :echo join(foo, '---')
+        :echo join([1, 2, 3], '')
+* reverse 反转列表
+
+        :call reverse(foo)
+
+### <a id="loop">循环</a>
+第一种循环是for循环。
+#### For循环
+执行下面的命令：
+
+    :let c = 0
+
+    :for i in [1, 2, 3, 4]
+    :  let c += i
+    :endfor
+
+    :echom c
+Vimscript中不存在C风格的for (int i = 0; i < foo; i++)。
+
+#### While循环
+执行下面命令：
+
+    :let c = 1
+    :let total = 0
+
+    :while c <= 4
+    :  let total += c
+    :  let c += 1
+    :endwhile
+
+    :echom total
+
+#### <a id="dict">字典</a>
+Vimscript字典类似于Python中的dict，和Javascript中的object。    
+
+执行这个命令：
+
+    :echo {'a': 1, 100: 'foo'}
+当键仅由字母，数字和/或下划线组成时，Vimscript也支持Javascript风格的"点"查找。 试试下面的命令：
+
+    :echo {'a': 1, 100: 'foo',}.a
+    :echo {'a': 1, 100: 'foo',}.100
+
 
 ### <a id="script">vimscript 命令</a>
 
