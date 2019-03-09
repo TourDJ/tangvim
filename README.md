@@ -61,6 +61,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [列表](#list)     
     - [循环](#loop)    
     - [字典](#dict)    
+    - [函数式编程](functional)   
     - [vimscript 命令](#script)       
   - [vim 文档](#doc)    
   - [其他](#other)     
@@ -1554,6 +1555,35 @@ Vimscript字典类似于Python中的dict，和Javascript中的object。
     :echo {'a': 1, 100: 'foo',}.a
     :echo {'a': 1, 100: 'foo',}.100
 
+### <a id="functional">函数式编程</a>
+#### 作为变量的函数
+Vimscript支持使用变量储存函数。执行下面的命令：
+
+    :let Myfunc = function("Append")
+    :echo Myfunc([1, 2], 3)
+> 注意我们使用的变量以大写字母开头。 如果一个Vimscript变量要引用一个函数，它就要以大写字母开头。
+
+函数也可以储存在列表里。执行下面命令：
+
+    :let funcs = [function("Append"), function("Pop")]
+    :echo funcs[1](['a', 'b', 'c'], 1)
+储存在列表的函数变量不需要以大写字母开头。
+
+#### 高阶函数
+高阶函数就是接受别的函数并使用它们的函数。
+
+添加代码：
+
+    function! Mapped(fn, l)
+        let new_list = deepcopy(a:l)
+        call map(new_list, string(a:fn) . '(v:val)')
+        return new_list
+    endfunction
+执行：
+
+    :let mylist = [[1, 2], [3, 4]]
+    :echo Mapped(function("Reversed"), mylist)
+Vim显示[[2, 1], [4, 3]]，正好是对列表中的每一个元素应用了Reversed()的结果。
 
 ### <a id="script">vimscript 命令</a>
 
