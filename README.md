@@ -52,6 +52,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [Abbreviations](#abbrev) 
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
+    - [插件管理工具](#plugintool)     
   - [vim 主题](#theme) 
   - [vimscript](#vimscript)   
     - [变量](#varli)   
@@ -1078,11 +1079,12 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
      :set runtimepath?
 
 ## <a id="plugin">vim 插件</a>
-相比sublime text2等现代编辑器，Vim缺乏默认的插件管理器，所有插件的文件都散布在~/.vim下的几个文件夹中。不过可以通过安装插件管理工具来管理插件，用户需要做的只是去Github上找到自己想要的插件的名字，安装，更新就可以用了。
+相比sublime text3等现代编辑器，Vim缺乏默认的插件管理器，所有插件的文件都散布在~/.vim下的几个文件夹中。不过可以通过安装插件管理工具来管理插件，用户需要做的只是去Github上找到自己想要的插件的名字，安装，更新就可以用了。
 
 相关链接：    
 [Setting up Vim for React.js](https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015)    
 
+### <a id="plugintool">插件管理工具</a>
 常用的 vim 插件管理工具：
 
 * pathogen       
@@ -1104,6 +1106,11 @@ pathogen 插件的安装：
       :PluginSearch foo - searches for foo; append `!` to refresh local cache
       :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
+### <a id="pluginconfig">基本配置方式</a>
+Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不同种类的文件夹来放置不同的内容。在Vim里，"插件(plugin)"有一个更专业的定义，它表示"~/.vim/plugins/下的一个文件"。
+
+* ~/.vim/colors/    
+Vim将会查找~/.vim/colors/mycolors.vim并执行它。 这个文件应该包括生成你的配色方案所需的一切Vimscript命令。
 
 ### 常用插件
 * [NERD Tree](https://github.com/scrooloose/nerdtree)是一个树形目录插件，方便浏览当前目录有哪些目录和文件。   
