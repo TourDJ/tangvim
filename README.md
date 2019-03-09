@@ -63,6 +63,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [字典](#dict)    
     - [函数式编程](#functional)   
     - [vimscript 命令](#script)       
+    - [路径](#path)   
   - [vim 文档](#doc)    
   - [其他](#other)     
 ***
@@ -1635,6 +1636,32 @@ execute允许你创建命令，因而你能够使用Vim普通的转义字符串�
 
 #### viw 
 将高亮选中整个单词。
+
+### <a id="path">路径</a>
+#### 绝对路径
+执行下面的命令：
+
+    :echom expand('%')
+    :echom expand('%:p')
+    :echom fnamemodify('foo.txt', ':p')
+第一个命令显示我们正在编辑的文件的相对路径。%表示"当前文件"。 Vim也支持其他一些字符串作为expand()的参数。    
+第二个命令显示当前文件的完整的绝对路径名。字符串中的:p告诉Vim你需要绝对路径。 这里也有许多别的修饰符可以用到。    
+第三个命令显示了当前文件夹下的文件foo.txt的绝对路径，无论文件是否存在。    
+> fnamemodify()是一个比expand()灵活多了的Vim函数， 你可以指定任意文件名作为fnamemodify()的参数，而不仅仅是expand()所需要的那种特殊字符串。
+
+#### 列出文件
+执行下面的命令：
+
+    :echo globpath('.', '*')
+Vim将输出当前目录下所有的文件和文件夹。globpath()函数返回一个字符串， 其中每一项都用换行符隔开。为了得到一个列表，你需要自己去split()。执行这个命令：
+
+    :echo split(globpath('.', '*'), '\n')
+这次Vim显示一个包括各个文件路径的Vimscript列表。
+
+你可以用\*\*递归地列出文件。执行这个命令：
+
+    :echo split(globpath('.', '**'), '\n')
+Vim将列出当前文件夹下的所有文件及文件夹。
 
 **vimscript 语法速览**         
 [Five Minute Vimscript](http://andrewscala.com/vimscript/)    
