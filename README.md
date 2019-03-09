@@ -64,8 +64,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [函数式编程](#functional)   
     - [vimscript 命令](#script)       
     - [路径](#path)   
-  - [vim 文档](#doc)    
-  - [其他](#other)     
+  - [其他](#other)  
+  - [vim 文档](#doc)       
 ***
 
 # <a id="vim">vim 使用</a>
@@ -1679,14 +1679,6 @@ Vim将列出当前文件夹下的所有文件及文件夹。
 [Part 5: Event-driven scripting and automation](https://www.ibm.com/developerworks/linux/library/l-vim-script-5/index.html?ca=drs-)    
 
 ***
-
-
-## <a id="doc">vim 文档</a>
-
-* [vim cookbook](http://www.oualline.com/vim-cook.html#last)     
-* [vim doc](http://vimcdoc.sourceforge.net/doc/quickref.html)    
-
-*** 
   
 ## <a id="other">其他</a> 
 ### <a id="vim8">vim7 升级 vim8</a>
@@ -1705,5 +1697,12 @@ Vim将列出当前文件夹下的所有文件及文件夹。
      make install
 
 ***
+
+## <a id="doc">vim 文档</a>
+
+* [vim cookbook](http://www.oualline.com/vim-cook.html#last)     
+* [vim doc](http://vimcdoc.sourceforge.net/doc/quickref.html)    
+
+*** 
 
 
