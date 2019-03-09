@@ -1,5 +1,5 @@
 
-" 常用映射 snippet
+" ============ 常用映射 snippet ============
 
 " 显示当前foldcolumn选项的值, 使用： 按下<leader>f
 nnoremap <leader>f :call FoldColumnToggle()<cr>
