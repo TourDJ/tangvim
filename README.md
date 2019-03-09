@@ -40,8 +40,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [键盘映射](#mapping)  
     - [Leader](#leader)    
     - [遮盖](#override)   
-    - [常用映射](#cusmapping)   
-    - [常用映射 snippet](#snippet)    
+    - [常用映射](#cusmapping)     
   - [自动命令](#autocmd)    
     - [FileType事件](#filetype)   
     - [自动命令组](#augroup)    
@@ -637,14 +636,14 @@ vi/vim 中可以使用 :s 命令来替换字符串
 在用vim编辑html和xml时经常使用 cit 操作来删除一对标签内的文字。
 
 #### 常用命令
-     %	跳转到配对的括号去
-     [[	跳转到代码块的开头去(但要求代码块中'{'必须单独占一行)
-     gD	跳转到局部变量的定义处
-     ''	跳转到光标上次停靠的地方, 是两个', 而不是一个"
-     mx	设置书签,x只能是a-z的26个字母
-     `x	跳转到书签处("`"是1左边的键)
-     >	增加缩进,"x>"表示增加以下x行的缩进
-     <	减少缩进,"x<"表示减少以下x行的缩进
+     %  跳转到配对的括号去
+     [[ 跳转到代码块的开头去(但要求代码块中'{'必须单独占一行)
+     gD 跳转到局部变量的定义处
+     '' 跳转到光标上次停靠的地方, 是两个', 而不是一个"
+     mx 设置书签,x只能是a-z的26个字母
+     `x 跳转到书签处("`"是1左边的键)
+     >  增加缩进,"x>"表示增加以下x行的缩进
+     <  减少缩进,"x<"表示减少以下x行的缩进
 
 ***
 
@@ -831,48 +830,6 @@ vimrc 修改后立即生效
 
      " 让配置变更立即生效
      autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
-#### <a id="snippet">常用映射 snippet</a>
-* 显示当前foldcolumn选项的值
-
-        nnoremap <leader>f :call FoldColumnToggle()<cr>
-
-        function! FoldColumnToggle()
-            echom &foldcolumn
-        endfunction
-使用： 按下<leader>f
-    
-* 显示或隐藏折叠状态条
-
-        nnoremap <leader>f :call FoldColumnToggle()<cr>
-
-        function! FoldColumnToggle()
-            if &foldcolumn
-                setlocal foldcolumn=0
-            else
-                setlocal foldcolumn=4
-            endif
-        endfunction
-使用： 按下<leader>f
-
-* 显示隐藏窗口
-
-        nnoremap <leader>q :call QuickfixToggle()<cr>
-
-        let g:quickfix_is_open = 0
-
-        function! QuickfixToggle()
-            if g:quickfix_is_open
-                cclose
-                let g:quickfix_is_open = 0
-                execute g:quickfix_return_to_window . "wincmd w"
-            else
-                let g:quickfix_return_to_window = winnr()
-                copen
-                let g:quickfix_is_open = 1
-            endif
-        endfunction
-
 
 ***
 
