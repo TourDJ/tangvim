@@ -61,7 +61,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [列表](#list)     
     - [循环](#loop)    
     - [字典](#dict)    
-    - [函数式编程](functional)   
+    - [函数式编程](#functional)   
     - [vimscript 命令](#script)       
   - [vim 文档](#doc)    
   - [其他](#other)     
