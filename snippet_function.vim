@@ -37,3 +37,15 @@ function! Pop(l, i)
     return new_list
 endfunction
 
+
+"  高阶函数
+
+" 对列表中的每一个元素应用传入的函数
+" 使用： 
+"   let mylist = [[1, 2], [3, 4]]
+"   echo Mapped(function("Reversed"), mylist)
+function! Mapped(fn, l)
+    let new_list = deepcopy(a:l)
+    call map(new_list, string(a:fn) . '(v:val)')
+    return new_list
+endfunction
