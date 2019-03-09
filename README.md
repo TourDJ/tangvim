@@ -1119,8 +1119,17 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 * `~/.vim/ftplugin/` `~/.vim/ftplugin/`下的文件则各不相同。一切皆取决于它的名字!
     * 当Vim把一个缓冲区的`filetype`设置成某个值时， 它会去查找`~/.vim/ftplugin/`下对应的文件。 比如：如果你执行`set filetype=derp`，Vim将查找`~/.vim/ftplugin/derp.vim`。 一旦文件存在`，Vim`将执行它。
     * Vim也支持在`~/.vim/ftplugin/`下放置文件夹。 再以我们刚才的例子为例：`set filetype=derp`将告诉Vim去执行`~/.vim/ftplugin/derp/`下的全部`*.vim`文件。 这使得你可以按代码逻辑分割在`ftplugin`下的文件。
-
 因为每次在一个缓冲区中执行filetype时都会执行这些文件，所以它们只能设置buffer-local选项！ 如果在它们中设置了全局选项，所有打开的缓冲区的设置都会遭到覆盖！
+
+* `~/.vim/indent/` `~/.vim/indent/`下的文件类似于`ftplugin`下的文件。加载时也是只加载名字对应的文件。`indent`文件应该设置跟对应文件类型相关的缩进，而且这些设置应该是buffer-local的。
+
+* `~/.vim/compiler/` `~/.vim/compiler`下的文件非常类似于`indent`文件。它们应该设置同类型名的当前缓冲区下的编译器相关选项。
+
+* `~/.vim/after/` `~/.vim/after`文件夹有点神奇。这个文件夹下的文件会在每次Vim启动的时候加载， 不过是在~/.vim/plugin/下的文件加载了之后。这允许你覆盖Vim的默认设置。实际上你将很少需要这么做，所以不用理它， 除非你有"Vim设置了选项x，但我想要不同的设置"的主意。
+
+* `~/.vim/autoload/` `~/.vim/autoload`文件夹就更加神奇了。事实上它的作用没有听起来那么复杂。简明扼要地说：`autoload`是一种延迟插件代码到需要时才加载的方法。 我们将在重构插件的时候详细讲解并展示它的用法。
+
+* `~/.vim/doc/` `~/.vim/doc/`文件夹提供了一个你可以放置你的插件的文档的地方。 Vim对文档的要求是多多益善(看看我们执行过的所有:help命令就知道)，所以为你的插件写文档是重要的。
 
 ### 常用插件
 * [NERD Tree](https://github.com/scrooloose/nerdtree)是一个树形目录插件，方便浏览当前目录有哪些目录和文件。   
