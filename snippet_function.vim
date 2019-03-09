@@ -9,7 +9,10 @@ function! Sorted(l)
     return new_list
 endfunction
 
-" 接受一个列表并返回一个新的倒置了元素的列表。
+" 名称： Reversed
+" 功能： 接受一个列表并返回一个新的倒置了元素的列表。
+" 参数： l 列表
+" 使用： 
 function! Reversed(l)
     let new_list = deepcopy(a:l)
     call reverse(new_list)
@@ -38,9 +41,12 @@ function! Pop(l, i)
 endfunction
 
 
-"  高阶函数
+" ~~~~~~~~~~~~ 高阶函数
 
-" 对列表中的每一个元素应用传入的函数
+" 名称： Mapped
+" 功能： 对列表中的每一个元素应用传入的函数
+" 参数： fn 执行函数
+"       l 列表
 " 使用： 
 "   let mylist = [[1, 2], [3, 4]]
 "   echo Mapped(function("Reversed"), mylist)
@@ -49,3 +55,34 @@ function! Mapped(fn, l)
     call map(new_list, string(a:fn) . '(v:val)')
     return new_list
 endfunction
+
+" 名称： Filtered
+" 功能： 返回一个列表的副本，过滤掉所有长度为0的元素。
+" 参数： fn 执行函数
+"       l 列表
+" 使用： 
+"   let mylist = [[1, 2], [], ['foo'], []]
+"   echo Filtered(function('len'), mylist)
+function! Filtered(fn, l)
+    let new_list = deepcopy(a:l)
+    call filter(new_list, string(a:fn) . '(v:val)')
+    return new_list
+endfunction
+
+" 名称： Removed
+" 功能： 返回非真值的元素。
+" 参数： fn 执行函数
+"       l 列表
+" 使用： 
+"   let mylist = [[1, 2], [], ['foo'], []]
+"   echo Removed(function('len'), mylist)
+function! Removed(fn, l)
+    let new_list = deepcopy(a:l)
+    call filter(new_list, '!' . string(a:fn) . '(v:val)')
+    return new_list
+endfunction
+
+
+
+
+
