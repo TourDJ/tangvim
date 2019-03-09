@@ -53,6 +53,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [Keyword Characters](#keyword)    
   - [vim 插件](#plugin)       
     - [插件管理工具](#plugintool)     
+    - [基本配置方式](#pluginconfig)    
   - [vim 主题](#theme) 
   - [vimscript](#vimscript)   
     - [变量](#varli)   
@@ -1109,8 +1110,11 @@ pathogen 插件的安装：
 ### <a id="pluginconfig">基本配置方式</a>
 Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不同种类的文件夹来放置不同的内容。在Vim里，"插件(plugin)"有一个更专业的定义，它表示"~/.vim/plugins/下的一个文件"。
 
-* ~/.vim/colors/    
-Vim将会查找~/.vim/colors/mycolors.vim并执行它。 这个文件应该包括生成你的配色方案所需的一切Vimscript命令。
+* `~/.vim/colors/`    
+Vim将会查找 `~/.vim/colors/mycolors.vim` 并执行它。 这个文件应该包括生成你的配色方案所需的一切Vimscript命令。
+
+* `~/.vim/plugin/`
+`~/.vim/plugin/` 下的文件将在每次Vim启动的时候执行。 这里的文件包括那些无论何时，在启动Vim之后你就想加载的代码。
 
 ### 常用插件
 * [NERD Tree](https://github.com/scrooloose/nerdtree)是一个树形目录插件，方便浏览当前目录有哪些目录和文件。   
