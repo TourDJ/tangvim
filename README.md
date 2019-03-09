@@ -1131,40 +1131,6 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 * `~/.vim/doc/` `~/.vim/doc/`文件夹提供了一个你可以放置你的插件的文档的地方。 Vim对文档的要求是多多益善(看看我们执行过的所有:help命令就知道)，所以为你的插件写文档是重要的。
 
-### 常用插件
-* [NERD Tree](https://github.com/scrooloose/nerdtree)是一个树形目录插件，方便浏览当前目录有哪些目录和文件。   
-
-常用快捷键来操作目录：
-
-    通过hjkl来移动光标
-    o打开关闭文件或目录，如果想打开文件，必须光标移动到文件名
-    t在标签页中打开
-    s和i可以水平或纵向分割窗口打开文件
-    p到上层目录
-    P到根目录
-    K到同目录第一个节点
-    P到同目录最后一个节点??
-
-* [Vim Powerline](https://github.com/powerline/powerline/tree/master)是一个显示vim状态栏插件，它能够显示vim模式、操作环境、编码格式、行数/列数等信息。使用时注意切换分支。     
-
-* [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides) 多层缩进    
-安装好后作以下配置
-
-     " 随 vim 自启动
-     let g:indent_guides_enable_on_vim_startup=1
-     " 从第二层开始可视化显示缩进
-     let g:indent_guides_start_level=2
-     " 色块宽度
-     let g:indent_guides_guide_size=1
-     " 快捷键 i 开/关缩进可视化
-     :nmap <silent> <Leader>i <Plug>IndentGuidesToggle
-
-* [nerdcommenter](https://github.com/scrooloose/nerdcommenter)注释插件
-默认配置了一些快捷键
-
-     <leader>cc，注释当前选中文本，如果选中的是整行则在每行首添加 //，如果选中一行的部分内容则在选中部分前后添加分别 /、/；
-     <leader>cu，取消选中文本块的注释
-
 ***
 
 环境变量 $VIMRUNTIME 用来找出各种支持文件。colors,plugins,docs都是在 VIMRUNTIME 目录下的。可以使用以下命令查看：
