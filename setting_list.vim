@@ -18,8 +18,8 @@ set shortmess=atI   "启动时隐去援助提示
 set tabstop=4       "指定在进行缩进格式化源码时制表符占据的空格数。
 set shiftwidth=4    "如何处理连续多个空格。   
 set softtabstop=4   "是否将tab转换为空格。
-set expandtab
-set smarttab
+set expandtab       "tab替换为空格键
+set smarttab        
 set autoread        "文件自动检测外部更改
 set cindent         "c文件自动缩进
 set autoindent      "自动对齐
