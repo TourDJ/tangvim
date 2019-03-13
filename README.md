@@ -250,16 +250,10 @@ vim 主要有两种选项：布尔选项（值为"on"或"off"）和键值选项�
 Vim支持六种不同的决定如何折叠你的文本的折叠类型。
 
 * Manual
-你手动创建折叠并且折叠将被Vim储存在内存中。 当你关闭Vim时，它们也将一并烟消云散，而下次你编辑文件时将不得不重新创建。
-
-在你把它跟一些自定义的创建折叠的映射结合起来时，这种方式会很方便。 
+你手动创建折叠并且折叠将被Vim储存在内存中。 当你关闭Vim时，它们也将一并烟消云散，而下次你编辑文件时将不得不重新创建。在你把它跟一些自定义的创建折叠的映射结合起来时，这种方式会很方便。 
 
 * Marker
-Vim基于特定的字符组合折叠你的代码。
-
-这些字符通常放置于注释中(比如// {{{)， 不过在有些语言里，你可以使用该语言自己的语法代替，比如javascript的{和}。
-
-纯粹为了你的编辑器，用注释割裂你的代码看上去有点丑，但好处是你可以定制特定的折叠。 如果你想以特定的方式组织一个大文件，这个类型将是非常棒的选择。
+Vim基于特定的字符组合折叠你的代码。这些字符通常放置于注释中(比如// {{{)， 不过在有些语言里，你可以使用该语言自己的语法代替，比如javascript的{和}。纯粹为了你的编辑器，用注释割裂你的代码看上去有点丑，但好处是你可以定制特定的折叠。 如果你想以特定的方式组织一个大文件，这个类型将是非常棒的选择。
 
 * Diff
 在diff文件时使用该特定的折叠类型。我们不会讨论它，因为Vim会自动使用它。
@@ -269,114 +263,6 @@ Vim基于特定的字符组合折叠你的代码。
 
 * Indent
 Vim使用你的代码的缩进来折叠。同样缩进等级的代码折叠到一块，空行则被折叠到周围的行一起去。
-
-vim 常用设置参数
-
-    "显示行号
-    set nu
-
-    "启动时隐去援助提示
-    set shortmess=atI
-
-
-    "使用vim的键盘模式
-    "set nocompatible
-
-    "不需要备份
-    set nobackup
-
-    "没有保存或文件只读时弹出确认
-    set confirm
-
-    "鼠标可用
-    set mouse=a     
-    
-    "指定我们在插入模式下输入一个制表符占据的空格数量，linux 内核编码规范建议是 8。
-    set tabstop=4
-    "指定在进行缩进格式化源码时制表符占据的空格数。
-    set shiftwidth=4
-    "如何处理连续多个空格。   
-    set softtabstop=4
-    "是否将tab转换为空格。
-    set expandtab
-    set smarttab
-
-    "文件自动检测外部更改
-    set autoread
-
-    "c文件自动缩进
-    set cindent
-
-    "自动对齐
-    set autoindent
-
-    "智能缩进
-    set smartindent
-
-* 高亮    
-
-        set hlsearch
-        高亮查找匹配
-
-        set hlsearch incsearch
-        hlsearch 让Vim高亮文件中所有匹配项，incsearch 则令Vim在你正打着搜索内容时就高亮下一个匹配项
-
-        syntax on
-        语法高亮
-
-* a
-
-    "背景色
-    set background=dark
-
-    "显示匹配
-    set showmatch
-
-    "显示标尺，就是在右下角显示光标位置
-    set ruler
-
-* 折叠
-
-        "允许折叠
-        set foldenable
-
-        "根据语法折叠
-        set fdm=syntax
-
-        "手动折叠
-        "set fdm=manual
-
-        "设置键盘映射，通过空格设置折叠
-        nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
-
-
-    "不要闪烁
-    set novisualbell
-
-    "启动显示状态行
-    set laststatus=2
-
-    "浅色显示当前行
-    autocmd InsertLeave * se nocul
-
-    "用浅色高亮当前行
-    autocmd InsertEnter * se cul
-
-    "显示输入的命令
-    set showcmd
-
-    "被分割窗口之间显示空白
-    set fillchars=vert:/
-
-    set fillchars=stl:/
-
-    set fillchars=stlnc:/
-
-paste：粘贴模式，会取消所有上述选项的影响来保证后面的操作。通常是从剪贴板粘贴代码——保持原有代码的风格，使用 nopaste 取消设置。
-
-     :set paste
-     :set nopaste
-
 
 **代码折叠**     
 vim 自身支持多种折叠：
