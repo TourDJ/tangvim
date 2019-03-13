@@ -22,6 +22,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [vim 模式](#mode)   
   - [vim 缓冲区](#buffer)    
   - [vim 配置](#config)      
+    - [选项](#option)      
   - [vim 命令](#vimcmd)      
     - [文件命令](#vimcmd_file)      
     - [插入命令](#vimcmd_insert)     
@@ -226,6 +227,7 @@ vim 的全局配置文件是： /etc/vimrc，用户的配置文件为 ~/.vimrc�
     :source ~/.vimrc
 > 注意命令前面的冒号，是在vim的命令模式下执行的，不是在linux命令行下执行。
 
+### <a id="option">选项</a>
 vim 主要有两种选项：布尔选项（值为"on"或"off"）和键值选项。      
 配置方法。
 
