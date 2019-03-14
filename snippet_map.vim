@@ -23,9 +23,7 @@ endfunction
 
 " 显示隐藏窗口
 nnoremap <leader>q :call QuickfixToggle()<cr>
-
 let g:quickfix_is_open = 0
-
 function! QuickfixToggle()
     if g:quickfix_is_open
         cclose
@@ -37,3 +35,14 @@ function! QuickfixToggle()
         let g:quickfix_is_open = 1
     endif
 endfunction
+
+
+" 在vim中执行python代码
+map <F5> :call RunPython()<CR>
+func! RunPython()
+    exec "W"
+    if &filetype == 'python'
+        exec "!time python2.7 %"
+    endif
+endfunc
+
