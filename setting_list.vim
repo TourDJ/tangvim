@@ -61,19 +61,6 @@ nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
 "  * zR 打开所有折叠
 
 
-"浅色显示当前行
-autocmd InsertLeave * se nocul
-
-"用浅色高亮当前行
-autocmd InsertEnter * se cul
-
-
-"被分割窗口之间显示空白
-set fillchars=vert:/
-set fillchars=stl:/
-set fillchars=stlnc:/
-
-
 """"""""""
 " 粘贴 
 """"""""""
@@ -93,11 +80,16 @@ set nopaste
 set splitbelow   "窗口在下方打开
 set splitright   "窗口在右边打开
 
+"被分割窗口之间显示空白
+set fillchars=vert:/
+set fillchars=stl:/
+set fillchars=stlnc:/
+
 "切换窗口
-Ctrl-w-j "切换到下方的分割窗口
-Ctrl-w-k "切换到上方的分割窗口
-Ctrl-w-l "切换到右侧的分割窗口
-Ctrl-w-h "切换到左侧的分割窗口
+"Ctrl-w-j "切换到下方的分割窗口
+"Ctrl-w-k "切换到上方的分割窗口
+"Ctrl-w-l "切换到右侧的分割窗口
+"Ctrl-w-h "切换到左侧的分割窗口
 
 "设置快捷键
 nnoremap <C-J> <C-W><C-J>
@@ -106,5 +98,26 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
+""""""""""
+" python 
+""""""""""
+"为py文件添加下支持pep8风格的配置：
+au BufNewFile,BufRead *.py
+\ set tabstop=4         "tab宽度
+\ set softtabstop=4     "
+\ set shiftwidth=4      " 
+\ set textwidth=79      "行最大宽度
+\ set expandtab         "tab替换为空格键
+\ set autoindent        "自动缩进
+\ set fileformat=unix   "保存文件格式
 
+
+""""""""""
+"  
+""""""""""
+"浅色显示当前行
+autocmd InsertLeave * se nocul
+
+"用浅色高亮当前行
+autocmd InsertEnter * se cul
 
