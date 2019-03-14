@@ -38,47 +38,30 @@ set hlsearch            "高亮查找匹配
 set hlsearch incsearch  "hlsearch 让Vim高亮文件中所有匹配项，incsearch 则令Vim在你正打着搜索内容时就高亮下一个匹配项
 syntax on               "语法高亮
 
-" a
+ 
+""""""""""
+" 折叠 
+""""""""""
+set nofoldenable        "启动 vim 时关闭折叠代码
+set foldenable          "允许折叠    
+set fdm=syntax          "基于语法进行代码折叠
+set fdm=manual          "手动折叠
+set foldmethod=indent   "基于缩进进行代码折叠
+
+"设置键盘映射，通过空格设置折叠
+nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>  
+"在 .vimrc 文件中配置好后，用以下命令操作：       
+"  * za 打开或关闭当前折叠
+"  * zM 关闭所有折叠
+"  * zR 打开所有折叠
+
+
 
 set background=dark "背景色
 set ruler           "显示标尺，就是在右下角显示光标位置
-
-" 折叠
-
-"允许折叠
-set foldenable
-
-"根据语法折叠
-set fdm=syntax
-
-"手动折叠
-"set fdm=manual
-
-"设置键盘映射，通过空格设置折叠
-nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
-
-
-
-配置
-
-     " 启动 vim 时关闭折叠代码
-     set nofoldenable
-     " 基于缩进进行代码折叠
-     set foldmethod=indent
-     " 基于语法进行代码折叠
-     set foldmethod=syntax
-     
-在 .vimrc 文件中配置好后，用以下命令操作：
-     * za 打开或关闭当前折叠
-     * zM 关闭所有折叠
-     * zR 打开所有折叠
-
-
-"不要闪烁
-set novisualbell
-
-"启动显示状态行
-set laststatus=2
+set novisualbell    "不要闪烁
+set laststatus=2    "启动显示状态行
+set showcmd         "显示输入的命令
 
 "浅色显示当前行
 autocmd InsertLeave * se nocul
@@ -86,17 +69,18 @@ autocmd InsertLeave * se nocul
 "用浅色高亮当前行
 autocmd InsertEnter * se cul
 
-"显示输入的命令
-set showcmd
 
 "被分割窗口之间显示空白
 set fillchars=vert:/
 set fillchars=stl:/
 set fillchars=stlnc:/
 
+
+""""""""""
+" 粘贴 
+""""""""""
 " paste：粘贴模式，会取消所有上述选项的影响来保证后面的操作。
 " 通常是从剪贴板粘贴代码——保持原有代码的风格，使用 nopaste 取消设置。
-"
 set paste
 set nopaste
 
