@@ -14,7 +14,11 @@ set mouse=a         "鼠标可用
 set showmatch       "显示匹配的括号
 set scrolloff=3     "距离顶部和底部3行
 set shortmess=atI   "启动时隐去援助提示
-
+set background=dark "背景色
+set ruler           "显示标尺，就是在右下角显示光标位置
+set novisualbell    "不要闪烁
+set laststatus=2    "启动显示状态行
+set showcmd         "显示输入的命令
 
 """"""""""
 " 缩进
@@ -47,6 +51,7 @@ set foldenable          "允许折叠
 set fdm=syntax          "基于语法进行代码折叠
 set fdm=manual          "手动折叠
 set foldmethod=indent   "基于缩进进行代码折叠
+set foldlevel=99
 
 "设置键盘映射，通过空格设置折叠
 nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>  
@@ -55,13 +60,6 @@ nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
 "  * zM 关闭所有折叠
 "  * zR 打开所有折叠
 
-
-
-set background=dark "背景色
-set ruler           "显示标尺，就是在右下角显示光标位置
-set novisualbell    "不要闪烁
-set laststatus=2    "启动显示状态行
-set showcmd         "显示输入的命令
 
 "浅色显示当前行
 autocmd InsertLeave * se nocul
@@ -83,4 +81,30 @@ set fillchars=stlnc:/
 " 通常是从剪贴板粘贴代码——保持原有代码的风格，使用 nopaste 取消设置。
 set paste
 set nopaste
+
+
+""""""""""
+" 分割窗口 
+""""""""""
+":vs 或者 :vsplit  将当前窗口竖直分割，并在上面新窗口中显示当前文件
+":sp 或者:sv或者:split  将当前窗口水平分割，并在左边新窗口中显示当前文件
+":new 新建文件并竖直分割
+":vnew 新建文件并水平分割
+set splitbelow   "窗口在下方打开
+set splitright   "窗口在右边打开
+
+"切换窗口
+Ctrl-w-j "切换到下方的分割窗口
+Ctrl-w-k "切换到上方的分割窗口
+Ctrl-w-l "切换到右侧的分割窗口
+Ctrl-w-h "切换到左侧的分割窗口
+
+"设置快捷键
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+
 
