@@ -12,6 +12,9 @@
 3.6.5 (default, Apr  1 2018, 05:46:30)
 [GCC 7.3.0]
 
+## Vim 开启 python/python3 支持
+
+
 
 ## YouCompleteMe 安装
 * Ubuntu 16.04 and later:
