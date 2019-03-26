@@ -34,3 +34,5 @@
      <leader>cu，取消选中文本块的注释
 
 [UltiSnips](https://github.com/sirver/ultisnips): The ultimate snippet solution for Vim.
+
+[SnipMate](https://github.com/garbas/vim-snipmate): aims to provide support for textual snippets, similar to TextMate or other Vim plugins like UltiSnips.
