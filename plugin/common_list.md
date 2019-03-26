@@ -32,3 +32,5 @@
 
      <leader>cc，注释当前选中文本，如果选中的是整行则在每行首添加 //，如果选中一行的部分内容则在选中部分前后添加分别 /、/；
      <leader>cu，取消选中文本块的注释
+
+[UltiSnips](https://github.com/sirver/ultisnips): The ultimate snippet solution for Vim.
