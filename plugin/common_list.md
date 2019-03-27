@@ -1,6 +1,8 @@
 
 ### Vim 插件最佳体验
 
+* Tree directory
+
 [NERD Tree](https://github.com/scrooloose/nerdtree)是一个树形目录插件，方便浏览当前目录有哪些目录和文件。   
 
 常用快捷键来操作目录：
@@ -14,7 +16,11 @@
     K到同目录第一个节点
     P到同目录最后一个节点??
 
+* Theme
+
 [vim-airline](https://github.com/vim-airline/vim-airline) light status tabline     
+
+* Indent
 
 [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides) 多层缩进    
 安装好后作以下配置
@@ -28,11 +34,15 @@
      " 快捷键 i 开/关缩进可视化
      :nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
+* Comment
+
 [nerdcommenter](https://github.com/scrooloose/nerdcommenter)注释插件
 默认配置了一些快捷键
 
      <leader>cc，注释当前选中文本，如果选中的是整行则在每行首添加 //，如果选中一行的部分内容则在选中部分前后添加分别 /、/；
      <leader>cu，取消选中文本块的注释
+
+* Syntax, autocompletion
 
 [UltiSnips](https://github.com/sirver/ultisnips): The ultimate snippet solution for Vim.
 
