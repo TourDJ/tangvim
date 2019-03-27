@@ -51,3 +51,9 @@
 [jedi](https://github.com/davidhalter/jedi-vim):  autocompletion library for VIM.
 
 
+* Git
+
+[vimagit](https://github.com/jreybert/vimagit): Easy git workflow
+
+
+
