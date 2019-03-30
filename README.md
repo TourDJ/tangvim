@@ -1067,7 +1067,7 @@ Lean & mean status/tabline for vim that's light as air.
 注： 安装插件管理工具是 vim-plug。
 
 * [solarized](https://github.com/altercation/solarized/tree/master/vim-colors-solarized)    
-Solarized Colorscheme for Vim
+Solarized Colorscheme for Vim, [install and config](https://github.com/TourDJ/tangvim/blob/master/theme/solarized-snippe.vim)    
 
 还有一些其他不错的主题插件值得关注：
 
