@@ -19,7 +19,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
    
   - [vim 概述](#summary)  
     - [vim 历史](#history)   
-  - [vim 模式](#mode)   
+  - [vim 模式](https://github.com/TourDJ/tangvim/blob/master/doc/mode.md#mode)   
   - [vim 缓冲区](https://github.com/TourDJ/tangvim/blob/master/doc/buffer.md#buffer)    
   - [vim 配置](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#config)      
     - [选项](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#option)    
