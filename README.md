@@ -37,7 +37,7 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [注释](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#vimcmd_comment)      
     - [批量缩进](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#vimcmd_indent)     
     - [其他](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#vimcmd_other)  
-  - [模式行（modeline）](#modeline)   
+  - [模式行（modeline）](https://github.com/TourDJ/tangvim/blob/master/doc/modeline.md#modeline)   
   - [vim 寄存器](https://github.com/TourDJ/tangvim/blob/master/doc/register.md#register)
   - [键盘映射](https://github.com/TourDJ/tangvim/blob/master/doc/key-mapping.md#mapping)  
     - [Leader](https://github.com/TourDJ/tangvim/blob/master/doc/key-mapping.md#leader)    
@@ -161,56 +161,6 @@ vim 编辑器很强大，而他的强大之处其中一方面是有种类繁多�
 *** 
 
 ****
-
-## <a id="config">vim 配置</a>
-vim 的全局配置文件是： /etc/vimrc，用户的配置文件为 ~/.vimrc， 如果不存在，就手动创建一个，平常我们只需配置这个文件就可以了。 配置完成后想要立刻生效，执行以下命令：
-    
-    :source ~/.vimrc
-> 注意命令前面的冒号，是在vim的命令模式下执行的，不是在linux命令行下执行。
-
-### <a id="option">选项</a>
-vim 主要有两种选项：布尔选项（值为"on"或"off"）和键值选项。      
-配置方法。
-
-    :set <name>打开选项、
-    :set no<name>关闭选项
-
-* 添加一个!（感叹号）至布尔选项后面就会切换对于选项的值。
-
-          :set number!
-
-* 使用一个?符号向Vim获取一个选项的当前值。
-
-          :set number
-          :set number?
-          :set nonumber
-          :set number?
-
-有些选项可以基于缓冲区进行设置。例如：
-
-    :setlocal wrap
-不是所有的选项都可以使用setlocal进行设置。如果你想知道某个特定的选项是否可以设置为本地选项，执行:help查看它的帮助文档。
-
-### <a id="fold">折叠类型</a>
-Vim支持六种不同的决定如何折叠你的文本的折叠类型。
-
-* Manual      
-你手动创建折叠并且折叠将被Vim储存在内存中。 当你关闭Vim时，它们也将一并烟消云散，而下次你编辑文件时将不得不重新创建。在你把它跟一些自定义的创建折叠的映射结合起来时，这种方式会很方便。 
-
-* Marker     
-Vim基于特定的字符组合折叠你的代码。这些字符通常放置于注释中(比如// {{{)， 不过在有些语言里，你可以使用该语言自己的语法代替，比如javascript的{和}。纯粹为了你的编辑器，用注释割裂你的代码看上去有点丑，但好处是你可以定制特定的折叠。 如果你想以特定的方式组织一个大文件，这个类型将是非常棒的选择。
-
-* Diff     
-在diff文件时使用该特定的折叠类型。我们不会讨论它，因为Vim会自动使用它。
-
-* Expr     
-这让你可以用自定义的Vimscript来决定折叠的位置。它是最为强大的方式，不过也需要最繁重的工作。 下一章我们将讲到它。
-
-* Indent     
-Vim使用你的代码的缩进来折叠。同样缩进等级的代码折叠到一块，空行则被折叠到周围的行一起去。
-
-* syntax      
-基于语法进行折叠。
 
 ***
 
