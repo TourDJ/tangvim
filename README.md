@@ -56,7 +56,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
   - [vim 插件](#plugin)       
     - [插件管理工具](#plugintool)     
     - [基本配置方式](#pluginconfig)    
-  - [vim 主题](#theme) 
+  - [vim 主题](#theme)    
+    - [自定义主题](#definetheme)         
   - [vimscript](#vimscript)   
     - [变量](#varli)   
     - [条件语句](#condition)     
@@ -1072,7 +1073,26 @@ Solarized Colorscheme for Vim, [install and config](https://github.com/TourDJ/ta
 还有一些其他不错的主题插件值得关注：
 
   [收集漂亮的 Vim 主题](https://zhuanlan.zhihu.com/p/34699085)     
-  
+
+### <a id="definetheme">自定义主题</a>
+找不到适合自己的主题？可以自己定义一个主题。
+
+创建步骤：     
+* 首先在 vim 的跟目录中，找到 colors 文件夹， 新建一个主题文件， 随意命名， 扩展名必须是以`.vim`结尾。
+* 在该文件中加入以下代码：
+```vimscript
+highlight clear             " 先清除之前的高亮
+if exists("syntax_on")      " 重置高亮
+	syntax reset
+endif
+set background=dark         " 主题风格设置为 dark
+let g:colors_name='myvim'   " 主题名称设置为 myvim
+```
+* 添加高亮    
+高亮的语法：      
+    * hi 样式名称 guifg= guibg= ctermfg= ctermbg= gui= cterm=
+    * hi link 子样式 被继承的父样式
+link 的主要作用就是让 Mystyle 继承 Normal的配色样式。[样式参考](https://github.com/antlypls/vim-colors-codeschool/blob/master/colors/codeschool.vim)
 ***  
 
 ## <a id="vimscript">Vimscript</a>
