@@ -2,10 +2,13 @@
 " Install with Vundle
 Plugin 'altercation/solarized'
 :PluginInstall
+" After install, copy solarized's color file
+" cd ~/.vim/bundle/solarized/vim-colors-solarized/colors
+" mv solarized.vim ~/.vim/colors/
 
 
 " How use
-" After install, put the following two lines in your .vimrc
+" Put the following two lines in your .vimrc
 
 " dark background mode
 syntax enable
@@ -23,4 +26,4 @@ if has('gui_running')
     set background=light
 else
     set background=dark
-endif
+endifP
