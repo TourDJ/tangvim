@@ -14,7 +14,7 @@ vim 的颜色主题在 $VIMRUNTIME/colors 文件夹里。在正常模式下输�
      set runtimepath+=~/.vim
 将用户目录加入到运行时路径中。
 
-**常用的主题插件**
+### <a id="commontheme">常用的主题插件</a>
 收藏了几个不同的主题插件。
 
 * [vim-airline](https://github.com/vim-airline/vim-airline)    
@@ -58,6 +58,6 @@ let g:colors_name='myvim'   " 主题名称设置为 myvim
 高亮的语法：      
     * hi 样式名称 guifg= guibg= ctermfg= ctermbg= gui= cterm=
     * hi link 子样式 被继承的父样式
-link 的主要作用就是让 Mystyle 继承 Normal的配色样式。[样式参考](https://github.com/antlypls/vim-colors-codeschool/blob/master/colors/codeschool.vim)
-***  
+link 的主要作用就是让 Mystyle 继承 Normal的配色样式。见[样式参考](https://github.com/antlypls/vim-colors-codeschool/blob/master/colors/codeschool.vim)
+
 
