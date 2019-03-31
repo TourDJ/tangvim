@@ -62,6 +62,8 @@ Playgound for vim's hobbyist. Here record vim's install, config and use.
     - [关键字](https://github.com/TourDJ/tangvim/blob/master/doc/keyword.md#keyword)    
         - [定制关键字](https://github.com/TourDJ/tangvim/blob/master/doc/keyword.md#commonkeyword)     
         - [自定义关键字](https://github.com/TourDJ/tangvim/blob/master/doc/keyword.md#definekeyword)    
+        - [关键字注释](https://github.com/TourDJ/tangvim/blob/master/doc/keyword.md#keywordcomment)    
+        - [在 Vim 创建外部脚本语言](https://github.com/TourDJ/tangvim/blob/master/doc/keyword.md#otherlang)    
     - [变量](https://github.com/TourDJ/tangvim/blob/master/doc/vimscript.md#varli)   
     - [条件语句](https://github.com/TourDJ/tangvim/blob/master/doc/vimscript.md#condition)     
     - [函数](https://github.com/TourDJ/tangvim/blob/master/doc/vimscript.md#function)      
