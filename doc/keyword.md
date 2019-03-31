@@ -1,5 +1,6 @@
 
 ## <a id="keyword">Vim 关键字</a>
+参考资料：[为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)    
 ### <a id="commonkeyword">定制关键字</a>
 Vim 定制编程语言的关键字
 
