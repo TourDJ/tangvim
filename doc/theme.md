@@ -56,7 +56,7 @@ let g:colors_name='myvim'   " 主题名称设置为 myvim
 ```
 * 添加高亮    
 高亮的语法：      
-    * hi 样式名称 guifg= guibg= ctermfg= ctermbg= gui= cterm=
+    * hi 样式名称 guifg= guibg= ctermfg= ctermbg= gui= cterm=      
 hi 是highlight的缩写。gui 表上图形界面，cterm表示终端, fg 表示前景色, bg 表示背景色。
     * hi link 子样式 被继承的父样式      
 link 的主要作用就是让 Mystyle 继承 Normal的配色样式。见[样式参考](https://github.com/antlypls/vim-colors-codeschool/blob/master/colors/codeschool.vim)
