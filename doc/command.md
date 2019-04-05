@@ -1,5 +1,5 @@
 
-## <a id="vimcmd"><font color="red">vim 命令</font></a>
+## <a id="vimcmd"><font color="red">Vim 命令</font></a>
 我们常说的命令通常是指在正常模式下的操作。
 
 技术链接：  
@@ -7,7 +7,12 @@
 [一些不起眼但非常有用的 Vim 命令](http://blog.jobbole.com/84683/)   
 
 
-以:和/开头的命令都有历史纪录，可以首先键入:或/然后按上下箭头来选择某个历史命令。
+> 以:和/开头的命令都有历史纪录，按上下箭头来选择某个历史命令。
+
+### <a id="startvim">启动 Vim</a>
+在打开文件前，先执行指定的命令: `vim -c cmd file` 例如：`vim -c "set nonu" file1`
+
+
 
 ### <a id="vimcmd_file">文件命令</a>
 打开文件
