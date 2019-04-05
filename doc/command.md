@@ -11,28 +11,44 @@
 
 ### <a id="startvim">启动 Vim</a>
 
-    vim -c cmd file       在打开文件前，先执行指定的命令。例如：vim -c "set nonu" file1
-    vim -r                列出交换文件并退出。
-    vim -r file           恢复崩溃的会话。                 
-    vim -R file           只读模式，可以强制保存。
-    vim -m file           不可修改(写入文件)。
-    vim -M file           文本不可修改。    
-    vim -y file           容易模式。
-    vim + file            启动后跳到文件末尾。
-    vim +lnum file        启动后跳到第 <lnum> 行。
-    vim +/string file     打开file，并将光标停留在第一个找到的string行上。
+    vim -c cmd file                         在打开文件前，先执行指定的命令。例如：vim -c "set nonu" file1
+    vim -r                                  列出交换文件并退出。
+    vim -r file                             恢复崩溃的会话。                 
+    vim -R file                             只读模式，可以强制保存。
+    vim -m file                             不可修改(写入文件)。
+    vim -M file                             文本不可修改。    
+    vim -y file                             容易模式。
+    vim + file                              启动后跳到文件末尾。
+    vim +lnum file                          启动后跳到第 <lnum> 行。
+    vim +/string file                       打开file，并将光标停留在第一个找到的string行上。
 
 ### <a id="vimcmd_file">文件命令</a>
 打开文件
 
-    vim file 打开单个文件
-    vim file1 file2 file3 ... 同时打开多个文件
-    vim file +10 打开文件并跳转到指定行
-    :open file 在vim窗口中打开一个新文件
-    :split file 在水平分割的窗口中打开文件
-    :vsplit file 在垂直分割的窗口中打开文件
+    vim file                                打开单个文件
+    vim file1 file2 file3 ...               同时打开多个文件
+    
+文件操作
+
+    :open file                              在vim窗口中打开一个新文件
+    :split file                             在水平分割的窗口中打开文件
+    :vsplit file                            在垂直分割的窗口中打开文件
+    :e file                                 关闭当前编辑的文件，并开启新的文件，如果对当前文件的修改未保存，vi会警告。
+    :e! file                                放弃对当前文件的修改，编辑新的文件
+    :e + file                               开始新的文件，并从文件尾开始编辑。
+    :e +n file                              开始新的文件，并从文件第n行开始编辑。
+    :e new                                  编译一个未命名的新文档。(<ctrl-w> + n)
+    :e                                      重新加载当前文档。
+    :e!                                     重新加载当前文档，并丢弃已做的改动。
+    :e#(ctrl+^)                             回到刚才编辑的文件。
+    :f(ctrl+g)                              显示文档名、是否修改和光标位置。
+    :f filename                             改变编辑的文件名，这时保存相当于另存为。
+    :n1,n2w filename                        将n1到n2的内容保存到 filename 文件中。
+    :saveas newfilename                     另存为到文件 newfilename 中。
     :bn 切换到下一个文件
     :bp 切换到上一个文件
+    
+    gf                                      打开以光标所在字符串为文件名的文件。
     
 在进入 vim 里打开另一个文件
 
