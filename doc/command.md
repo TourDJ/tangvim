@@ -45,8 +45,12 @@
     :f filename                             改变编辑的文件名，这时保存相当于另存为。
     :n1,n2w filename                        将n1到n2的内容保存到 filename 文件中。
     :saveas newfilename                     另存为到文件 newfilename 中。
+    :args                                   查看当前打开的文件列表，当前正在编辑的文件会用[]括起来。
+    :e ftp://192.168.10.76/abc.txt          打开远程文件。
     :bn 切换到下一个文件
     :bp 切换到上一个文件
+    :Sex                                    水平分割一个窗口，浏览文件系统。
+    :Vex                                    垂直分割一个窗口，浏览文件系统。
     
     gf                                      打开以光标所在字符串为文件名的文件。
     
