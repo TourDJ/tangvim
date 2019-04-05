@@ -58,8 +58,8 @@
 打开文件b.txt，将光标定位到要复制插入的位置，然后进入命令模式中输入：
     
     :r!cat a.txt
-    :r filename     在当前位置插入另一个文件的内容。
-    :[n]r filename  在第n行插入另一个文件的内容
+    :r filename                             在当前位置插入另一个文件的内容。
+    :[n]r filename                          在第n行插入另一个文件的内容
 
 #### <a id="insertparts">4. 插入另一个文件的部分内容</a>
 打开一个文件a.txt,复制n+1行:
