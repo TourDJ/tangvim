@@ -23,12 +23,12 @@
     vim +/string file                       打开file，并将光标停留在第一个找到的string行上。
 
 ### <a id="vimcmd_file">文件命令</a>
-#### 打开文件
+#### <a id="openfle">1. 打开文件</a>
 
     vim file                                打开单个文件
     vim file1 file2 file3 ...               同时打开多个文件
     
-#### 基本文件操作
+#### <a id="basefile">2. 基本文件操作</a>
 
     :open file                              在vim窗口中打开一个新文件
     :split file                             在水平分割的窗口中打开文件
@@ -54,12 +54,12 @@
     
     gf                                      打开以光标所在字符串为文件名的文件。
        
-#### 插入另一个文件的全部内容
+#### <a id="insertall">3. 插入另一个文件的全部内容</a>
 打开文件b.txt，将光标定位到要复制插入的位置，然后进入命令模式中输入：
     
     :r!cat a.txt
 
-#### 插入另一个文件的部分内容
+#### <a id="insertparts">插入另一个文件的部分内容</a>
 打开一个文件a.txt,复制n+1行:
     
         "ayn+1
