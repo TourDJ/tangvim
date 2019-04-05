@@ -10,16 +10,17 @@
 > 以:和/开头的命令都有历史纪录，按上下箭头来选择某个历史命令。
 
 ### <a id="startvim">启动 Vim</a>
-`vim -c cmd file`       在打开文件前，先执行指定的命令。例如：`vim -c "set nonu" file1`
-`vim -r`                列出交换文件并退出。
-`vim -r file`           恢复崩溃的会话。                 
-`vim -R file`           只读模式，可以强制保存。
-`vim -m file`           不可修改(写入文件)。
-`vim -M file`           文本不可修改。    
-`vim -y file`           容易模式。
-`vim + file`            启动后跳到文件末尾。
-`vim +lnum file`        启动后跳到第 <lnum> 行。
-`vim +/string file`     打开file，并将光标停留在第一个找到的string行上。
+
+    vim -c cmd file       在打开文件前，先执行指定的命令。例如：vim -c "set nonu" file1
+    vim -r                列出交换文件并退出。
+    vim -r file           恢复崩溃的会话。                 
+    vim -R file           只读模式，可以强制保存。
+    vim -m file           不可修改(写入文件)。
+    vim -M file           文本不可修改。    
+    vim -y file           容易模式。
+    vim + file            启动后跳到文件末尾。
+    vim +lnum file        启动后跳到第 <lnum> 行。
+    vim +/string file     打开file，并将光标停留在第一个找到的string行上。
 
 ### <a id="vimcmd_file">文件命令</a>
 打开文件
