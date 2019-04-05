@@ -59,7 +59,7 @@
     
     :r!cat a.txt
 
-#### <a id="insertparts">插入另一个文件的部分内容</a>
+#### <a id="insertparts">4. 插入另一个文件的部分内容</a>
 打开一个文件a.txt,复制n+1行:
     
         "ayn+1
