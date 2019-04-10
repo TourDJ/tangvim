@@ -126,6 +126,23 @@ Vim 和 TextMate 有很多不同，你常常会遇到它不让你输入，让你
      ./configure --disable-selinux --enable-perlinterp=yes --enable-python3interp=yes --enable-rubyinterp=yes --enable-cscope --enable-gui=auto --with-features=huge --enable-multibyte --enable-xim --with-x --with-gnome --with-compiledby="tang" --prefix=/usr/local/vim8
      make
      make install
+     
+#### ubuntu 安装 vim
+
+    sudo apt install vim
+
+
+ppa源来安装
+
+    sudo add-apt-repository ppa:jonathonf/vim
+    sudo apt update
+    sudo apt install vim
+
+如果您想要卸载它, 请使用如下命令
+
+    sudo apt remove vim
+    sudo add-apt-repository --remove ppa:jonathonf/vim
+
 
 ***
 
