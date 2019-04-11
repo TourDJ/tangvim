@@ -44,6 +44,13 @@ set hlsearch                              "高亮查找匹配
 set hlsearch incsearch                    "hlsearch 让Vim高亮文件中所有匹配项，incsearch 则令Vim在你正打着搜索内容时就高亮下一个匹配项
 set cursorcolumn                          "高亮光标所在的列
 set cursorline                            "高亮光标所在的行
+" cterm 表示为原生vim设置样式，设置为NONE表示可以自定义设置。
+" ctermbg 设置终端vim的背景色
+" ctermfg 设置终端vim的前景色
+" guibg 和 guifg 分别是设置gvim的背景色和前景色
+highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+
 
  
 """"""""""""""""""""""""""""""""""""""""
