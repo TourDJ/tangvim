@@ -19,6 +19,8 @@ set ruler                                 "显示标尺，就是在右下角显�
 set novisualbell                          "不要闪烁
 set laststatus=2                          "启动显示状态行
 set showcmd                               "显示输入的命令
+set noswapfile                            "不生成 swap 文件
+set textwidth=200                         "设置文本宽度
 
 """"""""""""""""""""""""""""""""""""""""
 " 缩进
@@ -129,4 +131,4 @@ nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
 "  * zM 关闭所有折叠
 "  * zR 打开所有折叠
 
-
+abbrev code # -*- coding: UTF-8 -*-
