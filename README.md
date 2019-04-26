@@ -86,4 +86,6 @@ Examples
     unlet i
 
 
+***
+[MIT](https://github.com/TourDJ/tangvim/blob/master/LICENSE)     
 
