@@ -87,5 +87,6 @@ Examples
 
 
 ***
+LICENSE      
 [MIT](https://github.com/TourDJ/tangvim/blob/master/LICENSE)     
 
