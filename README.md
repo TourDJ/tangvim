@@ -1,5 +1,8 @@
-# Vim
+# tangvim
 Playgound for vim's hobbyist. Here record vim's install, config and use. 
+
+## what is vim?
+Vim is a highly configurable text editor for efficiently creating and changing any kind of text.
 
 ## vim 安装配置
 
