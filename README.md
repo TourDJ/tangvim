@@ -44,7 +44,7 @@ For example, open the vim, and type:
 
 Additional, i gather some very classic document personal, take it no thanks:         
 
-* <strong>[Vim white book of tang](https://github.com/TourDJ/tangvim/blob/master/doc/index.md)    </strong>
+* <strong>[Vim white book of tang](./doc/index.md)    </strong>
 
 ## Customization
 Part of Vim's power is that it can be extensively customized. The basic interface can be controlled by the many options available, and the user can define personalized key mappings—often called macros—or abbreviations to automate sequences of keystrokes, or even call internal or user-defined functions.
