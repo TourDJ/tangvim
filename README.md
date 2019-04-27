@@ -36,12 +36,15 @@ For example, at the terimal type command:
 
     $ vimtutor
 
-Vim also has a built-in help facility (using the :help command) that allows users to query and navigate through commands and features. Open the vim, and type:
+Vim also has a built-in help facility (using the :help command) that allows users to query and navigate through commands and features. 
+
+For example, open the vim, and type:
 
     :help set
 
 Additional, i gather some very classic document personal, take it no thanks:         
-<strong>[Vim white book of tang](https://github.com/TourDJ/tangvim/blob/master/doc/index.md)    </strong>
+
+* <strong>[Vim white book of tang](https://github.com/TourDJ/tangvim/blob/master/doc/index.md)    </strong>
 
 ## Customization
 Part of Vim's power is that it can be extensively customized. The basic interface can be controlled by the many options available, and the user can define personalized key mappings—often called macros—or abbreviations to automate sequences of keystrokes, or even call internal or user-defined functions.
@@ -62,7 +65,7 @@ There are two kinds of vimrc:
 In any OS in vim execute:
 
     :echo $MYVIMRC
-then use `Ctrl` + `G` to view the path in status bar.
+then use `Ctrl` + `g` to view the path in status bar.
 
 [A vimrc of tang](https://github.com/TourDJ/tangvim/blob/master/tang.vim) 
 
