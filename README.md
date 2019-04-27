@@ -67,7 +67,7 @@ In any OS in vim execute:
     :echo $MYVIMRC
 then use `Ctrl` + `g` to view the path in status bar.
 
-[A vimrc of tang](https://github.com/TourDJ/tangvim/blob/master/tang.vim) 
+[A vimrc of tang](.vimrc) 
 
 ## Plugin
 There are many plugins available that will extend or add new functionality to Vim. These complex scripts are usually written in Vim's internal scripting language, vimscript (also known as VimL). Vim also supports scripting using Lua (as of Vim 7.3), Perl, Python, Racket (formerly PLT Scheme), Ruby, and Tcl.
