@@ -55,6 +55,10 @@ There are two kinds of vimrc:
   * the user vimrc in $HOME
   * the system vimrc in $VIM(ubutu is /etc/vim/vimrc)
 
+<strong>The user vimrc file often does not exist until created by the user. </strong> If you cannot find `$HOME/.vimrc` then you can, and probably should, just create it.
+
+<strong>The system vimrc should normally be left unmodified and is located in the $VIM* directory. </strong> The system vimrc is not a good place you keep your personal settings. If you modify this file your changes may be overwritten if you ever upgrade vim. Also, changes here will affect other users on a multi-user system. In most cases, settings in the user vimrc will override settings in the system vimrc.
+
 In any OS in vim execute:
 
     :echo $MYVIMRC
