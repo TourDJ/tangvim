@@ -21,6 +21,7 @@ set laststatus=2                          "启动显示状态行
 set showcmd                               "显示输入的命令
 set noswapfile                            "不生成 swap 文件
 set textwidth=200                         "设置文本宽度
+set autochdir                             "自动进入目录
 
 """"""""""""""""""""""""""""""""""""""""
 " 缩进
