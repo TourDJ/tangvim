@@ -4,7 +4,7 @@ Tangvim? What's it? It's a vim successor implementation or a vim plugin? No. Act
 Enjoy it!
 
 ## What is vim?
-Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux.
+Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux(may be, but at least for me).
 
 Vim (/vɪm/ a contraction of <strong>Vi IMproved</strong>) is a clone, with additions, of Bill Joy's vi text editor program for Unix. It was written by Bram Moolenaar based on source for a port of the Stevie editor to the Amiga and first released publicly in 1991. Vim is designed for use both from a command-line interface and as a standalone application in a graphical user interface. Vim is free and open-source software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda. The license is compatible with the GNU General Public License through a special clause allowing distribution of modified copies "under the GNU GPL version 2 or any later version".
 
