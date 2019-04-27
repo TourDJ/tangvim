@@ -134,5 +134,6 @@ ppa源来安装
 
 * [vim cookbook](http://www.oualline.com/vim-cook.html#last)     
 * [vim doc](http://vimcdoc.sourceforge.net/doc/quickref.html)    
+* [Vim Cheat Sheet](https://vim.rtorr.com/)        
 
 *** 
