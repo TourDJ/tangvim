@@ -19,7 +19,9 @@
             14      3*      Yellow, LightYellow
             15      7*      White
 
-The number under "NR-16" is used for 16-color terminals ('t_Co'greater than or equal to 16).  The number under "NR-8" is used for 8-color terminals ('t_Co' less than 16).  The '*' indicates that the bold attribute is set for ctermfg.  In many 8-color terminals (e.g.,"linux"), this causes the bright colors to appear.  This doesn't work for background colors!  Without the '*' the bold attribute is removed.If you want to set the bold attribute in a different way, put a "cterm=" argument AFTER the "ctermfg=" or "ctermbg=" argument.  Or use a number instead of a color name.
+The number under "NR-16" is used for 16-color terminals ('t_Co'greater than or equal to 16).  The number under "NR-8" is used for 8-color terminals ('t_Co' less than 16).  
+
+The '\*' indicates that the bold attribute is set for ctermfg.  In many 8-color terminals (e.g.,"linux"), this causes the bright colors to appear.  This doesn't work for background colors!  Without the '*' the bold attribute is removed.If you want to set the bold attribute in a different way, put a "cterm=" argument AFTER the "ctermfg=" or "ctermbg=" argument.  Or use a number instead of a color name.
         
 The case of the color names is ignored. Note that for 16 color ansi style terminals (including xterms), the numbers in the NR-8 column is used.  Here '*' means 'add 8' so that Blue is 12, DarkGray is 8 etc.
 
