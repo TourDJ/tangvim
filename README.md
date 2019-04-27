@@ -1,5 +1,7 @@
 # tangvim
-Tangvim? What's it? It's a vim successor implementation or a vim plugin? No. Actually tangvim is tang's vim, it just a playgound for vim's hobbyist. Ah! I am so enthusiast for vim that want to record anything about it.
+Tangvim? What's it? It's a vim successor implementation or a vim plugin? No. Actually tangvim is tang's vim, it just a playgound for vim's hobbyist. Ah! I am so enthusiast for vim that want to record anything about it. So i begin to start...
+
+Enjoy it!
 
 ## What is vim?
 Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux.
