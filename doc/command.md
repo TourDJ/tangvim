@@ -267,26 +267,30 @@
     :s/vivian/sky/                          替换当前行第一个 vivian 为 sky
     :s/vivian/sky/g                         替换当前行所有 vivian 为 sky
     :n,$s/vivian/sky/                       替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky
-    :n,$s/vivian/sky/g                      替换第 n 行开始到最后一行中每一行所有 vivian 为 sky(n 为数字，若 n 为 .，表示从当前行开始到最后一行)
-    :%s/vivian/sky/（等同于 :g/vivian/s//sky/） 替换每一行的第一个 vivian 为 sky
-    :%s/vivian/sky/g（等同于 :g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky
+    :n,$s/vivian/sky/g                      替换第 n 行开始到最后一行中每一行所有 vivian 为 sky
+> vi/vim 中可以使用 :s 命令来替换字符串
+> n 为数字，若 n 为 .，表示从当前行开始到最后一行
+
+    :%s/vivian/sky/（同:g/vivian/s//sky/）   替换每一行的第一个 vivian 为 sky
+    :%s/vivian/sky/g（同:g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky
 
 可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符
 
-    :s#vivian/#sky/# 替换当前行第一个 vivian/ 为 sky/
-    :%s+/oradata/apras/+/user01/apras1+ （使用+ 来 替换 / ）： /oradata/apras/替换成/user01/apras1/
+    :s#vivian/#sky/#                        替换当前行第一个 vivian/ 为 sky/
+使用+ 来 替换 /
+
+    :%s+/oradata/apras/+/user01/apras1+     /oradata/apras/替换成/user01/apras1/
 
 替换单个字符
 
-    将光标移到要替换的字符上：
-    rx x为要替换后的字符
+    rx                                      将光标移到要替换的字符上,x为要替换后的字符
     
 ### <a id="vimcmd_comment">注释</a>
 
-    3,5 s/^/#/g 注释第3-5行
-    3,5 s/^#//g 解除3-5行的注释
-    1,$ s/^/#/g 注释整个文档。
-    :%s/^/#/g 注释整个文档，此法更快。
+    3,5 s/^/#/g                             注释第3-5行
+    3,5 s/^#//g                             解除3-5行的注释
+    1,$ s/^/#/g                             注释整个文档。
+    :%s/^/#/g                               注释整个文档，此法更快。
 
 
 ### <a id="vimcmd_indent">批量缩进</a>
