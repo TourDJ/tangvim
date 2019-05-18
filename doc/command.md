@@ -229,44 +229,45 @@
 
 小技巧
 
-     %（跳转到与之匹配的括号处）
-     .（重复上次的修改命令）
-     `.（跳转到最近修改过的位置）
-     ZQ（无条件退出）
-     ZZ（存盘退出）
-     ga（显示光标下的字符在当前使用的 encoding 下的内码）
-     guw（光标下的单词变为小写）
-     gUw（光标下的单词变为大写）
-     :TOhtml（根据 Vim 的语法加亮的方式生成 HTML 代码；在图形界面中也可以使用菜单“Syntax—Convert to HTML”达到同样效果
+    
+    
+    ga                                      显示光标下的字符在当前使用的 encoding 下的内码
+    :TOhtml                                 根据 Vim 的语法加亮的方式生成 HTML 代码
 
 ## <a id="vimcmd_jump">跳转命令</a>
 
-    Ctrl + O 跳转到光标的上次位置
-    Ctrl + I 跳转到光标的下次位置
+    Ctrl + O                                跳转到光标的上次位置
+    Ctrl + I                                跳转到光标的下次位置
+    %                                       跳转到与之匹配的括号处
+    .                                       重复上次的修改命令
+    `.                                      跳转到最近修改过的位置
 
 ### <a id="vimcmd_undo">撤销和重做</a>
 
-    u 撤销（Undo）
-    U 撤销对整行的操作
-    Ctrl + r 重做（Redo），即撤销的撤销。
-    
+    u                                       撤销（Undo）
+    U                                       撤销对整行的操作
+    Ctrl + r                                重做（Redo），即撤销的撤销。
 
 ## <a id="vimcmd_exit">退出命令</a>
 
-    :wq 保存并退出
-    :x 同wq
-    ZZ 保存并退出
-    :q! 强制退出并忽略所有更改
-    :e! 放弃所有修改，并打开原来文件。
+    :wq                                     保存并退出
+    :x                                      同 :wq
+    :q!                                     强制退出并忽略所有更改
+    :e!                                     放弃所有修改，并打开原来文件
+    ZQ                                      无条件退出
+    ZZ                                      存盘退出
 
 
 ### <a id="vimcmd_replace">替换</a>
-vi/vim 中可以使用 :s 命令来替换字符串
 
-    :s/vivian/sky/ 替换当前行第一个 vivian 为 sky
-    :s/vivian/sky/g 替换当前行所有 vivian 为 sky
-    :n,$s/vivian/sky/ 替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky
-    :n,$s/vivian/sky/g 替换第 n 行开始到最后一行中每一行所有 vivian 为 sky(n 为数字，若 n 为 .，表示从当前行开始到最后一行)
+    guw                                     光标下的单词变转换为小写
+    guW                                     光标下的整行单词转换为小写
+    gUw                                     光标下的单词转换为大写
+    gUW                                     光标下的整行单词转换为大写
+    :s/vivian/sky/                          替换当前行第一个 vivian 为 sky
+    :s/vivian/sky/g                         替换当前行所有 vivian 为 sky
+    :n,$s/vivian/sky/                       替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky
+    :n,$s/vivian/sky/g                      替换第 n 行开始到最后一行中每一行所有 vivian 为 sky(n 为数字，若 n 为 .，表示从当前行开始到最后一行)
     :%s/vivian/sky/（等同于 :g/vivian/s//sky/） 替换每一行的第一个 vivian 为 sky
     :%s/vivian/sky/g（等同于 :g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky
 
