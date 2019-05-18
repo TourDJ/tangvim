@@ -1,4 +1,4 @@
-  - [vimscript](#vimscript)     
+  - [Vimscript](#vimscript)     
     - [关键字](./keyword.md#keyword)    
         - [定制关键字](./keyword.md#commonkeyword)     
         - [自定义关键字](./keyword.md#definekeyword)    
