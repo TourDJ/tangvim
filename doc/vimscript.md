@@ -74,7 +74,7 @@ Vim会输出你刚刚使用的搜索模式。这样你就可以通过编程来�
 > 查看 `:help internal-variables`
 
 ### <a id="condition">条件语句</a>
-#### If
+#### <a id="condition_if">If</a>
 每种编程语言都有产生分支流程的方法，在Vimscript中，这是用if语句实现的。 if语句是Vimscript中产生分支的基本方法。例如：
 
     :if "9024"
@@ -85,7 +85,7 @@ Vim会输出你刚刚使用的搜索模式。这样你就可以通过编程来�
 * 以一个数字开头的字符串会被强制转换成数字，否则会转换成0
 * 在所有的强制转换完成后，当if的判断条件等于非零整数时，Vim会执行if语句体。
 
-#### Else 和 Elseif
+#### <a id="condition_elif">Else 和 Elseif</a>
 Vim，像Python一样，支持"else"和"else if"分句。执行下面的命令：
 
     :if 0
@@ -96,7 +96,7 @@ Vim，像Python一样，支持"else"和"else if"分句。执行下面的命令�
     :    echom "finally!"
     :endif
 
-#### 比较
+#### <a id="condition_compare">比较</a>
 Vim允许我们比较值的大小
 
     :if 10 > 1
@@ -104,7 +104,7 @@ Vim允许我们比较值的大小
     :endif
 Vim会显示foo。
 
-#### 大小写敏感
+#### <a id="condition_noignorecase">大小写敏感</a>
 执行下面的命令：
 
     :set noignorecase
@@ -125,7 +125,7 @@ Vim执行elseif分句,所以显然Vimscript是大小写敏感的。现在执行�
 
 == 的行为取决于用户的设置。
 
-#### 防御性编程
+#### <a id="condition_defense>防御性编程</a>
 这意味着什么？意味着在为别人开发插件时，你不能信任==。 一个不加包装的==不能出现在你的插件代码里。
 
 好在Vim有额外两种比较操作符来处理这个问题。
@@ -171,14 +171,14 @@ Vim定义了一个函数。
     :call Meow()
 不出所料，Vim显示Meow!
 
-#### 调用函数
+#### <a id="function_call">调用函数</a>
 第一种方法使用call命令。
 
     :call Meow()
 第二种方法是在表达式里调用函数。
 
     :echom GetMeow()
-#### 隐式返回
+#### <a id="function_return">隐式返回</a>
 如果一个Vimscript函数不返回一个值，它隐式返回0。
 
 执行下面命令：
@@ -194,7 +194,7 @@ Vim定义了一个函数。
 * 访问特定作用域里的选项变量
 * 大小写敏感的比较
 
-#### 函数参数
+#### <a id="function_param">函数参数</a>
 执行下面的命令：
 
     :function DisplayName(name)
@@ -203,7 +203,7 @@ Vim定义了一个函数。
     :endfunction
 注意我们传递给echom命令的参数前面的a:。这表示一个变量的作用域，如果不带作用域前缀，Vim抱怨说它找不到变量。
 
-#### 可变参数
+#### <a id="function_args">可变参数</a>
 Vimscript函数可以设计为接受不定数目的参数，就像Javascript和Python中的一样。执行下面命令：
 
     :function Varg(...)
@@ -233,7 +233,7 @@ Vimscript函数可以设计为接受不定数目的参数，就像Javascript和P
     :call Varg2("a", "b", "c")
 我们可以看到Vim将"a"作为具名参数(named argument)a:foo的值，将余下的塞进可变参数列表中。
 
-#### 赋值
+#### <a id="function_setvalue">赋值</a>
 试试执行下面的命令：
 
     :function Assign(foo)
@@ -254,7 +254,7 @@ Vim将抛出一个错误，因为你不能对参数变量重新赋值。现在�
 这次就可以了，Vim显示Yep。
 
 ### <a id="datatype">数据类型</a>
-#### 数字
+#### <a id="datatype_number">数字</a>
 Vimscript有两种数值类型：Number和Float。一个Number是32位带符号整数。一个Float是浮点数。
 
 示例：
@@ -268,7 +268,7 @@ Vimscript有两种数值类型：Number和Float。一个Number是32位带符号�
     :echo 3 / 2.0
 Vim输出1.5。
 
-#### 字符串
+#### <a id="datatype_string">字符串</a>
 执行下面的命令：
 
     :echom "Hello, " + "world"
@@ -297,13 +297,13 @@ Vimscript列表是有序的，异质的元素集合。执行下面的命令：
 
     :echo ['foo', 3, 'bar']
 
-#### 索引
+#### <a id="list_index">索引</a>
 Vimscript列表的索引从0开始，也可以从列表结尾进行索引。
 
     :echo [0, [1, 2]][1]
     :echo [0, [1, 2]][-2]
 
-#### 切割    
+#### <a id="list_split">切割</a>    
 Vim列表也可被切割。类似于 python，区别是包括上下限。
 
     :echo ['a', 'b', 'c', 'd', 'e'][0:2]
@@ -314,12 +314,12 @@ Vim列表也可被切割。类似于 python，区别是包括上下限。
     :echo ['a', 'b', 'c', 'd', 'e'][:1]
     :echo ['a', 'b', 'c', 'd', 'e'][3:]
 
-#### 连接
+#### <a id="list_concat">连接</a>
 用+连接Vim列表。试试这个命令：
 
     :echo ['a', 'b'] + ['c']
 
-#### 列表函数
+#### <a id="list_func">列表函数</a>
 Vim有着许许多多内置列表函数。
 
 * add 列表增加元素    
@@ -349,7 +349,7 @@ Vim有着许许多多内置列表函数。
 
 ### <a id="loop">循环</a>
 第一种循环是for循环。
-#### For循环
+#### <a id="loop_for">For 循环</a>
 执行下面的命令：
 
     :let c = 0
@@ -361,7 +361,7 @@ Vim有着许许多多内置列表函数。
     :echom c
 Vimscript中不存在C风格的for (int i = 0; i < foo; i++)。
 
-#### While循环
+#### <a id="loop_while">While 循环</a>
 执行下面命令：
 
     :let c = 1
@@ -374,7 +374,7 @@ Vimscript中不存在C风格的for (int i = 0; i < foo; i++)。
 
     :echom total
 
-#### <a id="dict">字典</a>
+### <a id="dict">字典</a>
 Vimscript字典类似于Python中的dict，和Javascript中的object。    
 
 执行这个命令：
