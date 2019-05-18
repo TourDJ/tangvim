@@ -310,53 +310,29 @@
 
 ### <a id="vimcmd_other">其他</a>
 
-小技巧
-
-    
-    
     ga                                      显示光标下的字符在当前使用的 encoding 下的内码
     :TOhtml                                 根据 Vim 的语法加亮的方式生成 HTML 代码
-#### 基本计算器
+    
+* 基本计算器
 插入模式下，按 Ctrl+r 键然后输入 =，再输入一个简单的算式(如：=2+3)，再按 Enter 键计算结果会被插入到文件中。
 
-#### 缩写
-:ab [缩写] [要替换的文字]
+* 缩写
 
-    ab asap as soon as possible
+        :ab [缩写] [要替换的文字]
+        例如：ab asap as soon as possible
 
-#### 忘记用 root 方式打开文件时的文件保存
+* 忘记用 root 方式打开文件时的文件保存
 
-    :w !sudo tee %
+        :w !sudo tee %
     
-#### 实时加密文本
+* 实时加密文本
 
-    ggVGg?
-撤销命令：u
+        ggVGg?
 
-#### 自动补全
+* 自动补全
 
-    Ctrl+n
+        Ctrl+n
 
-#### set 命令
-
-    set autoindent  在插入模式下，对每行按与上行同样的标准进行缩进，与shiftwidth选项结合使用
-    set list  把制表符显示为^I ,用$标示行尾（使用list分辨尾部的字符是tab还是空格）
-    set number  显示行号
-    set readonly  文件只读，除非使用！可写
-    set shiftwidth  反向制表符中的空格数目
-    set showmatch  在vi中输入），}时，光标会暂时的回到相匹配的（，{   （如果没有相匹配的就发出错误信息的铃声），编程时很有用
-    set tabstop  指定tab缩进的字符数目
-    set wrapscan  授索在文件的两端绕回
-    set 显示设置的所有选项
-    set all 显示所有可以设置的选项
-
-
-> set 设置可以在命令行输入，也可以写在$HOME下的.exrc (如果是vi)或者.vimrc(如果是vim)中。写进去很方便的。
-
-#### cit 命令    
-在用vim编辑html和xml时经常使用 cit 操作来删除一对标签内的文字。
-
-#### 常用命令
-
-
+* cit 命令    
+在用 vim 编辑 `html` 和 `xml` 时经常使用 `cit` 操作来删除一对标签内的文字。
 
