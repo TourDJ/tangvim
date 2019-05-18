@@ -1,3 +1,19 @@
+  - [vimscript](#vimscript)     
+    - [关键字](./keyword.md#keyword)    
+        - [定制关键字](./keyword.md#commonkeyword)     
+        - [自定义关键字](./keyword.md#definekeyword)    
+        - [关键字注释](./keyword.md#keywordcomment)    
+        - [在 Vim 创建外部脚本语言](./keyword.md#otherlang)    
+    - [变量](#varli)   
+    - [条件语句](#condition)     
+    - [函数](#function)      
+    - [数据类型](#datatype)   
+    - [列表](#list)     
+    - [循环](#loop)    
+    - [字典](#dict)    
+    - [函数式编程](#functional)   
+    - [vimscript 命令](#script)       
+    - [路径](#path) 
 
 ## <a id="vimscript">Vimscript</a>
 
