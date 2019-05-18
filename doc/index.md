@@ -1,8 +1,7 @@
 
 ## vim 使用说明
    
-  - [vim 概述](#summary)  
-    - [vim 历史](#history)   
+  - [vim 概述](./summary.md)  
   - [vim 模式](https://github.com/TourDJ/tangvim/blob/master/doc/mode.md#mode)   
   - [vim 缓冲区](https://github.com/TourDJ/tangvim/blob/master/doc/buffer.md#buffer)    
   - [vim 配置](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#config)      
