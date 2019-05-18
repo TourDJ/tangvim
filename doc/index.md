@@ -8,7 +8,7 @@
   - [vim 配置](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#config)      
     - [选项](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#option)    
     - [折叠类型](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#fold)    
-  - [vim 命令](./doc/command.md)      
+  - [vim 命令](./command.md)      
   - [模式行（modeline）](https://github.com/TourDJ/tangvim/blob/master/doc/modeline.md#modeline)   
   - [vim 寄存器](https://github.com/TourDJ/tangvim/blob/master/doc/register.md#register)
   - [键盘映射](https://github.com/TourDJ/tangvim/blob/master/doc/key-mapping.md#mapping)  
