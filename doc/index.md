@@ -8,7 +8,7 @@
   - [vim 配置](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#config)      
     - [选项](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#option)    
     - [折叠类型](https://github.com/TourDJ/tangvim/blob/master/doc/config.md#fold)    
-  - [vim 命令](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#vimcmd)      
+  - [vim 命令](https://github.com/TourDJ/tangvim/blob/master/doc/command.md)      
     - [启动 Vim](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#startvim)    
     - [文件命令](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#vimcmd_file)    
         - [打开文件](https://github.com/TourDJ/tangvim/blob/master/doc/command.md#openfile)     
