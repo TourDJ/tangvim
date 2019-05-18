@@ -1,5 +1,5 @@
 
-## vim 使用说明
+## Vim 使用说明
    
   - [vim 概述](./summary.md)  
   - [vim 模式](https://github.com/TourDJ/tangvim/blob/master/doc/mode.md#mode)   
