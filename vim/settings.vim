@@ -2,41 +2,48 @@
 
 " ///////////////////////////////////////// vim 常用设置参数 ///////////////////////////////////////// 
 
+set                                       "显示设置的所有选项
+set all                                   "显示所有可以设置的选项
+
 """"""""""""""""""""""""""""""""""""""""
 " 基本
 """"""""""""""""""""""""""""""""""""""""
+set autochdir                             "自动进入目录
+set background=dark                       "背景色
+set confirm                               "没有保存或文件只读时弹出确认
+set laststatus=2                          "启动显示状态行
+set list                                  "把制表符显示为^I ,用$标示行尾（使用list分辨尾部的字符是tab还是空格）
+set mouse=a                               "鼠标可用
 set nu(mber)                              "显示行号
 set nocompatible                          "关闭与vi的兼容模式
 set nowrap                                "不自动折行
 set nobackup                              "不需要备份
-set confirm                               "没有保存或文件只读时弹出确认
-set mouse=a                               "鼠标可用
-set showmatch                             "显示匹配的括号
+set novisualbell                          "不要闪烁
+set noswapfile                            "不生成 swap 文件
+set readonly                              "文件只读，除非使用！可写
+set ruler                                 "显示标尺，就是在右下角显示光标位置
+set showmatch                             "在vi中输入括号时，光标会暂时的回到相匹配的括号，如果没有相匹配的就发出错误信息的铃声
 set scrolloff=3                           "距离顶部和底部3行
 set shortmess=atI                         "启动时隐去援助提示
-set background=dark                       "背景色
-set ruler                                 "显示标尺，就是在右下角显示光标位置
-set novisualbell                          "不要闪烁
-set laststatus=2                          "启动显示状态行
 set showcmd                               "显示输入的命令
-set noswapfile                            "不生成 swap 文件
 set textwidth=200                         "设置文本宽度
-set autochdir                             "自动进入目录
+set wrapscan                              "授索在文件的两端绕回
 
 """"""""""""""""""""""""""""""""""""""""
 " 缩进
 " 指定我们在插入模式下输入一个制表符占据的空格数量
 " linux 内核编码规范建议是 8。
 """"""""""""""""""""""""""""""""""""""""
-set tabstop=4                             "指定在进行缩进格式化源码时制表符占据的空格数。
-set shiftwidth=4                          "如何处理连续多个空格。   
-set softtabstop=4                         "是否将tab转换为空格。
-set expandtab                             "tab替换为空格键
-set smarttab                              "
 set autoread                              "文件自动检测外部更改
+set autoindent                            "在插入模式下，对每行按与上行同样的标准进行缩进，与 shiftwidth 选项结合使用
 set cindent                               "c文件自动缩进
-set autoindent                            "自动对齐
+set expandtab                             "tab替换为空格键
+set shiftwidth=4                          "反向制表符中的空格数目。   
+set softtabstop=4                         "是否将tab转换为空格。
+set smarttab                              "
 set smartindent                           "智能缩进
+set tabstop=4                             "指定在进行缩进格式化源码时制表符(tab)占据的空格数。
+
 
  
 """"""""""""""""""""""""""""""""""""""""
