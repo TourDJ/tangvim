@@ -2,11 +2,6 @@
 ## <a id="vimcmd"><font color="red">Vim 命令</font></a>
 我们常说的命令通常是指在正常模式下的操作。
 
-技术链接：  
-[Vim命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)     
-[一些不起眼但非常有用的 Vim 命令](http://blog.jobbole.com/84683/)   
-
-
 > 以:和/开头的命令都有历史纪录，按上下箭头来选择某个历史命令。
 
 ### <a id="startvim">启动 Vim</a>
@@ -336,3 +331,7 @@
 * cit 命令    
 在用 vim 编辑 `html` 和 `xml` 时经常使用 `cit` 操作来删除一对标签内的文字。
 
+
+：  
+[Vim命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)     
+[一些不起眼但非常有用的 Vim 命令](http://blog.jobbole.com/84683/)  
