@@ -9,7 +9,7 @@
     - [折叠类型](./config.md#fold)    
   - [vim 命令](./command.md)      
   - [模式行（modeline）](./modeline.md#modeline)   
-  - [vim 寄存器](./register.md#register)
+  - [vim 寄存器](./register.md)
   - [键盘映射](./key-mapping.md#mapping)  
     - [Leader](./key-mapping.md#leader)    
     - [遮盖](./key-mapping.md#override)   
