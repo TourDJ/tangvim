@@ -22,7 +22,9 @@
   - [跳转命令](#vimcmd_jump)     
   - [撤销和重做](#vimcmd_undo)      
   - [退出命令](#vimcmd_exit)    
-  - [替换](#vimcmd_replace)        
+  - [查找替换](#vimcmd_searep)   
+    - [查找](#vimcmd_search)       
+    - [替换](#vimcmd_replace)        
   - [注释](#vimcmd_comment)      
   - [批量缩进](#vimcmd_indent)     
   - [其他](#vimcmd_other)  
@@ -287,8 +289,17 @@
     ZZ                                      存盘退出
 
 
-### <a id="vimcmd_replace">替换</a>
+### <a id="vimcmd_searep">查找替换</a>
+#### <a id="vimcmd_search">查找</a>
 
+    /something                              在后面的文本中查找something。
+    ?something                              在前面的文本中查找something。
+    /pattern/+number                        将光标停在包含 pattern 的行后面第 number 行上。
+    /pattern/-number                        将光标停在包含 pattern 的行前面第 number 行上。
+    n                                       向后查找下一个。
+    N                                       向前查找下一个
+
+#### <a id="vimcmd_replace">替换</a>
     guw                                     光标下的单词变转换为小写
     guW                                     光标下的整行单词转换为小写
     gUw                                     光标下的单词转换为大写
