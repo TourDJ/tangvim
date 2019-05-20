@@ -25,7 +25,7 @@
   - [查找替换](#vimcmd_searep)   
     - [查找](#vimcmd_search)       
     - [替换](#vimcmd_replace)     
-    - [匹配到某个模式后执行种命](#vimcmd_command)     
+    - [匹配到某个模式后执行命令](#vimcmd_command)     
   - [注释](#vimcmd_comment)      
   - [批量缩进](#vimcmd_indent)     
   - [其他](#vimcmd_other)  
@@ -329,7 +329,7 @@
 
     rx                                      将光标移到要替换的字符上,x为要替换后的字符
 
-#### <a id="vimcmd_command">匹配到某个模式后执行种命</a>
+#### <a id="vimcmd_command">匹配到某个模式后执行/a>
 语法为 
 
     :[range]g/pattern/command
