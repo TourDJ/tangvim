@@ -24,7 +24,8 @@
   - [退出命令](#vimcmd_exit)    
   - [查找替换](#vimcmd_searep)   
     - [查找](#vimcmd_search)       
-    - [替换](#vimcmd_replace)        
+    - [替换](#vimcmd_replace)     
+    - [匹配到某个模式后执行种命](#vimcmd_command)     
   - [注释](#vimcmd_comment)      
   - [批量缩进](#vimcmd_indent)     
   - [其他](#vimcmd_other)  
@@ -327,6 +328,23 @@
 替换单个字符
 
     rx                                      将光标移到要替换的字符上,x为要替换后的字符
+
+#### <a id="vimcmd_command">匹配到某个模式后执行种命</a>
+语法为 
+
+    :[range]g/pattern/command
+例如 
+    
+    :%g/^Next/normal dd。
+表示对于以一个 Next 开头的行执行 normal 模式下的 `dd` 命令。
+
+关于 range 的规定为：
+* 如果不指定range，则表示当前行
+* m,n: 从m行到n行
+* 0: 最开始一行
+* $: 最后一行
+* .: 当前行
+* %: 所有行
     
 ### <a id="vimcmd_comment">注释</a>
 
