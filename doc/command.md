@@ -313,6 +313,9 @@
 
     :%s/vivian/sky/（同:g/vivian/s//sky/）   替换每一行的第一个 vivian 为 sky
     :%s/vivian/sky/g（同:g/vivian/s//sky/g） 替换每一行中所有 vivian 为 sky
+    :%s/^/xxx/g                             在每一行的行首插入xxx，^表示行首。
+    :%s/$/xxx/g                             在每一行的行尾插入xxx，$表示行尾。
+> 所有替换命令末尾加上 c，每个替换都将需要用户确认。 如`：%s/old/new/gc`，加上 i 则忽略大小写(ignore)。
 
 可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符
 
