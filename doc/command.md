@@ -407,6 +407,7 @@
 [一些不起眼但非常有用的 Vim 命令](http://blog.jobbole.com/84683/)        
 [史上最全的Vim命令](https://zhuanlan.zhihu.com/p/51440836)     
 [Vim cheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt)        
+[vim wiki](https://www.barbarianmeetscoding.com/wiki/vim)          
 
 
 
