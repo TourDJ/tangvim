@@ -7,7 +7,7 @@ Enjoy it!
 Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux(may be, but at least for me).
 
 ![Graphical cheat sheet](./images/vi-vim-cheat-sheet.gif)     
-<h6>Graphic: Graphical cheat sheet</h6>       
+Graphic: Graphical cheat sheet      
 See [Origin graphic](http://www.viemu.com/vi-vim-cheat-sheet.gif)      
 
 
