@@ -1,5 +1,5 @@
 # tangvim
-Tangvim? What's it? Is it a vim successor implementation or a vim plugin? Er..., no. Actually tangvim is tang's vim, it just a playgound for vim's hobbyist. Ah! I am so enthusiast for vim that want to record anything about it. So i begin to start...
+Tangvim is just a playgound for vim's hobbyist. Ah! I am so enthusiast for vim that want to record anything about it. So i begin to read and write...
 
 Enjoy it!
 
@@ -62,6 +62,10 @@ There are two kinds of vimrc:
 
 <strong>The system vimrc should normally be left unmodified and is located in the $VIM* directory. </strong> The system vimrc is not a good place you keep your personal settings. If you modify this file your changes may be overwritten if you ever upgrade vim. Also, changes here will affect other users on a multi-user system. In most cases, settings in the user vimrc will override settings in the system vimrc.
 
+Let's see an interesting questiong about vim:
+
+* [What is in your .vimrc?](https://stackoverflow.com/questions/164847/what-is-in-your-vimrc#)     
+
 In any OS in vim execute:
 
     :echo $MYVIMRC
@@ -99,3 +103,4 @@ Examples
 ***     
 [MIT](https://github.com/TourDJ/tangvim/blob/master/LICENSE)     
 
+     
