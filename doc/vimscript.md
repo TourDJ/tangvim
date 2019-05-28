@@ -22,7 +22,7 @@
 Vimscript 是典型的动态式命令语言，提供一些常用的语言特征：变量、表达式、控制结构、内置函数、用户自定义函数、一级字符串、列表、字典、终端、文件IO、正则表达式模式匹配、异常和集成调试器等。
 
 ### <a id="keyword">Vim 关键字</a>
-参考资料：[为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)    
+  
 #### <a id="commonkeyword">定制关键字</a>
 Vim 定制编程语言的关键字
 
@@ -588,10 +588,11 @@ Vim将输出当前目录下所有的文件和文件夹。globpath()函数返回�
     :echo split(globpath('.', '**'), '\n')
 Vim将列出当前文件夹下的所有文件及文件夹。
 
-**vimscript 语法速览**         
-[Five Minute Vimscript](http://andrewscala.com/vimscript/)    
-[Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)    
-[Learn Vimscript the Hard Way中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)    
+参考资料：         
+* [为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)          
+* [Five Minute Vimscript](http://andrewscala.com/vimscript/)    
+* [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)    
+* [Learn Vimscript the Hard Way中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)    
 
 **Vim’s internal documentation**      
 [Vim documentation: usr_41](http://vimdoc.sourceforge.net/htmldoc/usr_41.html)    
