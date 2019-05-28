@@ -6,6 +6,10 @@ Enjoy it!
 ## What is vim?
 Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux(may be, but at least for me).
 
+![Graphical cheat sheet](./images/vi-vim-cheat-sheet.gif)     
+vim keyboard graphic
+see [Origin graphic=\](http://www.viemu.com/vi-vim-cheat-sheet.gif)      
+
 Vim (/vɪm/ a contraction of <strong>Vi IMproved</strong>) is a clone, with additions, of Bill Joy's vi text editor program for Unix. It was written by Bram Moolenaar based on source for a port of the Stevie editor to the Amiga and first released publicly in 1991. Vim is designed for use both from a command-line interface and as a standalone application in a graphical user interface. Vim is free and open-source software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda. The license is compatible with the GNU General Public License through a special clause allowing distribution of modified copies "under the GNU GPL version 2 or any later version".
 
 Vim is a successor to vi which is a text editor from the early days of Unix. It became quite popular and made its way into the Single Unix Specification (SUS) and POSIX, but wasn't freely available until 2002. Vim means vi improved, as the name suggest it adds lots of functions to the original vi interface.
@@ -33,7 +37,7 @@ The name "Vim" is an acronym for "Vi IMproved" because Vim is an extended versio
 Vim has a built-in tutorial for beginners. There is also the Vim Users' Manual that details Vim's features and a FAQ. This manual can be read from within Vim, or found online. 
 
 For example, at the terimal type command:
-
+r
     $ vimtutor
 
 Vim also has a built-in help facility (using the :help command) that allows users to query and navigate through commands and features. 
