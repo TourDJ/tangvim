@@ -592,14 +592,10 @@ Vim将列出当前文件夹下的所有文件及文件夹。
 * [为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)          
 * [Five Minute Vimscript](http://andrewscala.com/vimscript/)    
 * [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)    
-* [Learn Vimscript the Hard Way中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)    
+* [Learn Vimscript the Hard Way中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)     
+* [使用脚本编写 Vim 编辑器](https://www.ibm.com/developerworks/cn/linux/l-vim-script-1/index.html)      
 
-**Vim’s internal documentation**      
-[Vim documentation: usr_41](http://vimdoc.sourceforge.net/htmldoc/usr_41.html)    
 
-**IBM Scripting the Vim editor series**      
-[Part 1: Variables, values, and expressions](https://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html)    
-[Part 2: User-defined functions](https://www.ibm.com/developerworks/linux/library/l-vim-script-2/index.html?ca=drs-)    
-[Part 3: Built-in lists](https://www.ibm.com/developerworks/linux/library/l-vim-script-3/index.html?ca=drs-)    
-[Part 4: Dictionaries](https://www.ibm.com/developerworks/linux/library/l-vim-script-4/index.html?ca=drs-)    
-[Part 5: Event-driven scripting and automation](https://www.ibm.com/developerworks/linux/library/l-vim-script-5/index.html?ca=drs-)    
+Vim’s internal documentation   
+* [Vim documentation: usr_41](http://vimdoc.sourceforge.net/htmldoc/usr_41.html)    
+
