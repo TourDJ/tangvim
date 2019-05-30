@@ -17,6 +17,7 @@
       - [基本插入](#vimcmd_insert_base)      
       - [改写插入](#vimcmd_insert_replace)     
   - [删除命令](#vimcmd_delete)     
+    - [删除标记内部的文字](#vimcme_delete_tag)       
   - [拷贝和粘贴](#vimcmd_yank)     
   - [文本对象](#vimcmd_text)     
   - [跳转命令](#vimcmd_jump)     
@@ -224,6 +225,13 @@
     :1,$d                                   删除所有行
     J                                       删除两行之间的空行，实际上是合并两行。
     ggdG(:%d)                               删除文件中所有
+
+#### <a id="vimcme_delete_tag">删除标记内部的文字</a>
+
+    di[                                     删除中括号内的文字
+    di(                                     删除圆括号内的文字
+    di{                                     删除大括号内的文字
+    dt.                                     删除所有光标和标记之间的内容（保持标记不动）
 
 ### <a id="vimcmd_yank">拷贝和粘贴</a>
 
