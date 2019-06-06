@@ -1,4 +1,9 @@
 
+- [vim 插件](#plugin)   
+  - [插件管理工具](#plugin_tool)     
+  - [基本配置方式](#plugin_config)      
+  
+
 ## <a id="plugin">vim 插件</a>
 
 工欲善其事，必先利其器。
@@ -11,7 +16,7 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
 相关链接：    
 [Setting up Vim for React.js](https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015)    
 
-### <a id="plugintool">插件管理工具</a>
+### <a id="plugin_tool">插件管理工具</a>
 常用的 vim 插件管理工具：
 
 * pathogen       
@@ -33,7 +38,7 @@ pathogen 插件的安装：
       :PluginSearch foo - searches for foo; append `!` to refresh local cache
       :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-### <a id="pluginconfig">基本配置方式</a>
+### <a id="plugin_config">基本配置方式</a>
 Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不同种类的文件夹来放置不同的内容。在Vim里，"插件(plugin)"有一个更专业的定义，它表示"~/.vim/plugins/下的一个文件"。
 
 * `~/.vim/colors/`  Vim将会查找 `~/.vim/colors/mycolors.vim` 并执行它。 这个文件应该包括生成你的配色方案所需的一切Vimscript命令。
