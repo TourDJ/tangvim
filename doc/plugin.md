@@ -64,8 +64,13 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 * `~/.vim/doc/` `~/.vim/doc/`文件夹提供了一个你可以放置你的插件的文档的地方。 Vim对文档的要求是多多益善(看看我们执行过的所有:help命令就知道)，所以为你的插件写文档是重要的。
 
-***
-
 环境变量 $VIMRUNTIME 用来找出各种支持文件。colors,plugins,docs都是在 VIMRUNTIME 目录下的。可以使用以下命令查看：
 
      :echo $VIMRUNTIME
+
+### <a id="plugin_use">常用插件</a>
+
+[Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim)     
+自动生成注释
+
+
