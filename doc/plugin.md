@@ -1,3 +1,5 @@
+[返回首页](./index.md)
+***
 
 - [vim 插件](#plugin)   
   - [插件管理工具](#plugin_tool)     
