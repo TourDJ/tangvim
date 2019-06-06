@@ -4,6 +4,7 @@
 - [vim 插件](#plugin)   
   - [插件管理工具](#plugin_tool)     
   - [基本配置方式](#plugin_config)      
+  - [常用插件](#plugin_use)      
   
 
 ## <a id="plugin">vim 插件</a>
