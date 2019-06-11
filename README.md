@@ -94,7 +94,9 @@ When you begin to install vim plugin, you may see this in it's installation doc:
 >
 >       your_runtime_directory/plugin/fuf.vim
 
+Assuming that you're using some flavor of Unix, your personal runtime directory is `~/.vim`. This is where you should put any plugin used only by you. If you want other users to be able to access the plugin, put it in the second directory of the 'runtimepath' option, which usually is `$VIM/vimfiles`. 
 
+> You should not install any plugins into the `$VIMRUNTIME` directory. That directory is intended for plugins distributed with Vim. If you put other plugins in that directory, or modify files in that directory, you will likely lose those changes when you update your Vim installation.
 
     
 ## Vim script
