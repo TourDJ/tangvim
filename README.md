@@ -92,7 +92,7 @@ When you begin to install vim plugin, you may see this in it's installation doc:
 >
 > You should place the files as follows:
 >
->       `your_runtime_directory/plugin/fuf.vim`
+>       your_runtime_directory/plugin/fuf.vim
 
 
 
