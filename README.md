@@ -111,6 +111,7 @@ More detail pls see:
     :help 'rtp'
     :help '$VIMRUNTIME'
 
+* [Vim plugin doc](./doc/plugin.md)    
 
     
 ## Vim script
