@@ -71,7 +71,9 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 ### <a id="plugin_use">常用插件</a>
 
-[Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim)     
-自动生成注释
+[Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释     
+设置在 @author 区域自动填充的作者名称
 
-
+    let g:DoxygenToolkit_authorName="zzq@moon.net" 
+将光标定位到文件首行，输入:DoxAuthor，将插入文件头注释       
+将光标定位到数据结构声明或函数声明的第一行，输入:Dox，将生成数据结构或函数的注释
