@@ -82,6 +82,37 @@ then use `Ctrl` + `g` to view the path in status bar.
 There are many plugins available that will extend or add new functionality to Vim. These complex scripts are usually written in Vim's internal scripting language, vimscript (also known as VimL). Vim also supports scripting using Lua (as of Vim 7.3), Perl, Python, Racket (formerly PLT Scheme), Ruby, and Tcl.
 
 There are projects bundling together complex scripts and customizations and aimed at turning Vim into a tool for a specific task or adding a major flavour to its behaviour. Examples include Cream, which makes Vim behave like a click-and-type editor, or VimOutliner, which provides a comfortable outliner for users of Unix-like systems.
+
+### Runtime directory
+When you begin to install vim plugin, you may see this in it's installation doc:
+
+> INSTALLATION
+>
+> Put all files into your runtime directory. If you have the zip file, extract it to your runtime directory.
+>
+> You should place the files as follows:
+>
+>       your_runtime_directory/plugin/fuf.vim
+
+Assuming that you're using some flavor of Unix, your personal runtime directory is 
+
+    ~/.vim
+This is where you should put any plugin used only by you. 
+
+If you want other users to be able to access the plugin, put it in the second directory of the 'runtimepath' option, which usually is 
+
+    $VIM/vimfiles 
+Use :set runtimepath? inside Vim to see the directories involved.
+
+><strong>Warning</strong>: You should not install any plugins into the `$VIMRUNTIME` directory. That directory is intended for plugins distributed with Vim. If you put other plugins in that directory, or modify files in that directory, you will likely lose those changes when you update your Vim installation.
+
+More detail pls see:
+
+    :help 'rtp'
+    :help '$VIMRUNTIME'
+
+* [Vim plugin doc](./doc/plugin.md)    
+
     
 ## Vim script
 Vim script (also called vimscript or VimL) is the scripting language built into Vim. Based on the ex editor language of the original vi editor, early versions of Vim added commands for control flow and function definitions. Since version 7, Vim script also supports more advanced data types such as lists and dictionaries and (a simple form of) object-oriented programming. Built-in functions such as map() and filter() allow a basic form of functional programming, and Vim script has lambda since version 8.0. Vim script is mostly written in an imperative programming style.
