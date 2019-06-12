@@ -94,6 +94,8 @@ When you begin to install vim plugin, you may see this in it's installation doc:
 >
 >       your_runtime_directory/plugin/fuf.vim
 
+So, what's runtime directory?
+
 Assuming that you're using some flavor of Unix, your personal runtime directory is 
 
     ~/.vim
