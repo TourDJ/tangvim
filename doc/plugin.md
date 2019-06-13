@@ -77,3 +77,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
     let g:DoxygenToolkit_authorName="zzq@moon.net" 
 将光标定位到文件首行，输入:DoxAuthor，将插入文件头注释       
 将光标定位到数据结构声明或函数声明的第一行，输入:Dox，将生成数据结构或函数的注释
+
+* taglist 是一款基于 ctags vim 插件，在vim代码窗口旁以分割窗口形式显示当前的代码结构概览，增加代码浏览的便利。    
+
+
