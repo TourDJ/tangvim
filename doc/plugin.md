@@ -80,6 +80,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 设置在 @author 区域自动填充的作者名称
 
     let g:DoxygenToolkit_authorName="zzq@moon.net" 
+
 将光标定位到文件首行，输入:DoxAuthor，将插入文件头注释。       
 将光标定位到数据结构声明或函数声明的第一行，输入:Dox，将生成数据结构或函数的注释。
 
@@ -89,7 +90,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     Plugin 'vim-scripts/taglist.vim'
 
-若要默认打开taglist，_vimrc中加入
+若要默认打开 taglist，在 `~/.vimrc` 中加入：
 
     let Tlist_Auto_Open=1
 
