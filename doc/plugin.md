@@ -94,7 +94,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     let Tlist_Auto_Open=1
 
-* taglist 与 ctags 的关联     
+##### taglist 与 ctags 的关联     
 如果 ctags 的安装路径不再 $PATH 中，则需要手动设置 `Tlist_Ctags_Cmd` 值。修改~/.vim/plugin/taglist.vim文件，找到
 `if !exitsts(loaded_taglist)` 这一行，并在其前面添加
 
