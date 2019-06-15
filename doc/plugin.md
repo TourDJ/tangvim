@@ -101,11 +101,15 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 
 #### [jsctags](https://github.com/sergioramos/jsctags)
-安装
+ctags 的 js 版本。
+
+安装：
 
     npm install -g git+https://github.com/ramitos/jsctags.git
 
 使用：
+
+在工程目录下执行
 
     find . -type f -iregex ".*\.js$"            --查找当前路径下以.js结尾的文件
             -not -path "./node_modules/*"       --排除路径 node_midules
