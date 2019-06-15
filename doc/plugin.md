@@ -100,6 +100,25 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
     let Tlist_Ctags_Cmd="$PATH/ctags"
 
 
+#### [jsctags](https://github.com/sergioramos/jsctags)
+安装
 
+    npm install -g git+https://github.com/ramitos/jsctags.git
 
+使用：
+
+    find . -type f -iregex ".*\.js$"            --查找当前路径下以.js结尾的文件
+            -not -path "./node_modules/*"       --排除路径 node_midules
+            -exec jsctags {} -f \;              --执行jstags -f给这些查找到的文件
+            | sed '/^$/d'                       --删除空行
+            | LANG=C                            --设置语言环境为C
+            sort                                --然后排序 
+            > tags                              --定向到 tags 文件
+    
+
+支持 jsx:
+
+    find . -not -path "./node_modules/*" |egrep "\.jsx?$" |xargs jsctags {} -f \; | sed '/^$/d' | LANG=C sort > tags
+    
+    
 
