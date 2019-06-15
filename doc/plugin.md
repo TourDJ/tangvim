@@ -24,8 +24,7 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
 
 * pathogen       
 
-pathogen 插件的安装：       
-[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
+pathogen 插件的安装：[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
 
 
 * vunble       
@@ -81,8 +80,8 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     let g:DoxygenToolkit_authorName="zzq@moon.net" 
 
-将光标定位到文件首行，输入:DoxAuthor，将插入文件头注释。       
-将光标定位到数据结构声明或函数声明的第一行，输入:Dox，将生成数据结构或函数的注释。
+将光标定位到文件首行，输入`:DoxAuthor`，将插入文件头注释。       
+将光标定位到数据结构声明或函数声明的第一行，输入`:Dox`，将生成数据结构或函数的注释。
 
 #### [taglist](https://github.com/vim-scripts/taglist.vim) 是一款基于 ctags 插件，在 vim 代码窗口旁以分割窗口形式显示当前的代码结构概览，增加代码浏览的便利。    
 
