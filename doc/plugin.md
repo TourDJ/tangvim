@@ -100,8 +100,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
     let Tlist_Ctags_Cmd="$PATH/ctags"
 
 
-#### [jsctags](https://github.com/sergioramos/jsctags)
-ctags 的 js 版本。
+#### [jsctags](https://github.com/sergioramos/jsctags) ctags 的 js 版本。
 
 安装：
 
