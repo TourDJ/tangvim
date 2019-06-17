@@ -123,5 +123,13 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     find . -not -path "./node_modules/*" |egrep "\.jsx?$" |xargs jsctags {} -f \; | sed '/^$/d' | LANG=C sort > tags
     
-    
+#### [vim-javascript](https://github.com/pangloss/vim-javascript) javascript 语法高亮
+
+使用 Vundle 安装
+
+    Plugin 'pangloss/vim-javascript'
+
+
+
+
 
