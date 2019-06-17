@@ -132,4 +132,8 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 
 
+***
+
+### 参考资料
+* [Using Vim as a JavaScript IDE](http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide/)     
 
