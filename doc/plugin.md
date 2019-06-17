@@ -24,8 +24,7 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
 
 * pathogen       
 
-pathogen 插件的安装：       
-[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
+pathogen 插件的安装：[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
 
 
 * vunble       
@@ -71,9 +70,70 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 ### <a id="plugin_use">常用插件</a>
 
-* [Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释     
+#### [Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释
+
+使用 Vundle 安装
+
+    Plugin 'vim-scripts/DoxygenToolkit.vim'
+
 设置在 @author 区域自动填充的作者名称
 
     let g:DoxygenToolkit_authorName="zzq@moon.net" 
-将光标定位到文件首行，输入:DoxAuthor，将插入文件头注释       
-将光标定位到数据结构声明或函数声明的第一行，输入:Dox，将生成数据结构或函数的注释
+
+将光标定位到文件首行，输入`:DoxAuthor`，将插入文件头注释。       
+将光标定位到数据结构声明或函数声明的第一行，输入`:Dox`，将生成数据结构或函数的注释。
+
+#### [taglist](https://github.com/vim-scripts/taglist.vim) 是一款基于 ctags 插件，在 vim 代码窗口旁以分割窗口形式显示当前的代码结构概览，增加代码浏览的便利。    
+
+使用 Vundle 安装
+
+    Plugin 'vim-scripts/taglist.vim'
+
+若要默认打开 taglist，在 `~/.vimrc` 中加入：
+
+    let Tlist_Auto_Open=1
+
+##### taglist 与 ctags 的关联     
+如果 ctags 的安装路径不再 $PATH 中，则需要手动设置 `Tlist_Ctags_Cmd` 值。修改~/.vim/plugin/taglist.vim文件，找到
+`if !exitsts(loaded_taglist)` 这一行，并在其前面添加
+
+    let Tlist_Ctags_Cmd="$PATH/ctags"
+
+
+#### [jsctags](https://github.com/sergioramos/jsctags) ctags 的 js 版本。
+
+安装：
+
+    npm install -g git+https://github.com/ramitos/jsctags.git
+
+使用：
+
+在工程目录下执行
+
+    find . -type f -iregex ".*\.js$"            --查找当前路径下以.js结尾的文件
+            -not -path "./node_modules/*"       --排除路径 node_midules
+            -exec jsctags {} -f \;              --执行jstags -f给这些查找到的文件
+            | sed '/^$/d'                       --删除空行
+            | LANG=C                            --设置语言环境为C
+            sort                                --然后排序 
+            > tags                              --定向到 tags 文件
+    
+
+支持 jsx:
+
+    find . -not -path "./node_modules/*" |egrep "\.jsx?$" |xargs jsctags {} -f \; | sed '/^$/d' | LANG=C sort > tags
+    
+#### [vim-javascript](https://github.com/pangloss/vim-javascript) javascript 语法高亮
+
+使用 Vundle 安装
+
+    Plugin 'pangloss/vim-javascript'
+
+
+
+
+***
+
+### 参考资料
+* [Using Vim as a JavaScript IDE](http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide/)     
+
