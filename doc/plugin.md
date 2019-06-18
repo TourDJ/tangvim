@@ -99,6 +99,17 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     let Tlist_Ctags_Cmd="$PATH/ctags"
 
+#### [tagbar](https://github.com/majutsushi/tagbar) Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. 
+
+是 taglist 的替代？
+
+使用 Vundle 安装
+
+    Plugin 'majutsushi/tagbar'
+
+映射快捷键：
+
+    nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 #### [jsctags](https://github.com/sergioramos/jsctags) ctags 的 js 版本。
 
@@ -135,5 +146,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 ***
 
 ### 参考资料
-* [Using Vim as a JavaScript IDE](http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide/)     
+* [Using Vim as a JavaScript IDE](http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide/)      
+* [Vim and Ctags](https://andrew.stwrt.ca/posts/vim-ctags/)     
+
 
