@@ -10,11 +10,6 @@ Vim is a highly configurable text editor for efficiently creating and changing a
 Graphic: Graphical cheat sheet      
 See [Origin graphic](http://www.viemu.com/vi-vim-cheat-sheet.gif)      
 
-
-Vim’s internal documentation   
-* [Vim documentation: usr_41](http://vimdoc.sourceforge.net/htmldoc/usr_41.html)    
-
-
 Vim (/vɪm/ a contraction of <strong>Vi IMproved</strong>) is a clone, with additions, of Bill Joy's vi text editor program for Unix. It was written by Bram Moolenaar based on source for a port of the Stevie editor to the Amiga and first released publicly in 1991. Vim is designed for use both from a command-line interface and as a standalone application in a graphical user interface. Vim is free and open-source software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda. The license is compatible with the GNU General Public License through a special clause allowing distribution of modified copies "under the GNU GPL version 2 or any later version".
 
 Vim is a successor to vi which is a text editor from the early days of Unix. It became quite popular and made its way into the Single Unix Specification (SUS) and POSIX, but wasn't freely available until 2002. Vim means vi improved, as the name suggest it adds lots of functions to the original vi interface.
@@ -139,6 +134,11 @@ Examples
       let i += 1
     endwhile
     unlet i
+
+
+
+## Vim User Manual   
+* [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)    
 
 
 
