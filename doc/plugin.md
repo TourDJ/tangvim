@@ -98,6 +98,13 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 `if !exitsts(loaded_taglist)` 这一行，并在其前面添加
 
     let Tlist_Ctags_Cmd="$PATH/ctags"
+    
+
+#### [nerdtree](https://github.com/scrooloose/nerdtree) vim 系统资源管理器插件
+
+使用 Vundle 安装
+
+    scrooloose/nerdtree
 
 #### [tagbar](https://github.com/majutsushi/tagbar) Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. 
 
