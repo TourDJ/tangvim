@@ -605,7 +605,3 @@ Vim将列出当前文件夹下的所有文件及文件夹。
 * [Learn Vimscript the Hard Way中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)     
 * [使用脚本编写 Vim 编辑器](https://www.ibm.com/developerworks/cn/linux/l-vim-script-1/index.html)      
 
-
-Vim’s internal documentation   
-* [Vim documentation: usr_41](http://vimdoc.sourceforge.net/htmldoc/usr_41.html)    
-
