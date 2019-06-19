@@ -117,6 +117,44 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
   vim-scripts/winmanager
 
+winmanager 集成 NerdTree 和 Tagbar：
+```vimscript
+"下面的代码放到自己的vimrc配置中即可"
+let g:winManagerWindowLayout='NERDTree|Tagbar'
+let g:winManagerWidth=30
+let g:AutoOpenWinManager = 1 "这里要配合修改winmanager.vim文件
+
+let g:NERDTree_title = "[NERDTree]"
+function! NERDTree_Start()
+    "执行一个退出命令，关闭自动出现的窗口"
+    exe 'q' 
+    exe 'NERDTree'
+endfunction
+function! NERDTree_IsValid()
+  return 1
+endfunction
+noremap <f5> :NERDTreeFind<cr>
+
+let g:Tagbar_title = "[Tagbar]"
+function! Tagbar_Start()
+    "执行一个退出命令，关闭自动出现的窗口"
+    exe 'q' 
+    exe 'TagbarOpen'
+endfunction
+function! Tagbar_IsValid()
+    return 1
+endfunction
+let g:tagbar_vertical = 30
+
+" win manger插件要修改下，打开 winmanager/plugins/winmanager.vim ，在文件顶部加入下面的代码：
+if g:AutoOpenWinManager
+    " vim进入时自动执行 ToggleWindowsManager ，然后移动一次窗口焦点
+    autocmd VimEnter * nested call s:ToggleWindowsManager()|1wincmd w 
+endif
+```
+
+
+
 #### [jsctags](https://github.com/sergioramos/jsctags) ctags 的 js 版本。
 
 安装：
