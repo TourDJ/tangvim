@@ -111,6 +111,12 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
+#### [winmanager](https://github.com/vim-scripts/winmanager) 实现类似 IDE 的窗口
+
+使用 Vundle 安装
+
+  vim-scripts/winmanager
+
 #### [jsctags](https://github.com/sergioramos/jsctags) ctags 的 js 版本。
 
 安装：
