@@ -13,6 +13,13 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" winmmanager assemble nerdtree and tagbar
+Plugin 'vim-scripts/winmanager'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+
 
 " All of your Plugins must be added before the following line
 " Plugin end ================
@@ -28,13 +35,65 @@ let mapleader = ";"
 nnoremap <leader>w :w<Esc>
 nnoremap <leader>q :q<Esc>
 
-
+" Shortcut save and quit(insert mode)
 inoremap <leader>w <Esc>:w<Esc>
 inoremap <leader>q <Esc>:q<Esc>
 
 " Shortcut comment and uncomment
-nnoremap <leader>1 I"  <Esc>:w<Esc>
+nnoremap <leader>1 I" <Esc>:w<Esc>
 nnoremap <leader>2 ^2x <Esc>:w<Esc>
+
+" Shortcut window switch
+nnoremap <leader>a <C-W><C-H>
+nnoremap <leader>s <C-W><C-J>
+nnoremap <leader>w <C-W><C-K>
+nnoremap <leader>d <C-W><C-L>
+
+
+" Shortcut nerdtree toggle
+nnoremap <silent> <leader>c :NERDTreeToggle<CR>
+" Shortcut tabbar toggle
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+"  Set winmanager, nerdtree, tagtree, let them work well together like IDE
+let g:winManagerWindowLayout='NERDTree|Tagbar'
+let g:winManagerWidth=30
+let g:AutoOpenWinManager = 1 
+
+" //////////////////////// NerdTree
+"去除第一行的帮助提示
+let NERDTreeMinimalUI=1
+let g:NERDTree_title = "[NERDTree]"
+function! NERDTree_Start()
+    "执行一个退出命令，关闭自动出现的窗口"
+    exe 'q' 
+    exe 'NERDTree'
+endfunction
+function! NERDTree_IsValid()
+  return 1
+endfunction
+noremap <f5> :NERDTreeFind<cr>
+
+" //////////////////////// Tagbar
+"去除第一行的帮助信息
+let g:tagbar_compact = 1
+let g:Tagbar_title = "[Tagbar]"
+" 展开关闭文件夹的图标
+let g:tagbar_iconchars = ['▸', '▾']
+" 设置窗口占行
+let g:tagbar_vertical = 20
+" let g:tagbar_autoshowtag = 1
+function! Tagbar_Start()
+    "执行一个退出命令，关闭自动出现的窗口"
+    exe 'q' 
+    exe 'TagbarOpen'
+endfunction
+function! Tagbar_IsValid()
+    return 1
+endfunction
+
+" set linux tags
+set tags=/opt/linux-5.1.9/tags
 
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
@@ -43,11 +102,6 @@ highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NON
 " set cursorcolumn
 " highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 
-abbrev code # -*- coding: UTF-8 -*-
-
 syntax on
 set nu
-
-set tags=/opt/linux-5.1.9/tags
-
 
