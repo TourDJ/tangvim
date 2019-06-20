@@ -3,11 +3,11 @@
    
   - [vim 概述](./summary.md)  
   - [vim 模式](./mode.md#mode)   
-  - [vim 缓冲区](./buffer.md#buffer)    
+  - [vim 缓冲区](./buffer.md)    
   - [vim 配置](./config.md)       
   - [vim 指令](./directive.md)       
   - [vim 命令](./command.md)      
-  - [模式行（modeline）](./modeline.md#modeline)   
+  - [模式行（modeline）](./modeline.md)   
   - [vim 寄存器](./register.md)
   - [键盘映射](./key-mapping.md)      
   - [自动命令](./autocmd.md)    
