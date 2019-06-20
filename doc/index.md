@@ -7,6 +7,7 @@
   - [vim 配置](./config.md#config)      
     - [选项](./config.md#option)    
     - [折叠类型](./config.md#fold)    
+  - [vim 指令](./directive.md)       
   - [vim 命令](./command.md)      
   - [模式行（modeline）](./modeline.md#modeline)   
   - [vim 寄存器](./register.md)
