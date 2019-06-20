@@ -1,4 +1,10 @@
 
+- [键盘映射](./key-mapping.md#mapping)  
+    - [Leader](./key-mapping.md#leader)    
+    - [遮盖](./key-mapping.md#override)   
+    - [常用映射](./key-mapping.md#cusmapping)     
+
+
 ## <a id="mapping">键盘映射</a>
 map 是一个映射命令,将常用的很长的命令映射到一个新的功能键上。
 map 的格式：
