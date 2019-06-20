@@ -1,4 +1,8 @@
 
+- [vim 主题](./theme.md#theme)    
+    - [自定义主题](./theme.md#definetheme)         
+
+
 ## <a id="theme">vim 主题</a>
 vim 的颜色主题在 $VIMRUNTIME/colors 文件夹里。在正常模式下输入
 
