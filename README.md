@@ -136,13 +136,29 @@ Examples
     unlet i
 
 
+## Vim Use Experience(使用心得)
+   
+  - [Overview(概述)](./doc/summary.md)  
+  - [Modal(模式)](./doc/mode.md#mode)   
+  - [Buffer(缓冲区)](./doc/buffer.md)    
+  - [Config(配置)](./doc/config.md)       
+  - [Directive(指令)](./doc/directive.md)       
+  - [Command(命令)](./doc/command.md)      
+  - [Modeline（模式行）](./doc/modeline.md)   
+  - [Register(寄存器)](./doc/register.md)
+  - [Keyboard mapping(键盘映射)](./doc/key-mapping.md)      
+  - [Auto command(自动命令)](./doc/autocmd.md)    
+  - [Operator-Pending mapping(Operator-Pending 映射)](./doc/operator-pending-mapping.md)      
+  - [Abbreviations(缩写)](./doc/abbreviations.md)        
+  - [Plugin(插件)](./doc/plugin.md)        
+  - [Theme(主题)](./doc/theme.md)    
+  - [Vimscript](./doc/vimscript.md)      
+  - [Others(其他)](./doc/others.md)   
 
 ## Vim User Manual   
 * [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)    
 
-
-
-***     
+    
 [MIT](https://github.com/TourDJ/tangvim/blob/master/LICENSE)     
 
      

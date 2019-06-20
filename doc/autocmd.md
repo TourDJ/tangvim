@@ -1,4 +1,9 @@
 
+- [自动命令](./autocmd.md#autocmd)    
+    - [FileType事件](./autocmd.md#filetype)   
+    - [自动命令组](./autocmd.md#augroup)    
+
+
 ## <a id="autocmd">自动命令</a>
 自动命令可以让Vim自动执行某些指定的命令，这些指定的命令会在某些事件发生的时候执行。
 我们先看一个例子。

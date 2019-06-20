@@ -1,4 +1,9 @@
 
+- [vim 配置](./config.md#config)      
+    - [选项](./config.md#option)    
+    - [折叠类型](./config.md#fold)    
+
+
 ## <a id="config">vim 配置</a>
 vim 的全局配置文件是： /etc/vimrc，用户的配置文件为 ~/.vimrc， 如果不存在，就手动创建一个，平常我们只需配置这个文件就可以了。 配置完成后想要立刻生效，执行以下命令：
     

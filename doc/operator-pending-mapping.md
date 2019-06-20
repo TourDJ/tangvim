@@ -1,5 +1,12 @@
 
-## <a id="operator">Operator-Pending映射</a>
+- [Operator-Pending映射](./operator-pending-mapping.md#operator)  
+    - [Movement映射](./operator-pending-mapping.md#movement)     
+    - [改变开始位置](./operator-pending-mapping.md#chgloc)   
+    - [一般规则](./operator-pending-mapping.md#cusprin)     
+    - [复杂 Operator-Pending 映射](./operator-pending-mapping.md#moreop)  
+
+
+## <a id="operator">Operator-Pending 映射</a>
 一个Operator（操作）就是一个命令，你可以在这个命令的后面输入一个Movement（移动）命令，然后Vim开始对文本执行前面的操作命令，这个操作命令会从你当前所在的位置开始执行，一直到这个移动命令会把你带到的位置结束。
 
 常用到的Operator有d，y和c。例如：
