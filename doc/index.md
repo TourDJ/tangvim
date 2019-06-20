@@ -14,7 +14,6 @@
   - [Operator-Pending映射](./operator-pending-mapping.md)      
   - [Abbreviations](./abbreviations.md)        
   - [vim 插件](./plugin.md)        
-  - [vim 主题](./theme.md#theme)    
-    - [自定义主题](./theme.md#definetheme)         
+  - [vim 主题](./theme.md)    
   - [vimscript](./vimscript.md)      
   - [其他](./others.md)     
