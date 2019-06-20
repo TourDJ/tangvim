@@ -138,7 +138,7 @@ Examples
 
 ## Vim Use Experience(使用心得)
    
-  - [Overview(概述)](./summary.md)  
+  - [Overview(概述)](./doc/summary.md)  
   - [Modal(模式)](./mode.md#mode)   
   - [Buffer(缓冲区)](./buffer.md)    
   - [Config(配置)](./config.md)       
