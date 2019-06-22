@@ -184,7 +184,8 @@ endif
 
 支持 jsx:
 
-    find . -not -path "./node_modules/*" |egrep "\.jsx?$" |xargs jsctags {} -f \; | sed '/^$/d' | LANG=C sort > tags
+    find . -not -path "./node_modules/*" |egrep "\.jsx?$" |xargs jsctags {} -f \; 
+    | sed '/^$/d' | LANG=C sort > tags
     
 #### [vim-javascript](https://github.com/pangloss/vim-javascript) javascript 语法高亮
 
