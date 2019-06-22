@@ -189,6 +189,13 @@ endif
     Plugin 'pangloss/vim-javascript'
 
 
+#### [spf13-vim](https://github.com/spf13/spf13-vim) 一个 vim 的分发版插件
+该插件继承了常用的 vim 插件，并配置了常用选项。
+
+安装：
+
+  curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+> Requires Git 1.7+ and Vim 7.3+
 
 
 ***
