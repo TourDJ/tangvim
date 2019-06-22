@@ -5,6 +5,8 @@
   - [插件管理工具](#plugin_tool)     
   - [基本配置方式](#plugin_config)      
   - [常用插件](#plugin_use)      
+    - [doxygen](#doxygen)     
+    
   
 
 ## <a id="plugin">vim 插件</a>
@@ -67,7 +69,9 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 ### <a id="plugin_use">常用插件</a>
 
-#### [Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释
+#### <a id="doxygen">Doxygen</a>
+[Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释
+
 
 使用 Vundle 安装
 
