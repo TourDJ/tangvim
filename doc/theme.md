@@ -20,7 +20,7 @@ vim 的颜色主题在 $VIMRUNTIME/colors 文件夹里。在正常模式下输�
 将用户目录加入到运行时路径中。
 
 ### 256 colors in vim
-XTerm and most other modern terminal emulators support 256 colors, you can use a script to check if your terminal supports 256 colors.
+XTerm and most other modern terminal emulators support 256 colors, you can use a script to check if your [terminal supports 256 colors](../script/terminalcolors.py).
 
 ### <a id="commontheme">常用的主题插件</a>
 收藏了几个不同的主题插件。
