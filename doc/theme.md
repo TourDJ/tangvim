@@ -1,6 +1,7 @@
 
-- [vim 主题](./theme.md#theme)    
-    - [自定义主题](./theme.md#definetheme)         
+- [vim 主题](#theme)      
+	- [常用的主题插件](#commontheme)      
+    - [自定义主题](#definetheme)         
 
 
 ## <a id="theme">vim 主题</a>
@@ -17,6 +18,9 @@ vim 的颜色主题在 $VIMRUNTIME/colors 文件夹里。在正常模式下输�
 
      set runtimepath+=~/.vim
 将用户目录加入到运行时路径中。
+
+### 256 colors in vim
+XTerm and most other modern terminal emulators support 256 colors, you can use a script to check if your [terminal supports 256 colors](../script/terminalcolors.py).
 
 ### <a id="commontheme">常用的主题插件</a>
 收藏了几个不同的主题插件。
@@ -64,5 +68,11 @@ let g:colors_name='myvim'   " 主题名称设置为 myvim
 hi 是highlight的缩写。gui 表上图形界面，cterm表示终端, fg 表示前景色, bg 表示背景色。
     * hi link 子样式 被继承的父样式      
 link 的主要作用就是让 Mystyle 继承 Normal的配色样式。见[样式参考](https://github.com/antlypls/vim-colors-codeschool/blob/master/colors/codeschool.vim)
+
+
+参考资料：      
+* [256 colors in vim](https://vim.fandom.com/wiki/256_colors_in_vim)      
+* [Colour colour everywhere! 256 colour-mode for Linux consoles](http://www.robmeerman.co.uk/unix/256colours)      
+
 
 
