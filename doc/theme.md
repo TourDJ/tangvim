@@ -72,5 +72,7 @@ link 的主要作用就是让 Mystyle 继承 Normal的配色样式。见[样式�
 
 参考资料：      
 * [256 colors in vim](https://vim.fandom.com/wiki/256_colors_in_vim)      
+* [Colour colour everywhere! 256 colour-mode for Linux consoles](http://www.robmeerman.co.uk/unix/256colours)      
+
 
 
