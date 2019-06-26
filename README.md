@@ -112,8 +112,6 @@ More detail pls see:
     :help 'rtp'
     :help '$VIMRUNTIME'
 
-* [Vim plugin doc](./doc/plugin.md)    
-
     
 ## Vim script
 Vim script (also called vimscript or VimL) is the scripting language built into Vim. Based on the ex editor language of the original vi editor, early versions of Vim added commands for control flow and function definitions. Since version 7, Vim script also supports more advanced data types such as lists and dictionaries and (a simple form of) object-oriented programming. Built-in functions such as map() and filter() allow a basic form of functional programming, and Vim script has lambda since version 8.0. Vim script is mostly written in an imperative programming style.
