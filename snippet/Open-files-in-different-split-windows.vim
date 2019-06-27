@@ -1,5 +1,7 @@
 " Open files in different split windows in VIM
-
+"
+" Detail: https://stackoverflow.com/questions/22716378/open-files-in-different-split-windows-in-vim
+"
 " Vim also offers the -o and -O command-line arguments for horizontal / vertical splits. 
 " Unfortunately, they cannot be mixed. To build you own custom window layout, you have to 
 " pass the explicit window placement commands via -c. 
