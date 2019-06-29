@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox' 
 
 " Window manager
 Plugin 'vim-scripts/winmanager'
@@ -31,6 +32,8 @@ call vundle#end()
 
 filetype plugin indent on    " enables filetype detection
 
+colorscheme gruvbox                                                                                              
+set background=dark 
 
 let mapleader = ";"
 
