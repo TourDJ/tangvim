@@ -18,7 +18,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Python plugin
 Plugin 'davidhalter/jedi-vim'
-
+Plugin 'vim-scripts/Pydiction'
 
 " All of your Plugins must be added before the following line
 " Plugin end ================
@@ -26,7 +26,7 @@ Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
 filetype plugin indent on    " enables filetype detection
-
+filetype plugin on
 
 let mapleader = ";" 
 
@@ -40,6 +40,8 @@ inoremap <leader>q <Esc>:q<Esc>
 " Shortcut comment and uncomment
 nnoremap <leader>1 I"  <Esc>:w<Esc>
 nnoremap <leader>2 ^2x <Esc>:w<Esc>
+
+let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
