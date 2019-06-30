@@ -56,5 +56,9 @@ imap <silent> <C-D><C-D> <C-R>=strftime("%e %b %Y")<CR>
 " 插入当前时间
 imap <silent> <C-T><C-T> <C-R>=strftime("%l:%M %p")<CR>
 
+" 当前的工作目录创建缩写
+iabbrev <silent> CWD <C-R>=getcwd()<CR>
+" 嵌入一个简单的计算器
+imap <silent> <C-C> <C-R>=string(eval(input("Calculate: ")))<CR>
 
 
