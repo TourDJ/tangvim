@@ -427,6 +427,14 @@ Vim将抛出一个错误，因为你不能对参数变量重新赋值。现在�
     :call AssignGood("test")
 这次就可以了，Vim显示Yep。
 
+可以通过输入下面的内容开始学习这些函数：
+
+    :help functions
+
+或者，可以访问一个（更加有用的）分类列表：
+
+    :help function-list
+
 ### <a id="datatype">数据类型</a>
 #### <a id="datatype_number">数字</a>
 Vimscript有两种数值类型：Number和Float。一个Number是32位带符号整数。一个Float是浮点数。
