@@ -46,3 +46,10 @@ func! RunPython()
     endif
 endfunc
 
+
+" 设置两个键映射（key-map）来增加或减小当前的表空间
+nmap <silent> ]] :let &tabstop += 1<CR>
+nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0<CR>
+
+
+
