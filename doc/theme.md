@@ -2,7 +2,7 @@
 - [vim 主题](#theme)      
 	- [常用的主题插件](#commontheme)      
     - [自定义主题](#definetheme)         
-
+	- [vim 的语法高亮/配色方案](#themecolor)     
 
 ## <a id="theme">vim 主题</a>
 vim 的颜色主题在 $VIMRUNTIME/colors 文件夹里。在正常模式下输入
@@ -68,6 +68,89 @@ let g:colors_name='myvim'   " 主题名称设置为 myvim
 hi 是highlight的缩写。gui 表上图形界面，cterm表示终端, fg 表示前景色, bg 表示背景色。
     * hi link 子样式 被继承的父样式      
 link 的主要作用就是让 Mystyle 继承 Normal的配色样式。见[样式参考](https://github.com/antlypls/vim-colors-codeschool/blob/master/colors/codeschool.vim)
+
+### <a id="themecolor">vim 的语法高亮/配色方案</a>
+vim 的配色分两部分：编辑环境配色和文本区域配色
+
+1) vim编辑环境配色：
+比如Vim编辑区的前景背景色、状态栏颜色、错误提示颜色、查找、光标、圈选区、行号、折叠等的颜色这里列出几个配色组名及其含义(全部的详细信息查看帮助文件 :help hi 查找 "highlight-group" 即可)：
+
+	Cursor        光标下的字符颜色    
+	CursorLine    光标所在行颜色    
+	ErrorMsg      命令行出现的错误信息提示    
+	IncSearcg     被搜索字符的颜色    
+	Normal        普通字符    
+	Pmenu         弹出的提示条目颜色    
+	PmenuSel      弹出的提示条目中被选中条目的颜色    
+	SpellBad      拼写错误字符颜色    
+	Visual        可视化模式下选中字符的颜色    
+	Menu          菜单栏的颜色字体    
+	Scrollbar     滚动条的颜色   
+
+2) 文本区域配色：
+可编辑的文本区域的字符配色(详细信息请执行 :help hi搜索 "\*comment")。由于配色种类较多，vim默认分了几大类(帮助信息中带*的)：
+
+	*Comment        注释  
+	*Constant       常量  
+	*statement      常用关键字标示符  
+	*PrePoc         预处理符号  
+	*Type           数据类型  
+ 
+下面是较为详细的组别：
+
+	String          字符串常量: "string abc\n"  
+	Character       单个字符常量: 'c', '\n'  
+	Number          数字常量: 234, 0xff  
+	Boolean         布尔常量: TRUE, false  
+	Function        函数名  
+	Conditional     条件关键字: if, then, else, endif, switch, etc.  
+	Repeat          循环关键字: for, do, while, etc.  
+	Operator        操作符: "sizeof", "+", "*", etc.  
+	Exception       异常关键字: try, catch, throw  
+
+这样便可以更为详细的为每一个组别进行配色。
+
+查看当前的vim配色情况
+
+	:hi/highlight
+另外，文本区域的配色可以关闭，但环境配色不能，通常vim给定的默认可选配色方案中同时包含了以上两个方面。
+下面就一条具体的配色命令(对数据类型配色)解释每个字段的含义：
+
+	hi Type cterm=none ctermbg=White ctermfg=Green guibg=Gray guifg=Red
+* hi: highlight的缩写，配色命令
+* Type: 配色组名，可以自定义(修改$VIMRUNTIME/syntax/下对应的文件可改变不同语言的高亮方案)其内容 
+* cterm,ctermbg,ctermfg,guibg,guifg: 代表了不同显示环境
+* White,Green: 表示颜色(也可以用数字或者类似与html的16进制颜色表示方法)
+
+显示环境有三种：黑白终端，彩色终端，图形界面，三种环境下参数名称如下:
+
+	term        attributes in a B&W terminal  
+	cterm       attributes in a color terminal  
+	ctermfg     foreground color in a color terminal  
+	ctermbg     background color in a color terminal  
+	gui         attributes in the GUI  
+	guifg       foreground color in the GUI  
+	guibg       background color in the GUI  
+
+其中term仅有黑白两色，cterm下颜色较为单一，GUI模式颜色丰富
+
+若要仅修改某种语言（c、Java、pascal）的配色，则在配色组名前加语言名称即可，比如对c/c++语言的数据类型单独配色：
+
+	hi cType ctermfg=Blue
+若是修改java/pascal的数据类型，则相应的将cType替换为javaType/pascalType即可。
+
+对于文本区域的语法高亮(即配色)，我们可根据需求特殊化定制，比如自定义组: myUniqueWord, mySymbol，使用syn/syntax命令
+
+syn keyword myUniqueWord gang Gang swagger
+syn match mySymbol "[,.;(){}[]]" (可使用正则表达式)
+vim目前7.4版本给出的可直接使用(colorscheme命令加于.vimrc中即可)的配色方案位于目录：/usr/local/share/vim/vim74/colors，比如使用desert.vim中的配色，则于.vimrc中添加一行
+
+	colorscheme desert
+即可
+
+配色方案列表(带效果图)，可参考：      
+http://vimcolorschemetest.googlecode.com/svn/html/index-c.html       
+[10 个你值得拥有的 Vim 配色方案](http://www.oschina.net/news/32306/10-vim-color-schemes-you-need-to-own)     
 
 
 参考资料：      
