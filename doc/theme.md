@@ -74,8 +74,7 @@ vim 的配色分两部分：编辑环境配色和文本区域配色
 
 1) vim编辑环境配色：
 比如Vim编辑区的前景背景色、状态栏颜色、错误提示颜色、查找、光标、圈选区、行号、折叠等的颜色这里列出几个配色组名及其含义(全部的详细信息查看帮助文件 :help hi 查找 "highlight-group" 即可)：
-
-
+```
 	Cursor        光标下的字符颜色    
 	CursorLine    光标所在行颜色    
 	ErrorMsg      命令行出现的错误信息提示    
@@ -87,19 +86,18 @@ vim 的配色分两部分：编辑环境配色和文本区域配色
 	Visual        可视化模式下选中字符的颜色    
 	Menu          菜单栏的颜色字体    
 	Scrollbar     滚动条的颜色   
-
+```
 2) 文本区域配色：
-可编辑的文本区域的字符配色(详细信息请执行 :help hi搜索 "\*comment")。由于配色种类较多，vim默认分了几大类(帮助信息中带*的)：
-
-
+可编辑的文本区域的字符配色(详细信息请执行 :help hi搜索 "\*comment")。由于配色种类较多，vim默认分了几大类(帮助信息中带\*的)：
+```
 	*Comment        注释  
 	*Constant       常量  
 	*statement      常用关键字标示符  
 	*PrePoc         预处理符号  
 	*Type           数据类型  
- 
+``` 
 下面是较为详细的组别：
-
+```
 	String          字符串常量: "string abc\n"  
 	Character       单个字符常量: 'c', '\n'  
 	Number          数字常量: 234, 0xff  
@@ -109,7 +107,7 @@ vim 的配色分两部分：编辑环境配色和文本区域配色
 	Repeat          循环关键字: for, do, while, etc.  
 	Operator        操作符: "sizeof", "+", "*", etc.  
 	Exception       异常关键字: try, catch, throw  
-
+```
 这样便可以更为详细的为每一个组别进行配色。
 
 查看当前的vim配色情况
@@ -125,7 +123,7 @@ vim 的配色分两部分：编辑环境配色和文本区域配色
 * White,Green: 表示颜色(也可以用数字或者类似与html的16进制颜色表示方法)
 
 显示环境有三种：黑白终端，彩色终端，图形界面，三种环境下参数名称如下:
-
+```
 	term        attributes in a B&W terminal  
 	cterm       attributes in a color terminal  
 	ctermfg     foreground color in a color terminal  
@@ -133,7 +131,7 @@ vim 的配色分两部分：编辑环境配色和文本区域配色
 	gui         attributes in the GUI  
 	guifg       foreground color in the GUI  
 	guibg       background color in the GUI  
-
+```
 其中term仅有黑白两色，cterm下颜色较为单一，GUI模式颜色丰富
 
 若要仅修改某种语言（c、Java、pascal）的配色，则在配色组名前加语言名称即可，比如对c/c++语言的数据类型单独配色：
