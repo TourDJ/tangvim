@@ -196,6 +196,36 @@ Vim会输出你刚刚使用的搜索模式。这样你就可以通过编程来�
 |@varname	|一个 Vim 注册器|
 |$varname	|一个环境变量|
 
+Vimscript 中的表达式由大多数其他现代脚本语言中使用的相同的基本运算符组成，并且使用基本相同的语法。
+
+表 3. Vimscript 运算符优先表
+
+|运算	      | 运算符语法  |
+|----------| ----------------------------------- |
+|赋值  | letvar=expr |
+|数值相加并赋值 | let var+=expr |
+|数值相减并赋值 | let var-=expr |
+|字符串连接并赋值	| let var.=expr |
+|三元运算符	| bool?expr-if-true:expr-if-false |
+|逻辑 OR |	bool||bool |
+|逻辑 AND	| bool&&bool |
+|数值或字符串相等 | expr==expr |
+|数值或字符串不相等 | expr!=expr |
+|数值或字符串大于 | expr>expr |
+|数值或字符串大于等于 | expr>=expr |
+|数值或字符串小于 | expr<expr |
+|数值或字符串小于等于	| expr<=expr |
+|数值相加 | num+num |
+|数值相减 | num-num |
+|字符串连接 | str.str |
+|数值相乘 | num*num |
+|数值相除 | num/num |
+|数值系数	| num%num |
+|转换为数值 | +num |
+|求负数 | -num |
+|逻辑 NOT	| !bool |
+|括号优先	| (expr) |
+
 ### <a id="condition">条件语句</a>
 #### <a id="condition_if">If</a>
 每种编程语言都有产生分支流程的方法，在Vimscript中，这是用if语句实现的。 if语句是Vimscript中产生分支的基本方法。例如：
@@ -614,6 +644,7 @@ Vim将输出当前目录下所有的文件和文件夹。globpath()函数返回�
 
     :echo split(globpath('.', '**'), '\n')
 Vim将列出当前文件夹下的所有文件及文件夹。
+
 
 参考资料：         
 * [为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)          
