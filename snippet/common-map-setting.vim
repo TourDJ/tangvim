@@ -51,6 +51,10 @@ endfunc
 nmap <silent> ]] :let &tabstop += 1<CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0<CR>
 
+" 插入生成的日期
+imap <silent> <C-D><C-D> <C-R>=strftime("%e %b %Y")<CR>
+" 插入当前时间
+imap <silent> <C-T><C-T> <C-R>=strftime("%l:%M %p")<CR>
 
 
 
