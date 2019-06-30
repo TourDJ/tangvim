@@ -90,9 +90,15 @@ function! ToggleSyntax()
       syntax enable
    endif
 endfunction
- 
 nmap <silent>  ;s  :call ToggleSyntax()<CR>
 
+" 创建中心标题
+function! CapitalizeCenterAndMoveDown()
+   s/\<./\u&/g   "Built-in substitution capitalizes each word
+   center        "Built-in center command centers entire line
+   +1            "Built-in relative motion (+1 line down)
+endfunction
+nmap <silent>  \C  :call CapitalizeCenterAndMoveDown()<CR>
 
 
 
