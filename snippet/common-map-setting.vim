@@ -1,5 +1,5 @@
 
-" ============ 常用映射 snippet ============
+" ============ 常用映射 ============
 
 " 显示当前foldcolumn选项的值, 使用： 按下<leader>f
 nnoremap <leader>f :call FoldColumnToggle()<cr>
@@ -50,6 +50,7 @@ endfunc
 " 设置两个键映射（key-map）来增加或减小当前的表空间
 nmap <silent> ]] :let &tabstop += 1<CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0<CR>
+
 
 
 
