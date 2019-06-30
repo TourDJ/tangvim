@@ -100,6 +100,7 @@ function! CapitalizeCenterAndMoveDown()
 endfunction
 nmap <silent>  \C  :call CapitalizeCenterAndMoveDown()<CR>
 
+" ======================== BEGIN 
 " 突出显示经常拼错的单词
 "Create a text highlighting style that always stands out...
 highlight STANDOUT term=bold cterm=bold gui=bold
@@ -137,5 +138,7 @@ nmap <silent>  ;p  :call WordCheck()<CR>
 " For example, if there is a set of words that you frequently misspell or misapply, you could 
 " add a script toyour .vimrc to activate Vim's match mechanism and highlight problematic words 
 " when you're proofreading text.
+
+" ======================== END
 
 
