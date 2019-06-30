@@ -7,7 +7,7 @@ Enjoy it!
 Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux(may be, but at least for me).
 
 ![Graphical cheat sheet](./images/vi-vim-cheat-sheet.gif)     
--                                       Graphic: Graphical cheat sheet      
+.                                       Graphic: Graphical cheat sheet      
 See [Origin graphic](http://www.viemu.com/vi-vim-cheat-sheet.gif), and also can see some [graphical cheat sheet based tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html).    
 One more vim [keyboard graphic](http://michael.peopleofhonoronly.com/vim/)
 
@@ -132,7 +132,7 @@ Examples
     unlet i
 
 
-## Vim Use Experience(使用心得)
+## Vim Use Show(使用说明)
    
   - [Overview(概述)](./doc/summary.md)  
   - [Modal(模式)](./doc/mode.md#mode)   
@@ -151,7 +151,7 @@ Examples
   - [Vimscript](./doc/vimscript.md)      
   - [Others(其他)](./doc/others.md)   
 
-## Vim User Manual   
+## Vim Use Manual   
 * [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)    
 
     
