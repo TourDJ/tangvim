@@ -156,6 +156,7 @@ http://vimcolorschemetest.googlecode.com/svn/html/index-c.html
 参考资料：      
 * [256 colors in vim](https://vim.fandom.com/wiki/256_colors_in_vim)      
 * [Colour colour everywhere! 256 colour-mode for Linux consoles](http://www.robmeerman.co.uk/unix/256colours)      
+* [vim的语法高亮/配色方案](https://www.cnblogs.com/qiyuexin/p/6398606.html#_label3)     
 
 
 
