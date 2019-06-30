@@ -7,7 +7,7 @@ Enjoy it!
 Vim is a highly configurable text editor for efficiently creating and changing any kind of text, now is the most popular text editor in Linux(may be, but at least for me).
 
 ![Graphical cheat sheet](./images/vi-vim-cheat-sheet.gif)     
-                                       Graphic: Graphical cheat sheet      
+-                                       Graphic: Graphical cheat sheet      
 See [Origin graphic](http://www.viemu.com/vi-vim-cheat-sheet.gif), and also can see some [graphical cheat sheet based tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html).    
 One more vim [keyboard graphic](http://michael.peopleofhonoronly.com/vim/)
 
@@ -47,9 +47,6 @@ For example, open the vim, and type:
 
     :help set
 
-Additional, i gather some very classic document personal, take it no thanks:         
-
-* <strong>[Vim white book of tang](./doc/index.md)    </strong>
 
 ## Customization
 Part of Vim's power is that it can be extensively customized. The basic interface can be controlled by the many options available, and the user can define personalized key mappings—often called macros—or abbreviations to automate sequences of keystrokes, or even call internal or user-defined functions.
