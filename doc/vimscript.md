@@ -4,7 +4,8 @@
         - [自定义关键字](#definekeyword)    
         - [关键字注释](#keywordcomment)    
         - [在 Vim 创建外部脚本语言](#otherlang)    
-    - [变量](#varli)   
+    - [变量](#varli)    
+    - [表达式](#expression)      
     - [条件语句](#condition)     
     - [函数](#function)      
     - [数据类型](#datatype)   
@@ -196,6 +197,8 @@ Vim会输出你刚刚使用的搜索模式。这样你就可以通过编程来�
 |@varname	|一个 Vim 注册器|
 |$varname	|一个环境变量|
 
+### <a id="expression">表达式</a>
+
 Vimscript 中的表达式由大多数其他现代脚本语言中使用的相同的基本运算符组成，并且使用基本相同的语法。
 
 表 3. Vimscript 运算符优先表
@@ -225,6 +228,24 @@ Vimscript 中的表达式由大多数其他现代脚本语言中使用的相同�
 |求负数 | -num |
 |逻辑 NOT	| !bool |
 |括号优先	| (expr) |
+
+#### 逻辑说明
+在 Vimscript 中，对于布尔值来说，只有数值 0 为假；任何非 0 数值 — 不管是正数还是负数 — 都为真。然而，所有逻辑和比较运算符都全部返回值 1，表示真。
+
+当将字符串作为布尔值使用时，将首先把字符串转换为整数，然后再计算真（非 0）或假（0）。这意味着大部分字符串 — 包括大部分非空字符串 — 将被计算为 false。
+
+#### 比较函数说明
+在 Vimscript 中，比较函数始终执行数字比较，除非两个运算对象都是字符串。特别是，如果一个运算对象是字符串，另一个是数字，那么字符串将被转换为数字，然后再对两个数字进行数值比较。
+
+字符串比较通常使用 Vim 的 ignorecase 选项的本地设置，但是任何字符串比较函数都可以被显式地标记为大小写敏感（通过附加一个 #）或大小写不敏感（通过附加一个 ?）：
+
+    if name ==? 'Batman'         |"Equality always case insensitive
+       echo "I'm Batman"
+    elseif name <# 'ee cummings' |"Less-than always case sensitive
+       echo "the sky was can dy lu minous"
+    endif
+
+强烈推荐对所有字符串比较使用 “显式设置大小写的” 运算对象，因为这样可以确保无论用户选项设置如何变化，脚本都可以可靠地执行。
 
 ### <a id="condition">条件语句</a>
 #### <a id="condition_if">If</a>
