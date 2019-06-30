@@ -128,3 +128,7 @@ vimrc 修改后立即生效
 
      " 让配置变更立即生效
      autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+
+> Vimscript 理解非打印字符的许多其他类似的表示, 通过在 Vim 内输入 :help keycodes，可以看到这些特殊符号的完整列表。
+
