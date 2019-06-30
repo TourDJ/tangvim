@@ -82,6 +82,16 @@ function! Removed(fn, l)
     return new_list
 endfunction
 
+" 启用或关闭语法突出显示功能
+function! ToggleSyntax()
+   if exists("g:syntax_on")
+      syntax off
+   else
+      syntax enable
+   endif
+endfunction
+ 
+nmap <silent>  ;s  :call ToggleSyntax()<CR>
 
 
 
