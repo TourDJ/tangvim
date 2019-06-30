@@ -1,0 +1,6 @@
+
+`CTRL-Y`  在 Insert 模式下会执行 “纵向复制（vertical copy）”。也就是说，它将从紧挨着游标的上一行中复制同一列中的字符。例如，在下面的情形中，将在游标处插入一个 “m”：
+
+    Glib jocks quiz nymph to vex dwarf
+    Glib jocks quiz ny_
+
