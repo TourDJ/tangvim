@@ -8,6 +8,7 @@
     - [表达式](#expression)      
     - [条件语句](#condition)     
     - [函数](#function)      
+      - [调用函数](#function_call)      
     - [数据类型](#datatype)   
     - [列表](#list)     
     - [循环](#loop)    
@@ -331,6 +332,8 @@ Vim显示two因为<code>==#</code>是"无论你怎么设都大小写敏感"比�
 ### <a id="function">函数</a>
 Vimscript支持函数。
 
+Vimscript 中的函数使用 function 关键字定义，后跟函数名，然后是参数列表（这是强制的，即使该函数没有参数）。函数体然后从下一行开始，一直连续下去，直到遇到一个匹配的 endfunction 关键字。
+
 没有作用域限制的Vimscript函数必须以一个大写字母开头！
 
 执行下面的命令：
@@ -344,6 +347,18 @@ Vim定义了一个函数。
 
     :call Meow()
 不出所料，Vim显示Meow!
+
+函数返回值使用 return 语句指定。可以根据需要指定任意数量的单独 return 语句。如果函数被用作一个过程，并且没有任何有用的返回值，那么可以不包含 return 语句。然而，Vimscript 函数始终 返回一个值，因此如果没有指定任何 return，那么函数将自动返回 0。
+
+如果使用显式的范围前缀声明函数，那么它的名称就不需要以大写开头；它可以是任意有效标识符。然而，显式确定范围的函数必须始终使用范围前缀进行调用。比如：
+
+    " Function scoped to current script file...
+    function s:save_backup ()
+        let b:backup_count = exists('b:backup_count') ? b:backup_count+1 : 1
+        return writefile(getline(1,'$'), bufname('%') . '_' . b:backup_count)
+    endfunction
+
+    nmap <silent>  <C-B>  :call s:save_backup()<CR>
 
 #### <a id="function_call">调用函数</a>
 第一种方法使用call命令。
