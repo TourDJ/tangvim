@@ -148,8 +148,7 @@ vim目前7.4版本给出的可直接使用(colorscheme命令加于.vimrc中即�
 	colorscheme desert
 即可
 
-配色方案列表(带效果图)，可参考：      
-http://vimcolorschemetest.googlecode.com/svn/html/index-c.html       
+配色方案列表(带效果图)，可参考：          
 [10 个你值得拥有的 Vim 配色方案](http://www.oschina.net/news/32306/10-vim-color-schemes-you-need-to-own)     
 
 
