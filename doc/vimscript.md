@@ -780,7 +780,7 @@ vim 大部分常用的正则元字符都与perl兼容，比如\\s,\\d,\\D,\\w,\\
 | \\@<=       |	(?<= |	逆序环视	   | 查找前面是my的sql： /\(my\)\@<=sql
 | \\@<!       |	(?<! |	逆序否定环视  |	查找前面不是my的sql： /\(my\)\@<!sql
 | \\@>        |	(?>  |	固化分组      |	
-| \\%(atom\\) |	(?:  |	非捕获型括号(此分组不捕获，可以理解为不算在分组信息中)	| :%s/\%(my\)sql\(ok\)/\1这个命令会将mysqlok替换为 ok ，由于my为捕获在分组中，故组中\1 为ok。|
+| \\%(atom\\) |	(?:  |	非捕获型括号	| :%s/\%(my\)sql\(ok\)/\1这个命令会将mysqlok替换为 ok |
 
 参考资料：         
 * [为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)          
