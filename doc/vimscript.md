@@ -789,6 +789,7 @@ vim 大部分常用的正则元字符都与perl兼容，比如\\s,\\d,\\D,\\w,\\
 * [Learn Vimscript the Hard Way中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)     
 * [使用脚本编写 Vim 编辑器](https://www.ibm.com/developerworks/cn/linux/l-vim-script-1/index.html)      
 * [A Byte of Vim](https://vim.swaroopch.com/)      
-* [Vim Cookbook](http://www.oualline.com/vim-cook.html)       
+* [Vim Cookbook](http://www.oualline.com/vim-cook.html)        
+* [Vim的正则表达式](https://www.jianshu.com/p/3abd6fbc3322)     
 
 
