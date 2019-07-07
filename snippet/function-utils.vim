@@ -149,7 +149,12 @@ function AlignAssignments ()
     let ASSIGN_LINE = '^\(.\{-}\)\s*\(' . ASSIGN_OP . '\)'
  
     "Locate block of code to be considered (same indentation, no blanks)
-   
+    let indent_pat = '^' . matchstr(getline('.'), '^\s*') . '\S'
+    let firstline  = search('^\%('. indent_pat . '\)\@!','bnW') + 1
+    let lastline   = search('^\%('. indent_pat . '\)\@!', 'nW') - 1
+    if lastline < 0
+        let lastline = line('$')
+    endif   
  
     "Find the column at which the operators should be aligned...
     let max_align_col = 0
