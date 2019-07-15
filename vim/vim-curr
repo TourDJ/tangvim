@@ -1,0 +1,124 @@
+"vundle
+set nocompatible "关闭与vi的兼容模式
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" Plugin begin ================
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+
+Plugin 'VundleVim/Vundle.vim'
+
+" theme
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox' 
+
+" Window manager
+Plugin 'vim-scripts/winmanager'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'kien/ctrlp.vim'
+
+" Python plugin
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-scripts/Pydiction'
+
+" All of your Plugins must be added before the following line
+" Plugin end ================
+
+call vundle#end()
+
+filetype plugin indent on    " enables filetype detection
+
+" colorscheme gruvbox                                                                                            " set background=dark 
+
+let mapleader = ";"
+
+" Shortcut save and quit
+nnoremap <leader>w :w<Esc>
+nnoremap <leader>q :q<Esc>
+
+" Shortcut save and quit(insert mode)
+inoremap <leader>w <Esc>:w<Esc>
+inoremap <leader>q <Esc>:q<Esc>
+
+" Shortcut comment and uncomment
+nnoremap <leader>1 I" <Esc>:w<Esc>
+nnoremap <leader>2 ^2x <Esc>:w<Esc>
+nnoremap <leader>3 I# <Esc>:w<Esc>
+nnoremap <leader>4 ^2x <Esc>:w<Esc>
+
+" Shortcut window switch
+nnoremap <leader>a <C-W><C-H>
+nnoremap <leader>s <C-W><C-J>
+nnoremap <leader>e <C-W><C-K>
+nnoremap <leader>d <C-W><C-L>
+
+
+" Shortcut nerdtree toggle
+nnoremap <silent> <leader>c :NERDTreeToggle<CR>
+" Shortcut tabbar toggle
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+"  let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
+let g:winManagerWindowLayout='NERDTree|Tagbar'
+let g:winManagerWidth=24
+let g:AutoOpenWinManager = 1 
+
+let NERDTreeMinimalUI=1
+let g:NERDTree_title = "[NERDTree]"
+let NERDTreeChDirMode = 2
+function! NERDTree_Start()
+    "执行一个退出命令，关闭自动出现的窗口"
+    exe 'q' 
+    exe 'NERDTree'
+endfunction
+function! NERDTree_IsValid()
+  return 1
+endfunction
+noremap <f5> :NERDTreeFind<cr>
+
+let g:tagbar_compact = 1
+let g:Tagbar_title = "[Tagbar]"
+let g:tagbar_iconchars = ['▸', '▾']
+let g:tagbar_vertical = 20
+let g:tagbar_autoshowtag = 1
+function! Tagbar_Start()
+    "执行一个退出命令，关闭自动出现的窗口"
+    exe 'q' 
+    exe 'TagbarOpen'
+endfunction
+function! Tagbar_IsValid()
+    return 1
+endfunction
+
+set tags=./tags;,tags,/home/diangong/jiefang/source/django-master/tags,/opt/linux-5.1.9/tags
+
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+" hi CursorLine term=none cterm=none ctermbg=4
+
+set cursorcolumn
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+
+syntax on
+set nu
+" set indent
+set autoindent
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set expandtab
+
+
+
+
+let g:pydiction_location = '/home/diangong/.vim/bundle/pydiction/complete-dict'
+
