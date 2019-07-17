@@ -813,7 +813,8 @@ vim 大部分常用的正则元字符都与perl兼容，比如\\s,\\d,\\D,\\w,\\
 | \\@>        |	(?>  |	固化分组      |	
 | \\%(atom\\) |	(?:  |	非捕获型括号	| :%s/\\%(my\\)sql\\(ok\\)/\\1这个命令会将mysqlok替换为 ok |
 
-参考资料：         
+
+## 参考资料：         
 * [为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)          
 * [Five Minute Vimscript](http://andrewscala.com/vimscript/)    
 * [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)    
