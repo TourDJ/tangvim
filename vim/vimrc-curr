@@ -30,6 +30,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/Pydiction'
 
+" similar to emmet
+Plugin 'mattn/emmet-vim'
+
 " All of your Plugins must be added before the following line
 " Plugin end ================
 
@@ -88,7 +91,7 @@ noremap <f5> :NERDTreeFind<cr>
 let g:tagbar_compact = 1
 let g:Tagbar_title = "[Tagbar]"
 let g:tagbar_iconchars = ['▸', '▾']
-let g:tagbar_vertical = 20
+let g:tagbar_vertical = 15
 let g:tagbar_autoshowtag = 1
 function! Tagbar_Start()
     "执行一个退出命令，关闭自动出现的窗口"
