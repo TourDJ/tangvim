@@ -70,6 +70,7 @@ nnoremap <silent> <leader>c :NERDTreeToggle<CR>
 " Shortcut tabbar toggle
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
+
 "  let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
 let g:winManagerWindowLayout='NERDTree|Tagbar'
 let g:winManagerWidth=24
@@ -120,8 +121,11 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
-
-
-
 let g:pydiction_location = '/home/diangong/.vim/bundle/pydiction/complete-dict'
+
+
+" set abbreviate
+abbrev code # -*- coding: UTF-8 -*-
+abbrev url {% url  %}
+
 
