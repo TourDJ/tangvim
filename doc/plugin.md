@@ -3,9 +3,17 @@
 
 - [vim 插件](#plugin)   
   - [插件管理工具](#plugin_tool)     
+    - [pathogen](#pathogen)         
+    - [vundle](#vundle)       
   - [基本配置方式](#plugin_config)      
   - [常用插件](#plugin_use)      
-    - [doxygen](#doxygen)     
+    - [主题](#plugin_theme)        
+    - [窗口管理](#plugin_windiow)       
+    - [语法词法提示](#plugin_syntax)      
+    - [html](#plugin_html)        
+    - [python](#plugin_python)     
+    - [工具](#plugin_tools)      
+      - [doxygen](#doxygen)     
     
   
 
@@ -21,12 +29,12 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
 ### <a id="plugin_tool">插件管理工具</a>
 常用的 vim 插件管理工具：
 
-* pathogen       
+#### <a id="pathogen">pathogen</a>    
 
 pathogen 插件的安装：[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
 
 
-* vunble       
+#### <a id="vundle>vunble</a>
 
 安装：     
 
@@ -69,6 +77,12 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 ### <a id="plugin_use">常用插件</a>
 
+#### <a id="plugin_theme">主题</a>        
+#### <a id="plugin_windiow">窗口管理</a>       
+#### <a id="plugin_syntax">语法词法提示</a>      
+#### <a id="plugin_html">html</a>        
+#### <a id="plugin_python">python</a>   
+#### <a id="plugin_tools">工具</a>
 #### <a id="doxygen">Doxygen</a>
 [Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释
 
