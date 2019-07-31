@@ -3,9 +3,17 @@
 
 - [vim 插件](#plugin)   
   - [插件管理工具](#plugin_tool)     
+    - [pathogen](#pathogen)         
+    - [vundle](#vundle)       
   - [基本配置方式](#plugin_config)      
   - [常用插件](#plugin_use)      
-    - [doxygen](#doxygen)     
+    - [主题](#plugin_theme)        
+    - [窗口管理](#plugin_windiow)       
+    - [语法词法提示](#plugin_syntax)      
+    - [html](#plugin_html)        
+    - [python](#plugin_python)     
+    - [工具](#plugin_tools)      
+      - [doxygen](#doxygen)     
     
   
 
@@ -21,12 +29,12 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
 ### <a id="plugin_tool">插件管理工具</a>
 常用的 vim 插件管理工具：
 
-* pathogen       
+#### <a id="pathogen">pathogen</a>    
 
 pathogen 插件的安装：[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
 
 
-* vunble       
+#### <a id="vundle>vunble</a>
 
 安装：     
 
@@ -69,22 +77,11 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
 ### <a id="plugin_use">常用插件</a>
 
-#### <a id="doxygen">Doxygen</a>
-[Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释
+#### <a id="plugin_theme">主题</a> 
 
+#### <a id="plugin_windiow">窗口管理</a> 
 
-使用 Vundle 安装
-
-    Plugin 'vim-scripts/DoxygenToolkit.vim'
-
-设置在 @author 区域自动填充的作者名称
-
-    let g:DoxygenToolkit_authorName="zzq@moon.net" 
-
-将光标定位到文件首行，输入`:DoxAuthor`，将插入文件头注释。       
-将光标定位到数据结构声明或函数声明的第一行，输入`:Dox`，将生成数据结构或函数的注释。
-
-#### [taglist](https://github.com/vim-scripts/taglist.vim) 是一款基于 ctags 插件，在 vim 代码窗口旁以分割窗口形式显示当前的代码结构概览，增加代码浏览的便利。    
+##### [taglist](https://github.com/vim-scripts/taglist.vim) 是一款基于 ctags 插件，在 vim 代码窗口旁以分割窗口形式显示当前的代码结构概览，增加代码浏览的便利。    
 
 使用 Vundle 安装
 
@@ -94,20 +91,21 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     let Tlist_Auto_Open=1
 
-##### taglist 与 ctags 的关联     
+taglist 与 ctags 的关联     
+
 如果 ctags 的安装路径不再 $PATH 中，则需要手动设置 `Tlist_Ctags_Cmd` 值。修改~/.vim/plugin/taglist.vim文件，找到
 `if !exitsts(loaded_taglist)` 这一行，并在其前面添加
 
     let Tlist_Ctags_Cmd="$PATH/ctags"
     
 
-#### [nerdtree](https://github.com/scrooloose/nerdtree) vim 系统资源管理器插件
+##### [nerdtree](https://github.com/scrooloose/nerdtree) vim 系统资源管理器插件
 
 使用 Vundle 安装
 
     scrooloose/nerdtree
 
-#### [tagbar](https://github.com/majutsushi/tagbar) Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. 
+##### [tagbar](https://github.com/majutsushi/tagbar) Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. 
 
 是 taglist 的替代？
 
@@ -119,7 +117,7 @@ Vim支持把插件分割成多个文件。你可以在~/.vim下创建许多不�
 
     nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
-#### [winmanager](https://github.com/vim-scripts/winmanager) 实现类似 IDE 的窗口
+##### [winmanager](https://github.com/vim-scripts/winmanager) 实现类似 IDE 的窗口
 
 使用 Vundle 安装
 
@@ -160,6 +158,27 @@ if g:AutoOpenWinManager
     autocmd VimEnter * nested call s:ToggleWindowsManager()|1wincmd w 
 endif
 ```
+
+#### <a id="plugin_syntax">语法词法提示</a>      
+#### <a id="plugin_html">html</a>        
+#### <a id="plugin_python">python</a>   
+
+#### <a id="plugin_tools">工具</a>
+##### <a id="doxygen">Doxygen</a>
+[Doxygen](https://github.com/vim-scripts/DoxygenToolkit.vim) 自动生成注释
+
+
+使用 Vundle 安装
+
+    Plugin 'vim-scripts/DoxygenToolkit.vim'
+
+设置在 @author 区域自动填充的作者名称
+
+    let g:DoxygenToolkit_authorName="zzq@moon.net" 
+
+将光标定位到文件首行，输入`:DoxAuthor`，将插入文件头注释。       
+将光标定位到数据结构声明或函数声明的第一行，输入`:Dox`，将生成数据结构或函数的注释。
+
 
 
 
