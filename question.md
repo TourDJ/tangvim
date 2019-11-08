@@ -6,4 +6,4 @@
 #### ubuntu安装完自带的vim是很不好用，是因为自带的是tiny 模式。卸载命令：
 
     sudo apt-get remove --purge vim-common
-    --purge 是完全删除，会连配置文件一起删除
+--purge 是完全删除，会连配置文件一起删除
