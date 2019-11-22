@@ -366,6 +366,8 @@ Vim定义了一个函数。
     :call Meow()
 不出所料，Vim显示Meow!
 
+**delfunction \<function\>** deletes a function.
+
 如果使用显式的范围前缀声明函数，那么它的名称就不需要以大写开头；它可以是任意有效标识符。然而，显式确定范围的函数必须始终使用范围前缀进行调用。比如：
 
     " Function scoped to current script file...
@@ -456,6 +458,17 @@ Vimscript函数可以设计为接受不定数目的参数，就像Javascript和P
 
     :call Varg2("a", "b", "c")
 我们可以看到Vim将"a"作为具名参数(named argument)a:foo的值，将余下的塞进可变参数列表中。
+
+There’s a special way to call functions, and that is on a range of lines from a buffer. Calling a function this way looks like 1,3call Foobar(). A function called with a range is executed once for every line in the range. In this case, Foobar is called three times total.
+
+If you add the keyword range after the argument list, the function will only be called once. Two special variables will be available within the scope of the function: a:firstline and a:lastline. These variables contain the start and end line numbers for the range on the function call.
+
+Example: Create buffer function RangeSize forcefully which will print out the size of the range it is called with.
+```
+function! b:RangeSize() range
+    echo a:lastline - a:firstline
+endfunction
+```
 
 #### <a id="function_setvalue">赋值</a>
 试试执行下面的命令：
