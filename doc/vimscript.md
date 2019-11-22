@@ -534,6 +534,19 @@ Vim也允许你使用"字符串字面量"来避免转义字符串的滥用。
 |\<string\> . \<string\>  | Concatenate two strings.|
 
 Note: Vim option ignorecase sets default case sensitivity for == and != operators. Add ? or # to the end of the operator to match based on a case or not.
+例子：
+```
+:function! TrueFalse(arg)
+:   return a:arg? "true" : "false"
+:endfunction
+
+:echo TrueFalse("X start" =~ 'X$')
+false
+:echo TrueFalse("end X" =~ 'X$')
+true
+:echo TrueFalse("end x" =~# 'X$')
+false
+```
 
 #### Funcref:
 A reference to a function. Variables used for funcref objects must start with a capital letter.
