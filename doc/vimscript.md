@@ -522,6 +522,20 @@ Vim也允许你使用"字符串字面量"来避免转义字符串的滥用。
     :echom '\n\\'
 使用单引号将告诉Vim，你希望字符串所见即所得，无视转义字符串。 一个例外是一行中连续两个单引号将产生一个单引号。
 
+
+#### Funcref:
+A reference to a function. Variables used for funcref objects must start with a capital letter.
+```
+:let Myfunc = function("strlen")
+:echo Myfunc('foobar') " Call strlen on 'foobar'.
+6
+```
+
+说明：
+1. There is no Boolean type. Numeric value 0 is treated as falsy, while anything else is truthy.
+
+2. Strings are converted to integers before checking truthiness. Most strings will covert to 0, unless the string starts with a number.
+
 ### <a id="list">列表</a>
 Vim有两种主要的集合类型：列表。
 
