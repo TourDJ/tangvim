@@ -18,7 +18,7 @@
     - [列表](#list)     
     - [循环](#loop)    
     - [字典](#dict)    
-    - [函数式编程](#functional)   
+    - [函数](#functional)   
     - [vimscript 命令](#script)       
     - [路径](#path)       
     - [正则表达式](#regexp)        
@@ -534,6 +534,7 @@ Vim也允许你使用"字符串字面量"来避免转义字符串的滥用。
 |\<string\> . \<string\>  | Concatenate two strings.|
 
 Note: Vim option ignorecase sets default case sensitivity for == and != operators. Add ? or # to the end of the operator to match based on a case or not.
+
 例子：
 ```
 :function! TrueFalse(arg)
@@ -655,7 +656,9 @@ Vimscript字典类似于Python中的dict，和Javascript中的object。
     :echo {'a': 1, 100: 'foo',}.a
     :echo {'a': 1, 100: 'foo',}.100
 
-### <a id="functional">函数式编程</a>
+### <a id="functional">函数</a>
+定义函数使用关键字 **function**。 在function后加上感叹号表示要覆盖函数。类是变量，函数也可以指定作用域。
+
 #### 作为变量的函数
 Vimscript支持使用变量储存函数。执行下面的命令：
 
