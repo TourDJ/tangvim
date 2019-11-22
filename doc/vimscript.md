@@ -525,13 +525,13 @@ Vim也允许你使用"字符串字面量"来避免转义字符串的滥用。
 ##### String Conditionals and Operators
 |  表达式       |   说明   |
 |-----------------| ------------ |
-|<string> == <string> | String equals.|
-|<string> != <string> | String does not equal.|
-|<string> =~ <pattern>| String matches pattern.|
-|<string> !~ <pattern>| String doesn’t match pattern.|
-|<operator>#          | Additionally match case.|
-|<operator>?          | Additionally don’t match case.|
-|<string> . <string>  | Concatenate two strings.|
+|\<string\> == \<string\> | String equals.|
+|\<string\> != \<string\> | String does not equal.|
+|\<string\> =~ \<pattern\>| String matches pattern.|
+|\<string\> !~ \<pattern\>| String doesn’t match pattern.|
+|\<operator\>#          | Additionally match case.|
+|\<operator\>?          | Additionally don’t match case.|
+|\<string\> . \<string\>  | Concatenate two strings.|
 
 Note: Vim option ignorecase sets default case sensitivity for == and != operators. Add ? or # to the end of the operator to match based on a case or not.
 
@@ -544,8 +544,8 @@ A reference to a function. Variables used for funcref objects must start with a 
 ```
 
 说明：
-1 There is no Boolean type. Numeric value 0 is treated as falsy, while anything else is truthy.
-2 Strings are converted to integers before checking truthiness. Most strings will covert to 0, unless the string starts with a number.
+1. There is no Boolean type. Numeric value 0 is treated as falsy, while anything else is truthy.
+2. Strings are converted to integers before checking truthiness. Most strings will covert to 0, unless the string starts with a number.
 
 ### <a id="list">列表</a>
 Vim有两种主要的集合类型：列表。
