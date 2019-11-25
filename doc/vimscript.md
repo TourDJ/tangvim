@@ -129,6 +129,13 @@ endfunction
 * 在 Vim 中编写一个函数，它把文件源代码传递给 Perl 代码。$curbuf->Count( ) 指出在当前的缓冲区中有多少行；$curbuf->Get(<line1>..<line2>) 返回 line1 和 line2 所指定的两行之间的文本。在这个脚本中，传递当前缓冲区中从第一行到最后一行的所有内容。现在，在 ESC 模式下输入 :call L1()，应该会立即看到正在处理的函数。
     
 ### <a id="varli">变量</a>
+
+默认情况下，如果变量最初是在函数外部定义的，则该变量是在全局范围内, 否则是在函数内部。
+
+* let 用于设置变量。
+* unlet 用于取消设置变量。
+* unlet! 取消设置变量并抑制错误（如果不存在）。
+
 执行下面的命令。
 
     :let foo = "bar"
@@ -206,6 +213,8 @@ Vim会输出你刚刚使用的搜索模式。这样你就可以通过编程来�
 |&g:varname	|全局 Vim 选项|
 |@varname	|一个 Vim 注册器|
 |$varname	|一个环境变量|
+
+> 您可以通过使用`$variable`的形式来设置和获取环境变量。 也可以通过使用`＆option`形式获取vim的内置选项。
 
 ### <a id="expression">表达式</a>
 
@@ -357,6 +366,8 @@ Vim定义了一个函数。
     :call Meow()
 不出所料，Vim显示Meow!
 
+**delfunction \<function\>** deletes a function.
+
 如果使用显式的范围前缀声明函数，那么它的名称就不需要以大写开头；它可以是任意有效标识符。然而，显式确定范围的函数必须始终使用范围前缀进行调用。比如：
 
     " Function scoped to current script file...
@@ -448,6 +459,17 @@ Vimscript函数可以设计为接受不定数目的参数，就像Javascript和P
     :call Varg2("a", "b", "c")
 我们可以看到Vim将"a"作为具名参数(named argument)a:foo的值，将余下的塞进可变参数列表中。
 
+There’s a special way to call functions, and that is on a range of lines from a buffer. Calling a function this way looks like 1,3call Foobar(). A function called with a range is executed once for every line in the range. In this case, Foobar is called three times total.
+
+If you add the keyword range after the argument list, the function will only be called once. Two special variables will be available within the scope of the function: a:firstline and a:lastline. These variables contain the start and end line numbers for the range on the function call.
+
+Example: Create buffer function RangeSize forcefully which will print out the size of the range it is called with.
+```
+function! b:RangeSize() range
+    echo a:lastline - a:firstline
+endfunction
+```
+
 #### <a id="function_setvalue">赋值</a>
 试试执行下面的命令：
 
@@ -512,6 +534,45 @@ Vim也允许你使用"字符串字面量"来避免转义字符串的滥用。
 
     :echom '\n\\'
 使用单引号将告诉Vim，你希望字符串所见即所得，无视转义字符串。 一个例外是一行中连续两个单引号将产生一个单引号。
+
+##### String Conditionals and Operators
+|  表达式       |   说明   |
+|-----------------| ------------ |
+|\<string\> == \<string\> | String equals.|
+|\<string\> != \<string\> | String does not equal.|
+|\<string\> =~ \<pattern\>| String matches pattern.|
+|\<string\> !~ \<pattern\>| String doesn’t match pattern.|
+|\<operator\>#          | Additionally match case.|
+|\<operator\>?          | Additionally don’t match case.|
+|\<string\> . \<string\>  | Concatenate two strings.|
+
+Note: Vim option ignorecase sets default case sensitivity for == and != operators. Add ? or # to the end of the operator to match based on a case or not.
+
+例子：
+```
+:function! TrueFalse(arg)
+:   return a:arg? "true" : "false"
+:endfunction
+
+:echo TrueFalse("X start" =~ 'X$')
+false
+:echo TrueFalse("end X" =~ 'X$')
+true
+:echo TrueFalse("end x" =~# 'X$')
+false
+```
+
+#### Funcref:
+A reference to a function. Variables used for funcref objects must start with a capital letter.
+```
+:let Myfunc = function("strlen")
+:echo Myfunc('foobar') " Call strlen on 'foobar'.
+6
+```
+
+说明：
+1. There is no Boolean type. Numeric value 0 is treated as falsy, while anything else is truthy.
+2. Strings are converted to integers before checking truthiness. Most strings will covert to 0, unless the string starts with a number.
 
 ### <a id="list">列表</a>
 Vim有两种主要的集合类型：列表。
@@ -746,9 +807,9 @@ Vim 对正则表达式有着强大的支持。使用正则表达式的命令最�
 
 #### <a id="regexp-metachar">特殊字符</a>
 
+1. 元字符: 元字符是具有特殊意义的字符。
 
-元字符是具有特殊意义的字符。
-##### 表： 元字符
+表： 元字符
 
 | 元字符  |  说明      |
 | ------ | -------------------- |
@@ -770,13 +831,10 @@ Vim 对正则表达式有着强大的支持。使用正则表达式的命令最�
 | \\u | 大写字母 [A-Z] |
 | \\U | 非大写字幕[^A-Z] |
 
-`\<`, `\>`	会匹配出以某些字符开头的(\<)或结尾(\>)的单词
 
-`\(`, `\)` 符号括起正规表达式，即可在后面使用\1、\2等变量来访问 \( 和 \) 中的内容。这种形式实际上是将\(与\)中的模式保存到了特殊的空间(称之为"保留缓冲区").这种方法可以保存任意一行中的9个模式.
+2. 量词
 
-`\?` 或 `\=`	0个或1个(匹配优先)
-
-##### 表： 量词
+表： 量词
 
 | 字符 | 含义 |
 | ---- | ----------------- |
@@ -788,6 +846,17 @@ Vim 对正则表达式有着强大的支持。使用正则表达式的命令最�
 | \\{,m} | 最多m个(匹配优先) |
 | \\{n} | 恰好n个 |
 
+3. 其他字符
+
+`\<`, `\>`	会匹配出以某些字符开头的(\<)或结尾(\>)的单词
+
+`\(`, `\)` 符号括起正规表达式，即可在后面使用\1、\2等变量来访问 \( 和 \) 中的内容。这种形式实际上是将\(与\)中的模式保存到了特殊的空间(称之为"保留缓冲区").这种方法可以保存任意一行中的9个模式.
+
+`\?` 或 `\=`	0个或1个(匹配优先)   
+
+`.*` 贪婪匹配
+
+`.\{-}` 非贪婪匹配
 
 #### <a id="regexp-presurvey">正向预查和反向预查</a>
 vim 大部分常用的正则元字符都与perl兼容，比如\\s,\\d,\\D,\\w,\\W, <, >。但vim不支持\\b，即单词边界。
@@ -798,14 +867,15 @@ vim 大部分常用的正则元字符都与perl兼容，比如\\s,\\d,\\D,\\w,\\
 
 | Vim	| Perl	| 意义 |	例子  |
 | ---- | ---- | ------------------- | --------------------- |
-| \\@=        |	(?=  |	顺序环视	   | 查找后面是sql的my： /my\(sql\)\@= |
-| \\@!        |	(?!	 |  顺序否定环视	| 查找后面不是sql的my： /my\(sql\)\@!
-| \\@<=       |	(?<= |	逆序环视	   | 查找前面是my的sql： /\(my\)\@<=sql
-| \\@<!       |	(?<! |	逆序否定环视  |	查找前面不是my的sql： /\(my\)\@<!sql
+| \\@=        |	(?=  |	顺序环视	   | 查找后面是sql的my： /my\\(sql\\)\\@= |
+| \\@!        |	(?!	 |  顺序否定环视	| 查找后面不是sql的my： /my\\(sql\\)\\@!
+| \\@<=       |	(?<= |	逆序环视	   | 查找前面是my的sql： /\\(my\\)\\@<=sql
+| \\@<!       |	(?<! |	逆序否定环视  |	查找前面不是my的sql： /\\(my\\)\\@<!sql
 | \\@>        |	(?>  |	固化分组      |	
 | \\%(atom\\) |	(?:  |	非捕获型括号	| :%s/\\%(my\\)sql\\(ok\\)/\\1这个命令会将mysqlok替换为 ok |
 
-参考资料：         
+
+## 参考资料：         
 * [为 Vim 编辑器开发定制插件](https://www.ibm.com/developerworks/cn/aix/library/au-vimplugin/)          
 * [Five Minute Vimscript](http://andrewscala.com/vimscript/)    
 * [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)    
