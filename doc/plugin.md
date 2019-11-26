@@ -105,6 +105,16 @@ taglist 与 ctags 的关联
 
     scrooloose/nerdtree
 
+nerdtree 设置
+```
+let NERDTreeShowHidden=1    默认显示隐藏文件
+```
+
+nerdtree 快捷键
+```
+I        切换NERDTree资源管理器窗口中的隐藏文件
+```
+
 ##### [tagbar](https://github.com/majutsushi/tagbar) Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure. 
 
 是 taglist 的替代？
