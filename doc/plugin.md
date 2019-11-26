@@ -9,6 +9,7 @@
   - [常用插件](#plugin_use)      
     - [主题](#plugin_theme)        
     - [窗口管理](#plugin_windiow)       
+      - [nerdtree](#nerdtree)       
     - [语法词法提示](#plugin_syntax)      
     - [html](#plugin_html)        
     - [python](#plugin_python)     
@@ -99,7 +100,8 @@ taglist 与 ctags 的关联
     let Tlist_Ctags_Cmd="$PATH/ctags"
     
 
-##### [nerdtree](https://github.com/scrooloose/nerdtree) vim 系统资源管理器插件
+##### <a id="nerdtree">nerdtree</a>
+[nerdtree](https://github.com/scrooloose/nerdtree) vim 系统资源管理器插件
 
 使用 Vundle 安装
 
