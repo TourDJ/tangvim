@@ -24,21 +24,21 @@ Yeap!!!
 ```
 即变成如下内容：
 ```
-System.out.println("Hello World!")
-System.out.println("Hi!")    
-System.out.println("OK!")    
-System.out.println("Yeap!!!") 
+System.out.println("Hello World!");
+System.out.println("Hi!");
+System.out.println("OK!");
+System.out.println("Yeap!!!");
 ```
 操作步骤如下：
 * 首先把光标移动line1上，输入qt，准备开始录制，缓冲器的名字为t
 * 录制的动作为：
   1. shift + ^ 回到行首
   2. 按下i键进入insert模式
-  3. 输入“System.out.println(”
+  3. 输入`System.out.println("`
   4. 按下esc键回到正常模式
   5. shift + $ 回到行尾部
   6. 按下i键进入insert模式
-  7. 输入“);”
+  7. 输入`");`
   8. 按下esc键回到正常模式
 * 按下q停止录制
 * 然后把光标移动到下面一行的任意位置输入 @ + t 即可
