@@ -150,7 +150,7 @@ Examples
   - [Theme(主题)](./doc/theme.md)    
   - [Vimscript](./doc/vimscript.md)      
   - [Others(其他)](./doc/others.md)     
-  - [recording宏]??       
+  - [recording(宏)](./doc/recording.md)         
 
 ## Vim Use Manual   
 * [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)    
