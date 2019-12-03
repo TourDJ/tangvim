@@ -411,9 +411,10 @@
 
         ggVGg?
 
-* 自动补全
+* 自动补全(提示)
 
         Ctrl+n
+        Ctrl+p
 
 * cit 命令    
 在用 vim 编辑 `html` 和 `xml` 时经常使用 `cit` 操作来删除一对标签内的文字。
