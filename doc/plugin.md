@@ -35,7 +35,7 @@ VIM 插件一般安装在 5 个地方， 存放插件的路径都列在“runtim
 pathogen 插件的安装：[Vim下的插件管理工具pathogen简介](https://www.cnblogs.com/litifeng/p/5597565.html) 
 
 
-#### <a id="vundle>vunble</a>
+#### <a id="vundle">vunble</a>
 
 安装：     
 
