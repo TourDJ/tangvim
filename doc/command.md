@@ -1,5 +1,3 @@
-\> [首页](./index.md)     
-***
 
 - [vim 命令](#vimcmd)      
   - [启动 Vim](#startvim)    
