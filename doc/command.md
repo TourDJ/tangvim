@@ -419,8 +419,7 @@
 
 
 #### 参考资料：      
-[Vim命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)     
-[一些不起眼但非常有用的 Vim 命令](http://blog.jobbole.com/84683/)        
+[Vim命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)         
 [史上最全的Vim命令](https://zhuanlan.zhihu.com/p/51440836)     
 [Vim cheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt)        
 [vim wiki](https://www.barbarianmeetscoding.com/wiki/vim)          
