@@ -7,30 +7,31 @@
      标签页是窗口的集合
 
 在 vim 中，可以将 buffer 看成是打开文件的实例。一个文件只有一个 buffer。
-* 查看 buffer 的命令：
 
-         :ls 
+###### 查看 buffer 的命令：
+
+     :ls 
 显示：
 
-           1 %a   ".vimrc"                       line 20
-           2   =  ".viminfo"                     line 30
-           3 # =  "/etc/vimrc"                   line 71
+      1 %a   ".vimrc"                       line 20
+      2   =  ".viminfo"                     line 30
+      3 # =  "/etc/vimrc"                   line 71
 左侧是buffer的编号，有%的表示是当前激活的window中打开的buffer，a表示这个buffer是active的，双引号中的字符串表示了buffer对应的文件名字，line n表示当前cursor处于该buffer的哪一行，# 代表的是编辑前一次编辑的文档。
 
-* 切换下一个缓冲区，显示下一个文件的内容
+###### 切换下一个缓冲区，显示下一个文件的内容
 
-          :bn
+     :bn
 
-* 切换上一个缓冲区，显示上一个文件的内容
+###### 切换上一个缓冲区，显示上一个文件的内容
 
-          :bp 
+     :bp 
 
-* 使用:buffer(:b)命令切换buffer
+###### 使用:buffer(:b)命令切换buffer
 
-        :b 2
-* 将当前缓冲区写入文件命令
+     :b 2
+###### 将当前缓冲区写入文件命令
 
-        :write
+     :write
 
 window 可以看成是 buffer 的 viewport。一个 buffer 可以有多个 window。在不同的window中编辑同一个文件的buffer，并且在一个window中对文件进行编辑，修改会同步体现在另外的window中。
 
