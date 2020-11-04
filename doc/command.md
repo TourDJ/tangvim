@@ -420,6 +420,7 @@
 
 #### 参考资料：      
 [Vim命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)         
+[精通 VIM ，此文就够了](https://zhuanlan.zhihu.com/p/68111471)                               
 [史上最全的Vim命令](https://zhuanlan.zhihu.com/p/51440836)     
 [Vim cheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt)        
 [vim wiki](https://www.barbarianmeetscoding.com/wiki/vim)          
