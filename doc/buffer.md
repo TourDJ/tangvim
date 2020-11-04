@@ -17,6 +17,14 @@
            3 # =  "/etc/vimrc"                   line 71
 左侧是buffer的编号，有%的表示是当前激活的window中打开的buffer，a表示这个buffer是active的，双引号中的字符串表示了buffer对应的文件名字，line n表示当前cursor处于该buffer的哪一行，# 代表的是编辑前一次编辑的文档。
 
+* 切换下一个缓冲区，显示下一个文件的内容
+
+          :bn
+
+* 切换上一个缓冲区，显示上一个文件的内容
+
+          :bp 
+
 * 使用:buffer(:b)命令切换buffer
 
         :b 2
