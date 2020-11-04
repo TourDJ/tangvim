@@ -8,7 +8,7 @@
 
 在 vim 中，可以将 buffer 看成是打开文件的实例。一个文件只有一个 buffer。
 
-###### 查看 buffer 的命令：
+#### 查看 buffer 的命令：
 
      :ls 
 显示：
