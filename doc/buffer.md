@@ -115,5 +115,6 @@ tab 是 window 的集合，tab的标题栏会显示该tab当前激活的window�
 
 
 ### 参考资料
-* [Buffers, windows, and tabs](https://sanctum.geek.nz/arabesque/buffers-windows-tabs/)   
+* [Buffers, windows, and tabs](https://sanctum.geek.nz/arabesque/buffers-windows-tabs/)        
+* [精通 vim 你应该理解的几个名词](https://zhuanlan.zhihu.com/p/96801314)      
     
