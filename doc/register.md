@@ -22,7 +22,7 @@ Debian/Ubuntu下可以通过安装 vim-gnome 解决。
     $ sudo apt-get install vim-gnome
        
 
-### [vim 复制](http://www.cnblogs.com/hustcat/articles/1791371.html)        
+### [vim 复制]()        
 * vim 常用的粘贴板有"、0、1、2、3、4、5、6、7、8、9、-、.、:、%、/，用 :reg 命令可以查看各个粘贴板里的内容；
 * 在vim中简单用y只是复制到“（双引号)和0粘贴板里，同样用p粘贴的也是这个粘贴板里的内容；
 * 要将vim的内容复制到某个粘贴板，需要退出编辑模式，进入正常模式后，选择要复制的内容，然后按"Ny（注意带引号）完成复制，其中N为粘贴板号(注意是按一下双引号然后按粘贴板号最后按y)，例如要把内容复制到粘贴板2，选中内容后按"2y就可以了。
@@ -32,4 +32,5 @@ Debian/Ubuntu下可以通过安装 vim-gnome 解决。
     
 参考资料：     
 [Vim 使用进阶：10 种寄存器剖析](http://www.codebelief.com/article/2017/03/vim-advanced-usage-10-registers-analysis/)    
-[Vim 复制粘贴探秘](http://www.cnblogs.com/jianyungsun/archive/2011/03/19/1988855.html)  
+[Vim 复制粘贴探秘](http://www.cnblogs.com/jianyungsun/archive/2011/03/19/1988855.html)       
+[vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)                   
