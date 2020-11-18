@@ -1,5 +1,3 @@
-[返回首页](./index.md)
-***
 
 - [vim 插件](#plugin)   
   - [插件管理工具](#plugin_tool)     
@@ -286,6 +284,7 @@ endif
 ### 参考资料
 * [Using Vim as a JavaScript IDE](http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide/)      
 * [Vim and Ctags](https://andrew.stwrt.ca/posts/vim-ctags/)     
-* [Setting up Vim for React.js](https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015)    
+* [Setting up Vim for React.js](https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015)        
+* [vim 插件](https://vimawesome.com/)           
 
 

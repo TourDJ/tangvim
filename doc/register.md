@@ -1,7 +1,15 @@
-- [Vim 寄存器](#register)     
+- [Vim 寄存器](#register)       
+    - [什么是寄存器](#register_what)           
     - [寄存器命令](#register_command)      
 
 ## <a id="register">Vim 寄存器</a>
+
+### <a id="register_what">什么是寄存器？</a>
+
+在使用不同操作系统的时候，我们经常会使用复制和黏贴的功能，当我们复制内容的时候，系统把内容放到了剪切板，当我们黏贴使用的时候就会快速的从剪切板里面获取内容。
+
+vim 也有相似的逻辑，我们叫它寄存器。当我们使用 y 复制内容的时候，vim 默认把内容寄存到一个无名寄存器，当使用黏贴功能 p 的时候，就会默认从无名寄存器中取出内容。
+
 ### <a id="register_command">寄存器命令</a>
 通过下面命令显示所有寄存器内容：
 
@@ -14,14 +22,15 @@ Debian/Ubuntu下可以通过安装 vim-gnome 解决。
     $ sudo apt-get install vim-gnome
        
 
-### [vim 复制](http://www.cnblogs.com/hustcat/articles/1791371.html)        
-* vim 常用的粘贴板有"、0、1、2、3、4、5、6、7、8、9、-、.、:、%、/，用 :reg 命令可以查看各个粘贴板里的内容；
+### vim 复制       
+* vim 常用的粘贴板有\"、0、1、2、3、4、5、6、7、8、9、-、.、:、%、/，用 :reg 命令可以查看各个粘贴板里的内容；
 * 在vim中简单用y只是复制到“（双引号)和0粘贴板里，同样用p粘贴的也是这个粘贴板里的内容；
 * 要将vim的内容复制到某个粘贴板，需要退出编辑模式，进入正常模式后，选择要复制的内容，然后按"Ny（注意带引号）完成复制，其中N为粘贴板号(注意是按一下双引号然后按粘贴板号最后按y)，例如要把内容复制到粘贴板2，选中内容后按"2y就可以了。
 > 有两点需要说明一下：    
     1， “号粘贴板（临时粘贴板）比较特殊，直接按y就复制到这个粘贴板中了，直接按p就粘贴这个粘贴板中的内容；      
     2， +号粘贴板是系统粘贴板，用"+y将内容复制到该粘贴板后可以使用Ctrl＋V将其粘贴到其他文档（如firefox、gedit）中，同理，要把在其他地方用Ctrl＋C或右键复制的内容复制到vim中，需要在正常模式下按"+p；
     
-参考资料：     
-[Vim 使用进阶：10 种寄存器剖析](http://www.codebelief.com/article/2017/03/vim-advanced-usage-10-registers-analysis/)    
-[Vim 复制粘贴探秘](http://www.cnblogs.com/jianyungsun/archive/2011/03/19/1988855.html)  
+### 参考资料  
+* [Vim 使用进阶：10 种寄存器剖析](http://www.codebelief.com/article/2017/03/vim-advanced-usage-10-registers-analysis/)    
+* [Vim 复制粘贴探秘](http://www.cnblogs.com/jianyungsun/archive/2011/03/19/1988855.html)       
+* [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)                   

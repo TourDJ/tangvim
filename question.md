@@ -7,3 +7,12 @@
 
     sudo apt-get remove --purge vim-common
 --purge 是完全删除，会连配置文件一起删除
+
+
+#### E21: Cannot make changes, 'modifiable' is off
+方法：
+```vimscript
+:set modifiable
+or
+:set ma
+```
