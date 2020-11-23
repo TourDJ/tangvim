@@ -419,12 +419,14 @@ c,d,v,y 等命令后接文本对象，一般为：<范围 i/a><类型>
 ### <a id="vimcmd_searep">查找替换</a>
 #### <a id="vimcmd_search">查找</a>
 
-    /something                              在后面的文本中查找something。
-    ?something                              在前面的文本中查找something。
+    /something                              从光标处向文件尾查找something。
+    ?something                              从光标处向文件头查找something。
     /pattern/+number                        将光标停在包含 pattern 的行后面第 number 行上。
     /pattern/-number                        将光标停在包含 pattern 的行前面第 number 行上。
-    n                                       向后查找下一个。
-    N                                       向前查找下一个
+    n                            			向同一方向执行上一次搜索
+    N                                       向相反方向执行上一次搜索
+	*                   					向前搜索光标下的单词
+	#                   					向后搜索光标下的单词
 
 #### <a id="vimcmd_replace">替换</a>
     guw                                     光标下的单词变转换为小写
