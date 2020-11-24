@@ -28,6 +28,7 @@
     - [匹配到某个模式后执行命令](#vimcmd_command)     
   - [注释](#vimcmd_comment)      
   - [批量缩进](#vimcmd_indent)     
+  - [visual 模式下的操作命令](#vimcmd_visual)           
   - [其他](#vimcmd_other)  
 
 ## <a id="vimcmd"><font color="red">Vim 命令</font></a>
@@ -503,6 +504,22 @@ c,d,v,y 等命令后接文本对象，一般为：<范围 i/a><类型>
     :m,n>                                   m 到 n 行缩进
     :m>n                                    m 行开始的 n 行缩进一次
 
+### <a id="vimcmd_visual">visual 模式下的操作命令</a>
+
+	>                   增加缩进
+	<                   减少缩进
+	d                   删除高亮选中的文字
+	x                   删除高亮选中的文字
+	c                   改写文字，即删除高亮选中的文字并进入插入模式
+	s                   改写文字，即删除高亮选中的文字并进入插入模式
+	y                   拷贝文字
+	~                   转换大小写
+	o                   跳转到标记区的另外一端
+	O                   跳转到标记块的另外一端
+	u                   标记区转换为小写
+	U                   标记区转换为大写
+	g CTRL-G            显示所选择区域的统计信息
+	<Esc>               退出可视模式
 
 ### <a id="vimcmd_other">其他</a>
 
