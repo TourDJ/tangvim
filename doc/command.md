@@ -433,7 +433,22 @@ c,d,v,y 等命令后接文本对象，一般为：<范围 i/a><类型>
     :e!                                     放弃所有修改，并打开原来文件
     ZQ                                      无条件退出
     ZZ                                      存盘退出
-
+	:w                  保存文件
+	:w <filename>       按名称保存文件
+	:e <filename>       打开文件并编辑
+	:saveas <filename>  另存为文件
+	:r <filename>       读取文件并将内容插入到光标后
+	:r !dir             将 dir 命令的输出捕获并插入到光标后
+	:close              关闭文件
+	:q                  退出
+	:q!                 强制退出
+	:wa                 保存所有文件
+	:cd <path>          切换 Vim 当前路径
+	:pwd                显示 Vim 当前路径
+	:new                打开一个新的窗口编辑新文件
+	:enew               在当前窗口创建新文件
+	:vnew               在左右切分的新窗口中编辑新文件
+	:tabnew             在新的标签页中编辑新文件
 
 ### <a id="vimcmd_searep">查找替换</a>
 #### <a id="vimcmd_search">查找</a>
