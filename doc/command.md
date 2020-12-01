@@ -178,12 +178,10 @@
     `"                                      移动到上次离开的地方。
     `.                                      移动到最后改动的地方。
     :marks                                  显示所有标记
-    :delmarks a b                           删除标记a和b
-    :delmarks a-c                           删除标记a、b和c
-    :delmarks a c-f                         删除标记a、c、d、e、f
-    :delmarks!                              删除当前缓冲区的所有标记
-    Ctrl+o                                  后退
-    Ctrl+i                                  前进
+    :delm(delmarks) a b                     删除标记a和b
+    :delm(delmarks) a-c                     删除标记a、b和c
+    :delm(delmarks) a c-f                   删除标记a、c、d、e、f
+    :delm(delmarks)!                        删除当前缓冲区的所有标记
 
 ***
 
