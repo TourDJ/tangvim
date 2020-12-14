@@ -584,6 +584,11 @@ c,d,v,y 等命令后接文本对象，一般为：<范围 i/a><类型>
 * cit 命令    
 在用 vim 编辑 `html` 和 `xml` 时经常使用 `cit` 操作来删除一对标签内的文字。
 
+* vim 卡死        
+在用 vim 编辑文当时，有时会习惯性的按下 `CTRL+S`来保存文件，结果导致 vim 卡死，恢复方法：
+
+    CTRL + Q
+
 
 #### 参考资料：      
 [Vim命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)         
