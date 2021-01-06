@@ -23,3 +23,22 @@ vi 是古老的文本编辑器，vim是从 vi 发展出来的一个文本编辑�
 
 Vim 和 TextMate 有很多不同，你常常会遇到它不让你输入，让你抓狂。Vim 有很多不同的模式，在不同的模式下，不同的按键有不同的功能。更让人崩溃的是，大写和小写的功能也天差地别。所以看看：
 * [迁移到 Vim 的10个难关](http://blog.jobbole.com/18333/)
+
+什么是.netrwhist？
+
+netrw是一种 vim plugin/script，支持跨网络读取和写入文件。 .netrwhist是一个维护所有修改的目录的历史文件。所以每当修改〜/ .vim的内容时，它会在.netrwhist中添加一个条目。
+
+示例.netrwhist如下所示
+
+    let g:netrw_dirhistmax  =10
+    let g:netrw_dirhist_cnt =6
+    let g:netrw_dirhist_1='/Users/wolever/EnSi/repos/web/env/web/lib/python2.6/site-packages/django'
+    let g:netrw_dirhist_2='/private/tmp/b/.hg/attic'
+    let g:netrw_dirhist_3='/Users/wolever/code/sandbox/pydhcplib-0.6.2/pydhcplib'
+    let g:netrw_dirhist_4='/Users/wolever/EnSi/repos/common/env/common/bin'
+    let g:netrw_dirhist_5='/Users/wolever/EnSi/repos/common/explode'
+    let g:netrw_dirhist_6='/Users/wolever/Sites/massuni-wiki/conf'
+netrw_dirhistmax指示它在历史记录文件中存储的修改目录的最大数量。即最大历史大小。 netrw_dirhist_cnt指示修改的目录的当前历史计数。
+
+如果要禁用netrw以生成历史记录文件，请参阅[How to disable netrw to generate history file?](http://vim.1045645.n5.nabble.com/How-to-disable-netrw-to-generate-history-file-td4248939.html)。        
+
