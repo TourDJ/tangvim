@@ -1,6 +1,7 @@
         
 - [vim 概述](#summary)  
-  - [vim 历史](#history)   
+  - [vim 历史](#history)      
+  - [vim 的基础知识](#base)        
     
 ## <a id="summary">vim 概述</a>    
 在 Linux 的系統中使用文字编辑器来编辑你的 Linux 参数配置文件，是最平常不过的事情了，常常听到的就有： [emacs](http://www.gnu.org/software/emacs/), [pico](https://en.wikipedia.org/wiki/Pico_(text_editor)), [nano](http://sourceforge.net/projects/nano/), [joe](http://sourceforge.net/projects/joe-editor/), 与 [vim](http://www.vim.org) 等等。这些编辑器有什么区别呢？     
@@ -23,7 +24,7 @@ vi 是古老的文本编辑器，vim是从 vi 发展出来的一个文本编辑�
 
 Vim 和 TextMate 有很多不同，你常常会遇到它不让你输入，让你抓狂。Vim 有很多不同的模式，在不同的模式下，不同的按键有不同的功能。更让人崩溃的是，大写和小写的功能也天差地别。
 
-## vim 的基础知识
+## <a id="base">vim 的基础知识</a>
 ### viminfo
 
 在vim中操作的行为，vim会自动记录下来，保存在 `~/.viminfo` 文件中。这样为了方便下次处理，如vim打开文件时，光标会自动在上次离开的位置显示。原来搜索过的字符串，新打开文件时自动高亮显示。
@@ -72,17 +73,19 @@ netrw_dirhistmax指示它在历史记录文件中存储的修改目录的最大�
     :let g:netrw_dirhistmax = 0 
 这样做不会导致任何以前的.netrwhist或.netrwbook文件被删除。
 
-另外，如果你希望vim遵守XDG的基本目录规范，以防止你的home文件夹被像~/.vim这样的点文件丢失，你可能需要从你的configuration中分割出caching的文件和历史文件驻留在运行时path中）。 例如，要将.netrwhist存储在~/.cache/vim ，您可能需要尝试
+另外，如果你希望vim遵守XDG的基本目录规范，以防止你的home文件夹被像~/.vim这样的点文件丢失，你可能需要从你的configuration中分割出caching的文件和历史文件驻留在运行时path中）。 例如，要将.netrwhist存储在`~/.cache/vim` ，您可能需要尝试
 
     let g:netrw_home=$XDG_CACHE_HOME.'/vim' 
+    
 从netrw参考手册：
 
 >  *.netrwhist* See |g:netrw_dirhistmax| for how to control the quantity of history stack slots. The file ".netrwhist" holds history when netrw (and vim) is not active. By default, it's stored on the first directory on the user's |'runtimepath'|. 
 
-在我的情况下， runtimepath的第一个path是~/.vim （使用:echo &runtimepath检查）。 我很好，所以我不需要改变g:netrw_home 。
+在我的情况下， runtimepath的第一个path是`~/.vim` （使用`:echo &runtimepath`检查）。 我很好，所以我不需要改变`g:netrw_home`。
 
 > *g:netrw_dirhistmax* =10: controls maximum quantity of past history. May be zero to supppress history. 
-所以，是的， let g:netrw_dirhistmax=0将停止写入历史文件。
+
+所以，是的， `let g:netrw_dirhistmax=0`将停止写入历史文件。
 
 ### 参考资料
 [VIM学习笔记 文件浏览器(Netrw)](https://zhuanlan.zhihu.com/p/61588081)                  
