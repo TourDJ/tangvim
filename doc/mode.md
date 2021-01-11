@@ -33,6 +33,12 @@ vim 是一个多模式的编辑器。初学者进入 vim 时，根本不知道�
 
 稍微有点熟悉之后，可以渐进式的系统学习。
 
+模式转换
+
+|From mode/To mode | Normal |  Visual |  Select |  Insert  |  Replace  |  Cmd-line  |  Ex   |
+|------------|--|--|--|--|--|--|--|
+|Normal      |v V ^V | \*4| \*1 | R gR | : / ? ! |  Q |
+
 **vim 相关文档**      
 
 当你发现你对 vim 还是挺感兴趣的，此时可以系统地学习下 vim 的入门知识，可以看看鸟哥的这篇介绍：
